@@ -1974,6 +1974,10 @@ input[type="range"]::-ms-fill-lower {
   .md\:text-left {
     text-align: left;
   }
+
+  .md\:text-\[100px\] {
+    font-size: 100px;
+  }
 }
 
 @media (min-width: 1024px) {
