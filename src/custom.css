@@ -48,9 +48,15 @@ body {
   width: 100%;
   
   height: 900px;
-  background-position: center center;
+  background-position: center center ;
   background-repeat: no-repeat;
   background-size: cover;
+}
+@media screen and (max-width: 768px) {
+  .hero-bg {
+    height: 600px;
+  }
+  
 }
 
 
@@ -105,35 +111,3 @@ body {
   .accordion-item:last-child { border-bottom: none; }
 }
 
-
-
-.goog-te-banner-frame.skiptranslate {
-    display: none !important;
-  }
-
-  body {
-    top: 0px !important;
-  }
-  table{
-    display: none  !important
-  }
-  /* Style the dropdown wrapper */
-  #google_translate_element {
-    @apply bg-gray-800 text-white px-3 py-2 rounded-md shadow-md;
-    border-radius: 8px;
-  }
-
-  /* Hide “Powered by Google” text */
-  .goog-logo-link {
-    display: none !important;
-  }
-
-  .goog-te-gadget span {
-    display: none !important;
-  }
-
-  /* Style the dropdown select itself */
-  .goog-te-combo {
-    @apply bg-gray-800 text-white border border-gray-700 rounded-md px-2 py-1;
-    font-family: inherit;
-  }
