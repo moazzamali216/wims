@@ -171,10 +171,11 @@
           </ul>
         </div>
 
-        <li><a href="#" class="cal tracking-wider text-sm font-[500] text-[#e0dfdf]">RESOURCES</a></li>
-        <li><a href="#" class="cal tracking-wider text-sm font-[500] text-[#e0dfdf]">SUSTAINIBILITY</a></li>
+  
+              <!-- <li><div id="google_translate_element" class=" bg-transparent"></div ></li> -->
         <li><a href="#" class="cal tracking-wider text-sm font-[500] text-[#e0dfdf]">E-BROUCHER</a></li>
-        <li><a href="#" class="cal tracking-wider text-sm font-[500] text-[#e0dfdf]">VIRTUAL TOUR</a></li>
+    
+        <li><a href="#" class="cal tracking-wider text-sm font-[500] text-[#e0dfdf]">SHOP</a></li>
       </ul>
     </div>
     <div class="w-fit flex gap-x-3 cal">
@@ -205,28 +206,40 @@ overflow-hidden bg-gradient-to-r from-[#F85757] via-[#FE7C00] to-[#FEAF06] trans
   <div class="lg:hidden">
     <!-- Top bar -->
     <nav id="desktop-nav2"
-      class="top-[34px] fixed z-[99999] py-8 transition-all left-0 w-full flex items-center justify-between px-6   bg-transparent ">
+      class="top-[0px] absolute z-[105] py-8 transition-all left-0 w-full flex items-center justify-between px-6   bg-transparent ">
       <!-- Logo -->
-      <div class="text-2xl mons text-[#e0dfdf]">LOGO</div>
+      <div class="text-2xl mons text-[#e0dfdf]"><img class="w-[80px]" src="./public/images/logo.png" alt=""></div>
+      <div class="flex items-center gap-4"><button style="padding:15px 20px 15px 20px"
+        class="group relative flex items-center gap-2 font-bold text-white text-base cal rounded-full 
+overflow-hidden bg-gradient-to-r from-[#F85757] via-[#FE7C00] to-[#FEAF06] transition-all duration-500 ease-out hover:scale-[1.03]">
+        <span>Get A Quote!</span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+          class="w-5 h-5 transition-transform duration-300 ease-out group-hover:translate-x-1">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
+        <span
+          class="absolute inset-0 bg-gradient-to-r from-white/30 to-transparent opacity-0 group-hover:opacity-100 translate-x-[-100%] group-hover:translate-x-[100%] transition-all duration-700 ease-out"></span>
+      </button>
+           <!-- <button id="openMenu"><img class="w-5 h-5" src="./public/images/download.png" alt=""></button> -->
+
 
       <!-- Hamburger -->
-      <button id="menu-btn" class="flex w-fit flex-col space-y-1">
+      <button id="menu-btn" class="flex w-fit z-[105] flex-col space-y-1">
         <i class="fa-solid fa-bars text-2xl text-[#e0dfdf]"></i>
-      </button>
+      </button></div>
     </nav>
 
     <!-- Mobile Menu (Hidden by Default, Slides from Right) -->
-    <div id="mobile-menu" class="fixed top-0 right-0 w-3/4 max-w-xs h-screen bg-black/70 backdrop-blur-md z-40 flex flex-col items-center justify-center space-y-6
+    <div id="mobile-menu" class="fixed !z-[102] top-0 right-0 w-3/4 max-w-xs h-screen bg-black/70 backdrop-blur-md  flex flex-col items-center justify-center space-y-6
               transform translate-x-full transition-transform duration-500 ease-in-out">
-
+  !
       <ul class="flex flex-col items-center gap-6">
         <li><a href="#" class="mons tracking-wider text-sm font-[500] text-[#e0dfdf]">HOME</a></li>
         <li><a href="#" class="mons tracking-wider text-sm font-[500] text-[#e0dfdf]">ABOUT</a></li>
         <li><a href="#" class="mons tracking-wider text-sm font-[500] text-[#e0dfdf]">SERVICES</a></li>
-        <li><a href="#" class="mons tracking-wider text-sm font-[500] text-[#e0dfdf]">RESOURCES</a></li>
-        <li><a href="#" class="mons tracking-wider text-sm font-[500] text-[#e0dfdf]">SUSTAINABILITY</a></li>
+
         <li><a href="#" class="mons tracking-wider text-sm font-[500] text-[#e0dfdf]">E-BROCHURE</a></li>
-        <li><a href="#" class="mons tracking-wider text-sm font-[500] text-[#e0dfdf]">VIRTUAL TOUR</a></li>
+        <li><a href="#" class="mons tracking-wider text-sm font-[500] text-[#e0dfdf]">SHOP</a></li>
       </ul>
 
       <!-- Contact Button -->
@@ -546,7 +559,7 @@ overflow-hidden bg-gradient-to-r from-[#F85757] via-[#FE7C00] to-[#FEAF06] trans
           class="w-full max-w-[400px] px-4 py-3  border border-gray-300 focus:ring-2 focus:ring-[#CD8B62] focus:outline-none text-gray-700 mons text-sm transition-all duration-300" />
         <button
           class="px-6 py-3 max-w-[400px] w-full bg-[#CD8B62] text-white mons font-[500] text-sm tracking-wider hover:bg-transparent hover:text-[#CD8B62] border border-[#CD8B62] transition-all duration-300">
-          SUBSCRIBE
+         <a href="./public/index.html">sa</a>
         </button>
       </div>
     </div>
@@ -647,6 +660,9 @@ overflow-hidden bg-gradient-to-r from-[#F85757] via-[#FE7C00] to-[#FEAF06] trans
     });
   </script>
    -->
+<script src="./src/js/google.js"></script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+ 
 </body>
 
 </html>

@@ -830,6 +830,9 @@ input[type="range"]::-ms-fill-lower {
 .relative {
   position: relative;
 }
+.sticky {
+  position: sticky;
+}
 .inset-0 {
   top: 0px;
   right: 0px;
@@ -857,6 +860,12 @@ input[type="range"]::-ms-fill-lower {
 .right-4 {
   right: 1rem;
 }
+.top-10 {
+  top: 2.5rem;
+}
+.right-10 {
+  right: 2.5rem;
+}
 .z-\[9999\] {
   z-index: 9999;
 }
@@ -883,6 +892,30 @@ input[type="range"]::-ms-fill-lower {
 }
 .z-\[101\] {
   z-index: 101;
+}
+.z-\[102\] {
+  z-index: 102;
+}
+.\!z-\[102\] {
+  z-index: 102 !important;
+}
+.\!z-\[103\] {
+  z-index: 103 !important;
+}
+.\!z-\[9999\] {
+  z-index: 9999 !important;
+}
+.z-\[103\] {
+  z-index: 103;
+}
+.z-\[104\] {
+  z-index: 104;
+}
+.z-\[105\] {
+  z-index: 105;
+}
+.z-\[107\] {
+  z-index: 107;
 }
 .mx-auto {
   margin-left: auto;
@@ -1023,6 +1056,12 @@ input[type="range"]::-ms-fill-lower {
 }
 .w-4 {
   width: 1rem;
+}
+.w-\[50px\] {
+  width: 50px;
+}
+.w-\[80px\] {
+  width: 80px;
 }
 .max-w-md {
   max-width: 28rem;
