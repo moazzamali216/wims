@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snip</title>
+
+  <!-- CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="../src/custom.css">
+  <link rel="stylesheet" href="./output.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
+    integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- Swipper Slider -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <!-- /* Font Awsome Cdn */ -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/duyplus/fontawesome-pro/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="../src/js/bundle.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+</head>
+<!-- Cookie Consent Modal -->
+<div id="cookie-banner"  >
+  <div class="fixed inset-0 z-[9999]  flex items-center justify-center bg-black/40 backdrop-blur-sm">
+  <div class=" bg-white/80 backdrop-blur-md rounded-2xl shadow-xl p-8 max-w-md w-[90%] text-center">
+    <h2 class="text-2xl raleway tracking-wider  mb-3 text-gray-800">We Value Your Privacy</h2>
+    <p class="text-gray-600 text-sm mons leading-relaxed mb-6">
+      We use cookies to improve your browsing experience and to analyze our traffic.  
+      Please select your country and choose whether to accept or decline cookies.
+    </p>
+
+    <!-- Country Selector -->
+    <div class="mb-6">
+      <label for="country" class="block text-gray-700 mons text-sm font-medium mb-2">Select your country:</label>
+      <select id="country" name="country"
+        class="w-full px-4 py-2 rounded-xl mons border border-gray-300 text-gray-700 text-sm focus:ring-2 focus:ring-[#4CAF50] focus:outline-none">
+        <option value="">-- Choose a country --</option>
+        <option value="US">United States</option>
+        <option value="UK">United Kingdom</option>
+        <option value="CA">Canada</option>
+        <option value="AU">Australia</option>
+        <option value="DE">Germany</option>
+        <option value="FR">France</option>
+        <option value="IT">Italy</option>
+        <option value="PK">Pakistan</option>
+        <option value="IN">India</option>
+        <option value="JP">Japan</option>
+        <option value="CN">China</option>
+        <option value="BR">Brazil</option>
+        <option value="ZA">South Africa</option>
+        <option value="AE">United Arab Emirates</option>
+        <!-- Add more as needed -->
+      </select>
+    </div>
+
+    <div class="flex justify-center gap-4">
+      <button id="accept-cookies" 
+        class="px-6 mons py-2 rounded-xl bg-[#B4D5F9] text-gray-600 text-sm font-medium 
+               hover:bg-[#6ea9e8] transition-all shadow-sm">
+        Accept
+      </button>
+      <button id="decline-cookies" 
+        class="px-6 mons py-2 rounded-xl bg-gray-300 text-gray-700 text-sm font-medium 
+               hover:bg-gray-400 transition-all shadow-sm">
+        Decline
+      </button>
+    </div>
+  </div>
+</div>
+</div>
+<body class="">
+
+<!-- Preloader -->
+<div id="preloader" class="fixed inset-0 z-[99999] flex flex-col items-center justify-center bg-white/90 backdrop-blur-md">
+  <div class="w-16 h-16 border-4 border-[#B4D5F9] border-t-transparent rounded-full animate-spin"></div>
+  <p class="mt-4 mons text-gray-600 tracking-wider text-sm">Loading Snip...</p>
+</div>
+
+
+
+
+
+ <div  class="bg-black  tracking-wider !font-[100] absolute top-0 mons py-2 text-sm w-full text-center text-[#e0dfdf] flex justify-center items-center gap-3">
+  <span>Discover Snip — crafted for elegance, built for you.</span>
+
+</div>
+  <nav class="fixed justify-around flex items-center top-[34px] py-8   w-full">
+    <div class="w-fit    text-2xl mons">LOGO</div>
+    <div class="w-fit  ">
+      <ul class="flex items-center gap-3">
+        <li><a href="#" class="mons tracking-wider text-xs font-[500] text-[#e0dfdf]">HOME</a></li>
+        <li><a href="#" class="mons tracking-wider s text-xs font-[500] text-[#e0dfdf]">ABOUT</a></li>
+
+
+        <li data-dropdown-toggle="dropdown"><a href="#"
+            class="mons tracking-wider text-xs font-[500] text-[#e0dfdf]">SERVICES <i
+              class="fa-solid fa-chevron-down"></i></a>
+
+        </li>
+
+        <!-- Dropdown menu -->
+        <div id="dropdown" class="z-[100]  hidden w-44 rounded-lg shadow-sm
+            bg-white/20 backdrop-blur-md dark:bg-gray-700/30 
+            divide-y divide-gray-100 dark:divide-gray-600">
+          <ul class="py-2 mons  rounded-md  text-sm text-[gray-600] dark:text-gray-200"
+            aria-labelledby="dropdownDefaultButton">
+            <li>
+              <a href="#"
+                class="block px-4 py-2 hover:bg-white/30 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+            </li>
+            <li>
+              <a href="#"
+                class="block px-4 py-2 hover:bg-white/30 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+            </li>
+            <li>
+              <a href="#"
+                class="block px-4 py-2 hover:bg-white/30 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+            </li>
+            <li>
+              <a href="#" class="block px-4 py-2 hover:bg-white/30 dark:hover:bg-gray-600 dark:hover:text-white">Sign
+                out</a>
+            </li>
+          </ul>
+        </div>
+
+
+        <li><a href="#" class="mons tracking-wider  text-xs font-[500] text-[#e0dfdf]">RESOURCES</a></li>
+        <li><a href="#" class="mons tracking-wider  text-xs font-[500] text-[#e0dfdf]">SUSTAINIBILITY</a></li>
+        <li><a href="#" class="mons tracking-wider  text-xs font-[500] text-[#e0dfdf]">E-BROUCHER</a></li>
+        <li><a href="#" class="mons tracking-wider  text-xs font-[500] text-[#e0dfdf]">VIRTUAL TOUR</a></li>
+
+
+
+
+
+      </ul>
+    </div>
+    <div class="w-fit  mons">
+<button class="mons relative border border-[#e0dfdf] text-[#e0dfdf] text-[14px] px-4 py-2 
+  overflow-hidden transition-all duration-500 ease-out 
+  hover:text-black ">
+  <span class="relative z-10">CONTACT US</span>
+  <span class="absolute inset-0 bg-[#f0f0f0] scale-x-0 origin-left transition-transform duration-500 ease-out hover:scale-x-100"></span>
+</button>
+
+    </div>
+  </nav>
+  <div class="hero-bg z-1 flex flex-row items-center justify-center  ">
+<div class="w-1/2 ml-8">
+      <div  class=" text-[#e0dfdf] mt-[140px]  bod italic leading-[80px] tracking-wide text-6xl" >Sourcing Sustainable <br> Fabrics for a <br>  Better Tomorrow</div>
+      <hr class="w-full">
+      <p class="text-[#e0dfdf] mt-4 mons trac">From concept to creation, Snip is your partner in sourcing premium <br> textiles, combining global reach with local expertise.</p>
+
+</div>
+<div class="w-1/2 flex justify-end items-center ">
+<div class="text-[#e0dfdf] items-center mr-10 flex">
+    <button class="mons ] mr-4 tracking-wider">LEARN MORE</button>
+<i class="fa-solid fa-arrow-right"></i>
+
+
+</div>
+</div>
+   
+  </div>
+<script>
+  window.addEventListener("load", () => {
+    const preloader = document.getElementById("preloader");
+    preloader.style.opacity = "0";
+    preloader.style.transition = "opacity 0.5s ease";
+
+    setTimeout(() => {
+      preloader.style.display = "none";
+    }, 500);
+  });
+</script>
+  <script src="https://unpkg.com/flowbite@1.5.2/dist/flowbite.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"
+    integrity="sha512-8Wy4KH0O+AuzjMm1w5QfZ5j5/y8Q/kcUktK9mPUVaUoBvh3QPUZB822W/vy7ULqri3yR8daH3F58+Y8Z08qzeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+  <script>
+    AOS.init();
+  </script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const banner = document.getElementById("cookie-banner");
+    const acceptBtn = document.getElementById("accept-cookies");
+    const declineBtn = document.getElementById("decline-cookies");
+
+    // Hide banner by default
+    banner.style.display = "none";
+
+    // Check if user already made a choice
+    if (!localStorage.getItem("cookiesConsent")) {
+      banner.style.display = "flex";   // Show banner only if no choice yet
+      document.body.style.overflow = "hidden"; // Lock scrolling
+    }
+
+    const closeBanner = (choice) => {
+      localStorage.setItem("cookiesConsent", choice);
+      banner.style.display = "none"; // Hide banner after choice
+      document.body.style.overflow = "auto"; // Restore scrolling
+    };
+
+    acceptBtn.addEventListener("click", () => closeBanner("accepted"));
+    declineBtn.addEventListener("click", () => closeBanner("declined"));
+  });
+  
+  function updateClock() {
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, "0");
+    const minutes = String(now.getMinutes()).padStart(2, "0");
+    const seconds = String(now.getSeconds()).padStart(2, "0");
+    document.getElementById("clock").textContent = `${hours}:${minutes}:${seconds}`;
+  }
+  setInterval(updateClock, 1000);
+  updateClock(); // run once immediately
+</script>
+
+
+
+
+</body>
+
+</html>
