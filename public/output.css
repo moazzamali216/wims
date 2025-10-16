@@ -866,6 +866,9 @@ input[type="range"]::-ms-fill-lower {
 .right-10 {
   right: 2.5rem;
 }
+.bottom-0 {
+  bottom: 0px;
+}
 .z-\[9999\] {
   z-index: 9999;
 }
