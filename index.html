@@ -6,7 +6,35 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WIMS</title>
+  <link rel="Icon" href="./public/images/logo.png" type="image/x-icon">
+  <script type="text/javascript">
+    // Helper to apply saved language from cookie
+    function getCookie(name) {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop().split(';').shift();
+    }
 
+    function applySavedLanguage() {
+      const saved = getCookie('googtrans');
+      if (saved) {
+        document.cookie = `googtrans=${saved};path=/;domain=${window.location.hostname}`;
+        document.cookie = `googtrans=${saved};path=/`;
+      }
+    }
+
+    // Apply saved language right away
+    applySavedLanguage();
+
+    // Initialize widget
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,fr,de,es,it',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
   <!-- External CSsS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="./public/output.css">
@@ -23,8 +51,10 @@
   </style>
   <!-- AlpineJS -->
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  <script src="./src/js/index.js"></script>
+
 </head>
+
+
 
 <!-- Cookie Consent Modal -->
 <div id="cookie-banner">
@@ -119,6 +149,11 @@
 </div>
 
 <body class="">
+  <!-- Scroll To Top Button -->
+  <div id="scrollToTop"
+    class="fixed bottom-6 right-6 w-14 h-14 rounded-full bg-[#FF6B00] text-white flex items-center justify-center shadow-lg cursor-pointer opacity-0 scale-0 transition-all duration-300 z-50">
+    <i class="fa-solid fa-arrow-up text-xl"></i>
+  </div>
 
   <!-- Preloader -->
   <div id="preloader"
@@ -162,10 +197,12 @@
         </div>
 
 
-        <!-- <li><div id="google_translate_element" class=" bg-transparent"></div ></li> -->
+        <li>
+          <div id="google_translate_element" class=" bg-transparent"></div>
+        </li>
         <li><a href="#" class="cal tracking-wider text-sm font-[500] text-[#e0dfdf]">E-BROUCHER</a></li>
 
-        <li><a href="#" class="cal tracking-wider text-sm font-[500] text-[#e0dfdf]">SHOP</a></li>
+        <li><a href="./index copy.html" class="cal tracking-wider text-sm font-[500] text-[#e0dfdf]">SHOP</a></li>
       </ul>
     </div>
     <div class="w-fit flex gap-x-3 cal">
@@ -489,59 +526,165 @@ overflow-hidden bg-gradient-to-r from-[#F85757] via-[#FE7C00] to-[#FEAF06] trans
   </section>
 
 
- <!-- BedSet -->
+  <!-- BedSet -->
   <section
-    class=" container gap-x-10  gap-y-10 flex justify-center items-center md:flex-row flex-col   mx-auto  2xl:max-w-[1530px] mt-10 py-10 px-4 ">
-    <div class="w-full  lg:w-1/2">
-      <img class="w-full object-cover h-[700px]" src="./public/images/t3.jpg" alt="">
+    class=" container  gap-x-10  gap-y-10 flex justify-center items-center md:flex-row flex-col   mx-auto  2xl:max-w-[1530px] mt-10 py-10 px-4 ">
+    <div class="w-full lg:block hidden lg:w-1/2">
+      <img class="w-full sticky top-0 object-cover h-[700px]" src="./public/images/t3.jpg" alt="">
     </div>
     <div class="w-full  lg:w-1/2">
-      <span class="flex gap-2 mt-4  items-center"><i class="fa-solid text-[#FEAF06] fa-star"></i> 
-        <h4 class="poppins font-semibold text-sm text-gray-700 mt-1">03.  Why Choose us?
-          
-        </h4></span>
-         <h1 class="text-5xl sm:text-[65px]  max-w-[800px] text-start leading-[55px] sm:leading-[70px] mt-5 cal">
-     Leading the world of textiles with excellence.</h1>
-     <p class="font-light poppins mt-5  text-gray-600">We are committed to integrating sustainability, environmental stewardship, and ethical governance into our business. As a leader in technical textiles, we recognise the responsibility we have in reducing our environmental impact, fostering a positive social footprint, and ensuring ethical and transparent governance practices.</p>
+      <span class="flex gap-2 mt-4  items-center"><i class="fa-solid text-[#FEAF06] fa-star"></i>
+        <h4 class="poppins font-semibold text-sm text-gray-700 mt-1">03. Why Choose us?
 
+        </h4>
+      </span>
+      <h1 class="text-5xl sm:text-[65px]  max-w-[800px] text-start leading-[55px] sm:leading-[70px] mt-5 cal">
+        Leading the world of textiles with excellence.</h1>
+      <p class="font-light poppins mt-5  text-gray-600">We are committed to integrating sustainability, environmental
+        stewardship, and ethical governance into our business. As a leader in technical textiles, we recognise the
+        responsibility we have in reducing our environmental impact, fostering a positive social footprint, and ensuring
+        ethical and transparent governance practices.</p>
 
-    <!-- Bar 1 -->
-    <div class="mb-10 mt-10">
-      <div class="flex justify-between items-center mb-2">
-        <h3 class=" f ont-semibold text-gray-900 cal">Textile Services</h3>
-        <span class="text-2xl font-bold text-[#D68910] poppins">85%</span>
-      </div>
-      <div class="relative w-full h-[6px] bg-gray-300 rounded-full overflow-hidden">
-        <div class="progress-bar h-[6px] bg-gray-800 rounded-full" data-width="85"></div>
-      </div>
-    </div>
+      <div>
 
-    <!-- Bar 2 -->
-    <div class="mb-10">
-      <div class="flex justify-between items-center mb-2">
-        <h3 class=" f ont-semibold text-gray-900 cal">Industrial Work</h3>
-        <span class="text-2xl font-bold text-[#D68910] poppins">95%</span>
-      </div>
-      <div class="relative w-full h-[6px] bg-gray-300 rounded-full overflow-hidden">
-        <div class="progress-bar h-[6px] bg-gray-800 rounded-full" data-width="95"></div>
-      </div>
-    </div>
+        <!-- Bar 1 -->
+        <div class="mb-10 mt-10">
+          <div class="flex justify-between items-center mb-2">
+            <h3 class=" f ont-semibold text-gray-900 cal">Textile Services</h3>
+            <span class="text-2xl font-bold text-[#D68910] poppins">85%</span>
+          </div>
+          <div class="relative w-full h-[6px] bg-gray-300 rounded-full overflow-hidden">
+            <div class="progress-bar h-[6px] bg-gray-800 rounded-full" data-width="85"></div>
+          </div>
+        </div>
 
-    <!-- Bar 3 -->
-    <div class="mb-10">
-      <div class="flex justify-between items-center mb-2">
-        <h3 class=" f ont-semibold text-gray-900 cal">Home Textiles</h3>
-        <span class="text-2xl font-bold text-[#D68910] poppins">65%</span>
-      </div>
-      <div class="relative w-full h-[6px] bg-gray-300 rounded-full overflow-hidden">
-        <div class="progress-bar h-[6px] bg-gray-800 rounded-full" data-width="65"></div>
-      </div>
-    </div>
+        <!-- Bar 2 -->
+        <div class="mb-10">
+          <div class="flex justify-between items-center mb-2">
+            <h3 class=" f ont-semibold text-gray-900 cal">Industrial Work</h3>
+            <span class="text-2xl font-bold text-[#D68910] poppins">95%</span>
+          </div>
+          <div class="relative w-full h-[6px] bg-gray-300 rounded-full overflow-hidden">
+            <div class="progress-bar h-[6px] bg-gray-800 rounded-full" data-width="95"></div>
+          </div>
+        </div>
 
+        <!-- Bar 3 -->
+        <div class="mb-10">
+          <div class="flex justify-between items-center mb-2">
+            <h3 class=" f ont-semibold text-gray-900 cal">Home Textiles</h3>
+            <span class="text-2xl font-bold text-[#D68910] poppins">65%</span>
+          </div>
+          <div class="relative w-full h-[6px] bg-gray-300 rounded-full overflow-hidden">
+            <div class="progress-bar h-[6px] bg-gray-800 rounded-full" data-width="65"></div>
+          </div>
+        </div>
+
+      </div>
+      <div class="flex items-start gap-6 bg-white p-6 rounded-xl shadow-sm">
+        <!-- Icon Circle -->
+        <div class="flex-shrink-0 w-24 h-24 bg-[#FFB029] rounded-full flex items-center justify-center">
+          <i class="fa-solid fa-scissors text-4xl text-[#1E293B]"></i>
+        </div>
+
+        <!-- Text Content -->
+        <div class="flex flex-col">
+          <h3 class="text-2xl cal font-bold text-[#1E293B]">
+            Production of Fabrics
+          </h3>
+          <div class="h-[2px] w-24 bg-[#F1E0BE] my-3"></div>
+          <p class="text-gray-600 poppins leading-relaxed max-w-md">
+            Textiles are materials made from natural or synthetic fibers. Yarn and threads
+            are used to create the widest range of fabric types and applications.
+          </p>
+        </div>
+      </div>
 
 
     </div>
   </section>
+
+  <!-- Services -->
+    <!-- SERVICES OFFERED -->
+  <div class="bg-no-repeat !z-0 py-10 mt-10 bg-cover backdrop-filter backdrop-blur-sm bg-center"
+    style="background-image: url(./public/images/a9dft8.gif);">
+    <section class=" container   mx-auto  2xl:max-w-[1530px] mt-10 py-10 px-4 ">
+
+      <div class="faq-section-container">
+        <div class="faq-card">
+          <h2 class="cal !text-gray-900 text-xl mons font-[100]">Enhancing Your Business Through Expertise</h2>
+          <div class="faq-grid mt-10 poppins">
+
+            <!-- Accordion Item 1 -->
+            <div class="accordion-item">
+              <button class="accordion-button" aria-expanded="false">
+                <span>Global Sourcing & Procurement</span>
+                <svg class="accordion-icon" viewBox="0 0 24 24">
+                  <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"></path>
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                  et dolore magna aliqua.</p>
+              </div>
+            </div>
+
+            <!-- Accordion Item 2 -->
+            <div class="accordion-item">
+              <button class="accordion-button" aria-expanded="false">
+                <span>Quality Assurance & Compliance</span>
+                <svg class="accordion-icon" viewBox="0 0 24 24">
+                  <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"></path>
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat.</p>
+              </div>
+            </div>
+
+            <!-- Add other 4 items similarly -->
+            <div class="accordion-item"><button class="accordion-button" aria-expanded="false"><span>Supply Chain
+                  Management</span><svg class="accordion-icon" viewBox="0 0 24 24">
+                  <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"></path>
+                </svg></button>
+              <div class="accordion-content">
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                  pariatur.</p>
+              </div>
+            </div>
+            <div class="accordion-item"><button class="accordion-button" aria-expanded="false"><span>Product Development
+                  & Customization</span><svg class="accordion-icon" viewBox="0 0 24 24">
+                  <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"></path>
+                </svg></button>
+              <div class="accordion-content">
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                  laborum.</p>
+              </div>
+            </div>
+            <div class="accordion-item"><button class="accordion-button" aria-expanded="false"><span>Market Intelligence
+                  & Trend Analysis</span><svg class="accordion-icon" viewBox="0 0 24 24">
+                  <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"></path>
+                </svg></button>
+              <div class="accordion-content">
+                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
+              </div>
+            </div>
+            <div class="accordion-item"><button class="accordion-button" aria-expanded="false"><span>Home Textiles and
+                  Fabrics</span><svg class="accordion-icon" viewBox="0 0 24 24">
+                  <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"></path>
+                </svg></button>
+              <div class="accordion-content">
+                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </div>
 
 
 </body>
@@ -556,6 +699,7 @@ overflow-hidden bg-gradient-to-r from-[#F85757] via-[#FE7C00] to-[#FEAF06] trans
   AOS.init();
 </script>
 <script src="./src/js/gsap.js"></script>
+<script defer src="./src/js/"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <script>
@@ -630,33 +774,9 @@ overflow-hidden bg-gradient-to-r from-[#F85757] via-[#FE7C00] to-[#FEAF06] trans
     });
   });
 </script>
-<script type="text/javascript">
-  // Helper to apply saved language from cookie
-  function getCookie(name) {
-    const value = `; ${document.cookie}`;
-    const parts = value.split(`; ${name}=`);
-    if (parts.length === 2) return parts.pop().split(';').shift();
-  }
 
-  function applySavedLanguage() {
-    const saved = getCookie('googtrans');
-    if (saved) {
-      document.cookie = `googtrans=${saved};path=/;domain=${window.location.hostname}`;
-      document.cookie = `googtrans=${saved};path=/`;
-    }
-  }
 
-  // Apply saved language right away
-  applySavedLanguage();
-
-  // Initialize widget
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'en',
-      includedLanguages: 'en,fr,de,es,it',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-    }, 'google_translate_element');
-  }
-</script>
+<script defer src="./src/js/index.js"></script>
+<script defer src="./src//js/scrollbar.js"></script>
 
 </html>
