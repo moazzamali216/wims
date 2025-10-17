@@ -1467,6 +1467,27 @@ input[type="range"]::-ms-fill-lower {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
+.bg-black\/20 {
+  background-color: rgb(0 0 0 / 0.2);
+}
+.bg-black\/90 {
+  background-color: rgb(0 0 0 / 0.9);
+}
+.bg-black\/10 {
+  background-color: rgb(0 0 0 / 0.1);
+}
+.bg-yellow-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 202 21 / var(--tw-bg-opacity));
+}
+.bg-\[\#FEAF06\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 175 6 / var(--tw-bg-opacity));
+}
+.bg-\[\#a68b4a\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(166 139 74 / var(--tw-bg-opacity));
+}
 .bg-opacity-60 {
   --tw-bg-opacity: 0.6;
 }
@@ -1496,6 +1517,11 @@ input[type="range"]::-ms-fill-lower {
   --tw-gradient-to: rgb(0 0 0 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
+.from-\[\#F9A3A3\] {
+  --tw-gradient-from: #F9A3A3;
+  --tw-gradient-to: rgb(249 163 163 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
 .via-\[\#FE7C00\] {
   --tw-gradient-to: rgb(254 124 0 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), #FE7C00, var(--tw-gradient-to);
@@ -1504,11 +1530,18 @@ input[type="range"]::-ms-fill-lower {
   --tw-gradient-to: rgb(204 163 75 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), rgb(204 163 75 / 0.1), var(--tw-gradient-to);
 }
+.via-\[\#FDB56E\] {
+  --tw-gradient-to: rgb(253 181 110 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), #FDB56E, var(--tw-gradient-to);
+}
 .to-\[\#FEAF06\] {
   --tw-gradient-to: #FEAF06;
 }
 .to-transparent {
   --tw-gradient-to: transparent;
+}
+.to-\[\#FEE6A0\] {
+  --tw-gradient-to: #FEE6A0;
 }
 .bg-cover {
   background-size: cover;
@@ -1725,6 +1758,15 @@ input[type="range"]::-ms-fill-lower {
 .tracking-widest {
   letter-spacing: 0.1em;
 }
+.-tracking-wider {
+  letter-spacing: -0.05em;
+}
+.tracking-\[20px\] {
+  letter-spacing: 20px;
+}
+.tracking-\[3px\] {
+  letter-spacing: 3px;
+}
 .text-gray-800 {
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
@@ -1802,6 +1844,10 @@ input[type="range"]::-ms-fill-lower {
 .text-yellow-400 {
   --tw-text-opacity: 1;
   color: rgb(227 160 8 / var(--tw-text-opacity));
+}
+.text-\[\#a68b4a\] {
+  --tw-text-opacity: 1;
+  color: rgb(166 139 74 / var(--tw-text-opacity));
 }
 .opacity-0 {
   opacity: 0;
@@ -2196,6 +2242,10 @@ input[type="range"]::-ms-fill-lower {
 
   .md\:text-\[100px\] {
     font-size: 100px;
+  }
+
+  .md\:text-\[60px\] {
+    font-size: 60px;
   }
 }
 
