@@ -76,3 +76,46 @@
     });
   });
 })();
+
+
+(function animateSewImages() {
+  const sewRight = document.querySelector('.sew-img');
+  const sewLeft = document.querySelector('.sew2-img');
+
+  // Right image: fly from bottom-right upward
+  if (sewRight) {
+    gsap.from(sewRight, {
+      y: 200,        // from below
+      x: 200,        // from the right side
+      opacity: 0,
+      duration: 1.2,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: sewRight,
+        start: "top 85%",
+        toggleActions: "play none none reverse",
+        // markers: true, // uncomment for testing
+      }
+    });
+  }
+
+  // Left image: fly from bottom-left upward
+  if (sewLeft) {
+    gsap.from(sewLeft, {
+      y: 200,        // from below
+      x: -200,       // from the left side
+      opacity: 0,
+      duration: 1.2,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: sewLeft,
+        start: "top 85%",
+        toggleActions: "play none none reverse",
+        // markers: true,
+      }
+    });
+  }
+})();
+
+
+
