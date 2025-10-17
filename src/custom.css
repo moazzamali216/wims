@@ -110,3 +110,11 @@ body {
 .VIpgJd-ZVi9od-xl07Ob-lTBxed>img{
   display: none !important;
 }
+
+
+.t-box{
+  background-image: url('../public/images/t1.jpg') !important;
+  background-size: cover;
+  background-position: center;
+  border-radius: 24px;
+}
