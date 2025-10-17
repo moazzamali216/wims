@@ -991,6 +991,9 @@ input[type="range"]::-ms-fill-lower {
 .\!mt-\[100px\] {
   margin-top: 100px !important;
 }
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
 .block {
   display: block;
 }
@@ -1044,6 +1047,9 @@ input[type="range"]::-ms-fill-lower {
 }
 .h-14 {
   height: 3.5rem;
+}
+.h-\[6px\] {
+  height: 6px;
 }
 .min-h-\[600px\] {
   min-height: 600px;
@@ -1129,6 +1135,9 @@ input[type="range"]::-ms-fill-lower {
 }
 .max-w-\[800px\] {
   max-width: 800px;
+}
+.max-w-4xl {
+  max-width: 56rem;
 }
 .flex-shrink-0 {
   flex-shrink: 0;
@@ -1244,6 +1253,10 @@ input[type="range"]::-ms-fill-lower {
 }
 .gap-y-6 {
   row-gap: 1.5rem;
+}
+.gap-x-2 {
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
 }
 .space-y-1 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
@@ -1413,6 +1426,10 @@ input[type="range"]::-ms-fill-lower {
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+.bg-gray-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
 }
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
@@ -1668,6 +1685,12 @@ input[type="range"]::-ms-fill-lower {
 .leading-\[70px\] {
   line-height: 70px;
 }
+.leading-\[40px\] {
+  line-height: 40px;
+}
+.leading-\[55px\] {
+  line-height: 55px;
+}
 .tracking-wide {
   letter-spacing: 0.025em;
 }
@@ -1754,6 +1777,10 @@ input[type="range"]::-ms-fill-lower {
 .text-\[\#000\] {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+.text-\[\#D68910\] {
+  --tw-text-opacity: 1;
+  color: rgb(214 137 16 / var(--tw-text-opacity));
 }
 .opacity-0 {
   opacity: 0;
@@ -2018,12 +2045,20 @@ input[type="range"]::-ms-fill-lower {
 
 @media (min-width: 640px) {
 
+  .sm\:block {
+    display: block;
+  }
+
   .sm\:w-\[400px\] {
     width: 400px;
   }
 
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sm\:flex-row {
+    flex-direction: row;
   }
 
   .sm\:flex-col {
@@ -2048,6 +2083,14 @@ input[type="range"]::-ms-fill-lower {
   .sm\:text-5xl {
     font-size: 3rem;
     line-height: 1;
+  }
+
+  .sm\:text-\[65px\] {
+    font-size: 65px;
+  }
+
+  .sm\:leading-\[70px\] {
+    line-height: 70px;
   }
 }
 

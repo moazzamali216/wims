@@ -119,3 +119,32 @@
 
 
 
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.utils.toArray(".progress-bar").forEach((bar) => {
+  const targetWidth = bar.getAttribute("data-width");
+
+  gsap.fromTo(
+    bar,
+    { width: "0%" },
+    {
+      width: targetWidth + "%",
+      duration: 2,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: bar,
+        start: "top 90%", // triggers earlier to ensure the last one animates too
+        end: "bottom 60%", // gives a wider trigger window
+        toggleActions: "play none none reverse",
+        invalidateOnRefresh: true,
+      },
+    }
+  );
+});
+
+// Optional: refresh ScrollTrigger once all content (like images/fonts) are loaded
+window.addEventListener("load", () => {
+  ScrollTrigger.refresh();
+});
