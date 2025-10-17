@@ -821,6 +821,9 @@ input[type="range"]::-ms-fill-lower {
 .pointer-events-none {
   pointer-events: none;
 }
+.visible {
+  visibility: visible;
+}
 .fixed {
   position: fixed;
 }
@@ -1502,6 +1505,10 @@ input[type="range"]::-ms-fill-lower {
   padding-left: 0.375rem;
   padding-right: 0.375rem;
 }
+.py-14 {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
 .pt-4 {
   padding-top: 1rem;
 }
@@ -1682,6 +1689,10 @@ input[type="range"]::-ms-fill-lower {
 .text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+.\!text-gray-900 {
+  --tw-text-opacity: 1 !important;
+  color: rgb(17 24 39 / var(--tw-text-opacity)) !important;
 }
 .opacity-0 {
   opacity: 0;
@@ -1960,6 +1971,11 @@ input[type="range"]::-ms-fill-lower {
     padding-right: 30px;
   }
 
+  .sm\:py-14 {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
   .sm\:text-5xl {
     font-size: 3rem;
     line-height: 1;
@@ -1990,6 +2006,11 @@ input[type="range"]::-ms-fill-lower {
 
   .md\:w-1\/2 {
     width: 50%;
+  }
+
+  .md\:w-fit {
+    width: -moz-fit-content;
+    width: fit-content;
   }
 
   .md\:max-w-\[480px\] {
