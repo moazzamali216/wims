@@ -266,3 +266,37 @@ if (window.innerWidth > 600) {
   });
 
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Disable animations on small screens
+  if (window.innerWidth < 600) return;
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Animate cards on scroll
+  gsap.from(".card", {
+    opacity: 0,
+    y: 50,
+    duration: 1,
+    stagger: 0.2,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".card",
+            toggleActions: "play none none reverse",
+      start: "top 85%",
+    },
+  });
+
+  // Optional: subtle scale animation on entrance
+  gsap.from(".card-bg", {
+    scale: 1.1,
+    duration: 1.2,
+    ease: "power2.out",
+    stagger: 0.15,
+    scrollTrigger: {
+      trigger: ".card",
+            toggleActions: "play none none reverse",
+      start: "top 85%",
+    },
+  });
+});
