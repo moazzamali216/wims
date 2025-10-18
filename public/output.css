@@ -890,6 +890,15 @@ input[type="range"]::-ms-fill-lower {
 .top-6 {
   top: 1.5rem;
 }
+.\!top-0 {
+  top: 0px !important;
+}
+.\!bottom-0 {
+  bottom: 0px !important;
+}
+.\!bottom-\[-50px\] {
+  bottom: -50px !important;
+}
 .z-\[9999\] {
   z-index: 9999;
 }
