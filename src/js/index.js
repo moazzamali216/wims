@@ -1,4 +1,5 @@
  
+ 
  document.addEventListener('DOMContentLoaded', () => {
   const allAccordionItems = document.querySelectorAll('.accordion-item');
 

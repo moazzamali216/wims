@@ -121,7 +121,7 @@
 gsap.to("#hero-text", {
     scrollTrigger: {
       trigger: "#hero-text",
-      start: "top 80%",
+      start: "top 90%",
     },
     opacity: 1,
     y: 0,
@@ -130,22 +130,36 @@ gsap.to("#hero-text", {
   });
 
   // Sale text fade + slide-in
-  gsap.to("#sale-text", {
+  gsap.to(".sale-text", {
     scrollTrigger: {
-      trigger: "#sale-text",
-      start: "top 85%",
+      trigger: ".sale-text",
+      start: "top 90%",
+        toggleActions: "play none none reverse",
     },
     opacity: 1,
     x: 0,
+
     duration: 1.3,
     ease: "power3.out"
   });
 
   // Image animations
-  gsap.to("#sale-small-img", {
+  gsap.to(".sale-small-img", {
     scrollTrigger: {
-      trigger: "#sale-small-img",
+      trigger: ".sale-small-img",
       start: "top 90%",
+              toggleActions: "play none none reverse",
+    },
+    opacity: 1,
+    scale: 1,
+    duration: 1.3,
+    ease: "power2.out"
+  });
+   gsap.to(".sale-small-img-2", {
+    scrollTrigger: {
+      trigger: ".sale-small-img-2",
+      start: "top 90%",
+              toggleActions: "play none none reverse",
     },
     opacity: 1,
     scale: 1,
@@ -157,6 +171,7 @@ gsap.to("#hero-text", {
     scrollTrigger: {
       trigger: "#sale-large-img",
       start: "top 90%",
+              toggleActions: "play none none reverse",
     },
     opacity: 1,
     scale: 1,
@@ -195,3 +210,59 @@ gsap.utils.toArray(".progress-bar").forEach((bar) => {
 window.addEventListener("load", () => {
   ScrollTrigger.refresh();
 });
+
+
+
+if (window.innerWidth > 600) {
+
+  // Header Animations
+  gsap.from(".services-heading", {
+    scrollTrigger: {
+      trigger: ".services-heading",
+      start: "top 85%",
+    },
+    opacity: 0,
+    y: 50,
+    duration: 1.2,
+    ease: "power3.out",
+  });
+
+  gsap.from(".services-subtext", {
+    scrollTrigger: {
+      trigger: ".services-subtext",
+      start: "top 85%",
+    },
+    opacity: 0,
+    y: 40,
+    duration: 1.2,
+    delay: 0.2,
+    ease: "power3.out",
+  });
+
+  // Card Animations — staggered and Swiper-safe
+  gsap.from(".service-card", {
+    scrollTrigger: {
+      toggleActions: "play none none reverse",
+      trigger: ".mySwiper",
+      start: "top 80%",
+    },
+    opacity: 0,
+    y: 60,
+    duration: 0.9,
+    stagger: 0.2,
+    ease: "power2.out",
+  });
+
+  // Footer Button & Text
+  gsap.from(".services-footer", {
+    scrollTrigger: {
+      trigger: ".services-footer",
+      start: "top 90%",
+    },
+    opacity: 0,
+    y: 40,
+    duration: 1,
+    ease: "power2.out",
+  });
+
+}
