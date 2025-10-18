@@ -118,6 +118,53 @@
 })();
 
 
+gsap.to("#hero-text", {
+    scrollTrigger: {
+      trigger: "#hero-text",
+      start: "top 80%",
+    },
+    opacity: 1,
+    y: 0,
+    duration: 1.2,
+    ease: "power3.out"
+  });
+
+  // Sale text fade + slide-in
+  gsap.to("#sale-text", {
+    scrollTrigger: {
+      trigger: "#sale-text",
+      start: "top 85%",
+    },
+    opacity: 1,
+    x: 0,
+    duration: 1.3,
+    ease: "power3.out"
+  });
+
+  // Image animations
+  gsap.to("#sale-small-img", {
+    scrollTrigger: {
+      trigger: "#sale-small-img",
+      start: "top 90%",
+    },
+    opacity: 1,
+    scale: 1,
+    duration: 1.3,
+    ease: "power2.out"
+  });
+
+  gsap.to("#sale-large-img", {
+    scrollTrigger: {
+      trigger: "#sale-large-img",
+      start: "top 90%",
+    },
+    opacity: 1,
+    scale: 1,
+    duration: 1.4,
+    ease: "power2.out",
+    delay: 0.2
+  });
+
 
 
 
