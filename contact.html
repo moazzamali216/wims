@@ -162,7 +162,7 @@
 
  <!-- Desktop Navbar -->
   <nav id="desktop-nav"
-    class="absolute border-b-[0.33px] bg-white border-[#636363]  hidden z-[100] transition-all lg:flex justify-around  items-center top-[0px] py-2 w-full">
+    class=" border-b-[0.33px] bg-white border-[#636363]  hidden z-[100] transition-all lg:flex justify-around  items-center top-[0px] py-2 w-full">
     <div class="w-fit text-2xl mons"><img  class="w-[100px] " src="./public/images/logo.png" alt=""></div>
     <div class="w-fit">
       <ul class="flex items-center gap-4 ">
@@ -278,27 +278,54 @@ overflow-hidden bg-[#a68b4a] transition-all duration-500 ease-out hover:scale-[1
     </div>
   </div>
 
-  <section id="contact" class="mt-20">
-  <div style="max-width:900px;margin:auto;text-align:center;">
-    <h2 style="font-size:2.5rem;font-weight:700;color:#333;margin-bottom:10px;">
-      Get in <span style="color:#a68b4a;">Touch</span>
-    </h2>
-    <p style="color:#555;font-size:1rem;margin-bottom:30px;">
-      We’d love to hear from you! Fill out the form below and our team will get back to you.
-    </p>
+ <section  class="relative mt-[100px] mb-10  bg-[#f9f9f9]">
+  <div class="max-w-4xl mx-auto px-6 sm:px-10">
+    <div class="text-center mb-12">
+      <span class="text-sm poppins font-semibold text-[#a68b4a] mb-2 block">✦ Contact Us</span>
+      <h2 class="text-4xl cal font-bold text-gray-800 mb-3">Get n Touch With Us</h2>
+      <p class="text-gray-600 poppins max-w-2xl mx-auto">
+        Have questions or want to request a quote? Fill out the form below and our team will get back to you promptly.
+      </p>
+    </div>
 
-    <!-- ✅ Simplified JotForm Embed -->
-    <iframe
-      id="JotFormIFrame"
-      title="WIMS Contact Form"
-      src="https://form.jotform.com/252960561042453"
-      style="min-width:100%;height: 1270px;border:none;"
-      frameborder="0"
-      scrolling="yes"
-      allowfullscreen>
-    </iframe>
+    <form 
+      action="https://formspree.io/f/xeopjqey" 
+      method="POST"
+      class="bg-white shadow-xl rounded-2xl p-8 space-y-6 border border-gray-100"
+    >
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-700 poppins mb-2">Your Name</label>
+          <input type="text" id="name" name="name" required
+            class="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-800 poppins text-sm focus:outline-none focus:ring-2 focus:ring-[#a68b4a]">
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700 poppins mb-2">Your Email</label>
+          <input type="email" id="email" name="email" required
+            class="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-800 poppins text-sm focus:outline-none focus:ring-2 focus:ring-[#a68b4a]">
+        </div>
+      </div>
+
+      <div>
+        <label for="subject" class="block text-sm font-medium text-gray-700 poppins mb-2">Subject</label>
+        <input type="text" id="subject" name="subject"
+          class="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-800 poppins text-sm focus:outline-none focus:ring-2 focus:ring-[#a68b4a]">
+      </div>
+
+      <div>
+        <label for="message" class="block text-sm font-medium text-gray-700 poppins mb-2">Message</label>
+        <textarea id="message" name="message" rows="5" required
+          class="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-800 poppins text-sm focus:outline-none focus:ring-2 focus:ring-[#a68b4a]"></textarea>
+      </div>
+
+      <button type="submit"
+        class="w-full sm:w-auto px-8 py-3 bg-[#a68b4a] hover:bg-[#8c773d] transition-all text-white font-semibold rounded-full poppins shadow-md hover:scale-[1.02] duration-300">
+        Send Message
+      </button>
+    </form>
   </div>
 </section>
+
 
 
 
