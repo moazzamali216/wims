@@ -917,6 +917,9 @@ input[type="range"]::-ms-fill-lower {
 .\!z-0 {
   z-index: 0 !important;
 }
+.z-\[107\] {
+  z-index: 107;
+}
 .my-20 {
   margin-top: 5rem;
   margin-bottom: 5rem;
@@ -1370,6 +1373,10 @@ input[type="range"]::-ms-fill-lower {
 .border-\[\#475C6C\] {
   --tw-border-opacity: 1;
   border-color: rgb(71 92 108 / var(--tw-border-opacity));
+}
+.border-\[red\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 0 0 / var(--tw-border-opacity));
 }
 .border-t-transparent {
   border-top-color: transparent;
@@ -2329,6 +2336,10 @@ input[type="range"]::-ms-fill-lower {
 
   .md\:text-\[60px\] {
     font-size: 60px;
+  }
+
+  .md\:leading-\[60px\] {
+    line-height: 60px;
   }
 }
 

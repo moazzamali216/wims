@@ -1,59 +1,55 @@
-  gsap.registerPlugin(ScrollTrigger);
-
-  gsap.from(".workers-img loading="lazy"", {
-    x: -200,              // start position (off-screen left)
-    opacity: 0,           // fade in effect
-    duration: 1.5,        // animation time
-    ease: "power3.out",   // smooth easing
-    scrollTrigger: {
-      trigger: ".workers-img loading="lazy"", // element to trigger the animation
-      start: "top 80%",        // when the top of the image hits 80% of viewport
-      toggleActions: "play none none reverse" // replay on scroll up/down
-    }
-  });
-  // Register GSAP plugin
-
+gsap.registerPlugin(ScrollTrigger);
 
 /* ===============================
-   IMAGE ANIMATION (slide from left)
+   WORKERS IMAGE ANIMATION
    =============================== */
+gsap.from(".workers-img", {
+  x: -200,
+  opacity: 0,
+  duration: 1.5,
+  ease: "power3.out",
+  scrollTrigger: {
+    trigger: ".workers-img",
+    start: "top 80%",
+    toggleActions: "play none none reverse",
+  },
+});
+
 (function animateImage() {
-  const img loading="lazy" = document.querySelector('.workers-img loading="lazy"');
-  if (!img loading="lazy") return;
+  const img = document.querySelector(".workers-img");
+  if (!img) return;
 
-  // Set initial state
-  gsap.set(img loading="lazy", { x: -300, opacity: 0 });
+  gsap.set(img, { x: -300, opacity: 0 });
 
-  gsap.to(img loading="lazy", {
+  gsap.to(img, {
     x: 0,
     opacity: 1,
     duration: 1.2,
     ease: "power3.out",
     scrollTrigger: {
-      trigger: img loading="lazy",
+      trigger: img,
       start: "top 85%",
       end: "bottom 60%",
       toggleActions: "play none none reverse",
-      // markers: true, // Uncomment for debugging
-    }
+    },
   });
 })();
 
 /* ===============================
-   COUNT-UP ANIMATION (on scroll)
+   COUNT-UP ANIMATION
    =============================== */
 (function counters() {
-  const nodes = document.querySelectorAll('.count');
+  const nodes = document.querySelectorAll(".count");
   if (!nodes.length) return;
 
   function formatNumber(n) {
     return n.toLocaleString();
   }
 
-  nodes.forEach(node => {
-    const targetRaw = node.getAttribute('data-target') || "0";
-    const target = parseInt(String(targetRaw).replace(/\D/g, ''), 10) || 0;
-    node.textContent = '0+';
+  nodes.forEach((node) => {
+    const targetRaw = node.getAttribute("data-target") || "0";
+    const target = parseInt(String(targetRaw).replace(/\D/g, ""), 10) || 0;
+    node.textContent = "0+";
 
     const obj = { val: 0 };
 
@@ -62,7 +58,7 @@
       duration: Math.min(2, 0.5 + target / 500),
       ease: "power1.out",
       scrollTrigger: {
-        trigger: node.closest('.grid') || node,
+        trigger: node.closest(".grid") || node,
         start: "top 80%",
         toggleActions: "play none none reverse",
       },
@@ -72,21 +68,22 @@
       },
       onComplete() {
         node.textContent = formatNumber(target) + "+";
-      }
+      },
     });
   });
 })();
 
-
+/* ===============================
+   SEW IMAGES ANIMATION
+   =============================== */
 (function animateSewImages() {
-  const sewRight = document.querySelector('.sew-img loading="lazy"');
-  const sewLeft = document.querySelector('.sew2-img loading="lazy"');
+  const sewRight = document.querySelector(".sew-img");
+  const sewLeft = document.querySelector(".sew2-img");
 
-  // Right image: fly from bottom-right upward
   if (sewRight) {
     gsap.from(sewRight, {
-      y: 200,        // from below
-      x: 200,        // from the right side
+      y: 200,
+      x: 200,
       opacity: 0,
       duration: 1.2,
       ease: "power3.out",
@@ -94,16 +91,14 @@
         trigger: sewRight,
         start: "top 85%",
         toggleActions: "play none none reverse",
-        // markers: true, // uncomment for testing
-      }
+      },
     });
   }
 
-  // Left image: fly from bottom-left upward
   if (sewLeft) {
     gsap.from(sewLeft, {
-      y: 200,        // from below
-      x: -200,       // from the left side
+      y: 200,
+      x: -200,
       opacity: 0,
       duration: 1.2,
       ease: "power3.out",
@@ -111,80 +106,64 @@
         trigger: sewLeft,
         start: "top 85%",
         toggleActions: "play none none reverse",
-        // markers: true,
-      }
+      },
     });
   }
 })();
 
-
+/* ===============================
+   HERO & SALE SECTION
+   =============================== */
 gsap.to("#hero-text", {
-    scrollTrigger: {
-      trigger: "#hero-text",
-      start: "top 90%",
-    },
-    opacity: 1,
-    y: 0,
-    duration: 1.2,
-    ease: "power3.out"
-  });
+  scrollTrigger: {
+    trigger: "#hero-text",
+    start: "top 90%",
+  },
+  opacity: 1,
+  y: 0,
+  duration: 1.2,
+  ease: "power3.out",
+});
 
-  // Sale text fade + slide-in
-  gsap.to(".sale-text", {
-    scrollTrigger: {
-      trigger: ".sale-text",
-      start: "top 90%",
-        toggleActions: "play none none reverse",
-    },
-    opacity: 1,
-    x: 0,
+gsap.to(".sale-text", {
+  scrollTrigger: {
+    trigger: ".sale-text",
+    start: "top 90%",
+    toggleActions: "play none none reverse",
+  },
+  opacity: 1,
+  x: 0,
+  duration: 1.3,
+  ease: "power3.out",
+});
 
-    duration: 1.3,
-    ease: "power3.out"
-  });
+gsap.to(".sale-small-img", {
+  scrollTrigger: {
+    trigger: ".sale-small-img",
+    start: "top 90%",
+    toggleActions: "play none none reverse",
+  },
+  opacity: 1,
+  scale: 1,
+  duration: 1.3,
+  ease: "power2.out",
+});
 
-  // Image animations
-  gsap.to(".sale-small-img loading="lazy"", {
-    scrollTrigger: {
-      trigger: ".sale-small-img loading="lazy"",
-      start: "top 90%",
-              toggleActions: "play none none reverse",
-    },
-    opacity: 1,
-    scale: 1,
-    duration: 1.3,
-    ease: "power2.out"
-  });
-   gsap.to(".sale-small-img loading="lazy"-2", {
-    scrollTrigger: {
-      trigger: ".sale-small-img loading="lazy"-2",
-      start: "top 90%",
-              toggleActions: "play none none reverse",
-    },
-    opacity: 1,
-    scale: 1,
-    duration: 1.3,
-    ease: "power2.out"
-  });
+gsap.to(".sale-large-img", {
+  scrollTrigger: {
+    trigger: ".sale-large-img",
+    start: "top 90%",
+    toggleActions: "play none none reverse",
+  },
+  opacity: 1,
+  scale: 1,
+  duration: 1.3,
+  ease: "power2.out",
+});
 
-  gsap.to("#sale-large-img loading="lazy"", {
-    scrollTrigger: {
-      trigger: "#sale-large-img loading="lazy"",
-      start: "top 90%",
-              toggleActions: "play none none reverse",
-    },
-    opacity: 1,
-    scale: 1,
-    duration: 1.4,
-    ease: "power2.out",
-    delay: 0.2
-  });
-
-
-
-
-gsap.registerPlugin(ScrollTrigger);
-
+/* ===============================
+   PROGRESS BARS
+   =============================== */
 gsap.utils.toArray(".progress-bar").forEach((bar) => {
   const targetWidth = bar.getAttribute("data-width");
 
@@ -197,8 +176,8 @@ gsap.utils.toArray(".progress-bar").forEach((bar) => {
       ease: "power2.out",
       scrollTrigger: {
         trigger: bar,
-        start: "top 90%", // triggers earlier to ensure the last one animates too
-        end: "bottom 60%", // gives a wider trigger window
+        start: "top 90%",
+        end: "bottom 60%",
         toggleActions: "play none none reverse",
         invalidateOnRefresh: true,
       },
@@ -206,16 +185,14 @@ gsap.utils.toArray(".progress-bar").forEach((bar) => {
   );
 });
 
-// Optional: refresh ScrollTrigger once all content (like images/fonts) are loaded
 window.addEventListener("load", () => {
   ScrollTrigger.refresh();
 });
 
-
-
+/* ===============================
+   SERVICES SECTION (Desktop only)
+   =============================== */
 if (window.innerWidth > 600) {
-
-  // Header Animations
   gsap.from(".services-heading", {
     scrollTrigger: {
       trigger: ".services-heading",
@@ -239,12 +216,11 @@ if (window.innerWidth > 600) {
     ease: "power3.out",
   });
 
-  // Card Animations — staggered and Swiper-safe
   gsap.from(".service-card", {
     scrollTrigger: {
-      toggleActions: "play none none reverse",
       trigger: ".mySwiper",
       start: "top 80%",
+      toggleActions: "play none none reverse",
     },
     opacity: 0,
     y: 60,
@@ -253,7 +229,6 @@ if (window.innerWidth > 600) {
     ease: "power2.out",
   });
 
-  // Footer Button & Text
   gsap.from(".services-footer", {
     scrollTrigger: {
       trigger: ".services-footer",
@@ -264,16 +239,16 @@ if (window.innerWidth > 600) {
     duration: 1,
     ease: "power2.out",
   });
-
 }
 
+/* ===============================
+   CARD ANIMATIONS (Desktop only)
+   =============================== */
 document.addEventListener("DOMContentLoaded", () => {
-  // Disable animations on small screens
   if (window.innerWidth < 600) return;
 
   gsap.registerPlugin(ScrollTrigger);
 
-  // Animate cards on scroll
   gsap.from(".card", {
     opacity: 0,
     y: 50,
@@ -282,12 +257,11 @@ document.addEventListener("DOMContentLoaded", () => {
     ease: "power3.out",
     scrollTrigger: {
       trigger: ".card",
-            toggleActions: "play none none reverse",
       start: "top 85%",
+      toggleActions: "play none none reverse",
     },
   });
 
-  // Optional: subtle scale animation on entrance
   gsap.from(".card-bg", {
     scale: 1.1,
     duration: 1.2,
@@ -295,8 +269,8 @@ document.addEventListener("DOMContentLoaded", () => {
     stagger: 0.15,
     scrollTrigger: {
       trigger: ".card",
-            toggleActions: "play none none reverse",
       start: "top 85%",
+      toggleActions: "play none none reverse",
     },
   });
 });
