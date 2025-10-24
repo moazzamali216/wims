@@ -1,12 +1,12 @@
   gsap.registerPlugin(ScrollTrigger);
 
-  gsap.from(".workers-img", {
+  gsap.from(".workers-img loading="lazy"", {
     x: -200,              // start position (off-screen left)
     opacity: 0,           // fade in effect
     duration: 1.5,        // animation time
     ease: "power3.out",   // smooth easing
     scrollTrigger: {
-      trigger: ".workers-img", // element to trigger the animation
+      trigger: ".workers-img loading="lazy"", // element to trigger the animation
       start: "top 80%",        // when the top of the image hits 80% of viewport
       toggleActions: "play none none reverse" // replay on scroll up/down
     }
@@ -18,19 +18,19 @@
    IMAGE ANIMATION (slide from left)
    =============================== */
 (function animateImage() {
-  const img = document.querySelector('.workers-img');
-  if (!img) return;
+  const img loading="lazy" = document.querySelector('.workers-img loading="lazy"');
+  if (!img loading="lazy") return;
 
   // Set initial state
-  gsap.set(img, { x: -300, opacity: 0 });
+  gsap.set(img loading="lazy", { x: -300, opacity: 0 });
 
-  gsap.to(img, {
+  gsap.to(img loading="lazy", {
     x: 0,
     opacity: 1,
     duration: 1.2,
     ease: "power3.out",
     scrollTrigger: {
-      trigger: img,
+      trigger: img loading="lazy",
       start: "top 85%",
       end: "bottom 60%",
       toggleActions: "play none none reverse",
@@ -79,8 +79,8 @@
 
 
 (function animateSewImages() {
-  const sewRight = document.querySelector('.sew-img');
-  const sewLeft = document.querySelector('.sew2-img');
+  const sewRight = document.querySelector('.sew-img loading="lazy"');
+  const sewLeft = document.querySelector('.sew2-img loading="lazy"');
 
   // Right image: fly from bottom-right upward
   if (sewRight) {
@@ -144,9 +144,9 @@ gsap.to("#hero-text", {
   });
 
   // Image animations
-  gsap.to(".sale-small-img", {
+  gsap.to(".sale-small-img loading="lazy"", {
     scrollTrigger: {
-      trigger: ".sale-small-img",
+      trigger: ".sale-small-img loading="lazy"",
       start: "top 90%",
               toggleActions: "play none none reverse",
     },
@@ -155,9 +155,9 @@ gsap.to("#hero-text", {
     duration: 1.3,
     ease: "power2.out"
   });
-   gsap.to(".sale-small-img-2", {
+   gsap.to(".sale-small-img loading="lazy"-2", {
     scrollTrigger: {
-      trigger: ".sale-small-img-2",
+      trigger: ".sale-small-img loading="lazy"-2",
       start: "top 90%",
               toggleActions: "play none none reverse",
     },
@@ -167,9 +167,9 @@ gsap.to("#hero-text", {
     ease: "power2.out"
   });
 
-  gsap.to("#sale-large-img", {
+  gsap.to("#sale-large-img loading="lazy"", {
     scrollTrigger: {
-      trigger: "#sale-large-img",
+      trigger: "#sale-large-img loading="lazy"",
       start: "top 90%",
               toggleActions: "play none none reverse",
     },
