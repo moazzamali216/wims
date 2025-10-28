@@ -997,6 +997,9 @@ input[type="range"]::-ms-fill-lower {
 .mt-16 {
   margin-top: 4rem;
 }
+.mt-14 {
+  margin-top: 3.5rem;
+}
 .block {
   display: block;
 }
@@ -1968,6 +1971,9 @@ input[type="range"]::-ms-fill-lower {
 }
 .opacity-25 {
   opacity: 0.25;
+}
+.opacity-\[0\.05\] {
+  opacity: 0.05;
 }
 .shadow-xl {
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
