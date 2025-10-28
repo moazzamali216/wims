@@ -374,35 +374,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".gallery-card");
   const heading = document.querySelector(".gallery-heading");
 
-  if (heading) {
-    gsap.from(heading, {
-      opacity: 0,
-      y: 40,
-      duration: 1.2,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: heading,
-        start: "top 85%",
-        toggleActions: "play none none reverse",
-      },
-    });
-  }
 
-  if (cards.length) {
-    gsap.from(cards, {
-      opacity: 0,
-      y: 60,
-      scale: 0.95,
-      duration: 1,
-      ease: "power3.out",
-      stagger: 0.2,
-      scrollTrigger: {
-        trigger: ".wims-gallery",
-        start: "top 80%",
-        toggleActions: "play none none reverse",
-      },
-    });
-  }
 
   // Subtle parallax hover effect
   cards.forEach((card) => {
