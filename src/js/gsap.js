@@ -333,8 +333,7 @@ document.addEventListener("DOMContentLoaded", () => {
     scrollTrigger: {
       trigger: ".wellness-text",
       start: "top 85%",
-        toggleActions: "restart none none reverse", // 👈 replay animation when re-entered
-        once: false, // 👈 ensures it runs every time
+      toggleActions: "play none none reverse",
     },
   });
 
@@ -348,8 +347,7 @@ document.addEventListener("DOMContentLoaded", () => {
     scrollTrigger: {
       trigger: ".wellness-image",
       start: "top 85%",
-        toggleActions: "restart none none reverse", // 👈 replay animation when re-entered
-        once: false, // 👈 ensures it runs every time
+      toggleActions: "play none none reverse",
     },
   });
 
@@ -363,8 +361,7 @@ document.addEventListener("DOMContentLoaded", () => {
     scrollTrigger: {
       trigger: ".wellness-btn",
       start: "top 90%",
-        toggleActions: "restart none none reverse", // 👈 replay animation when re-entered
-        once: false, // 👈 ensures it runs every time
+      toggleActions: "play none none reverse",
     },
   });
 })();
@@ -386,8 +383,7 @@ document.addEventListener("DOMContentLoaded", () => {
       scrollTrigger: {
         trigger: heading,
         start: "top 85%",
-        toggleActions: "restart none none reverse", // 👈 replay animation when re-entered
-        once: false, // 👈 ensures it runs every time
+        toggleActions: "play none none reverse",
       },
     });
   }
@@ -403,8 +399,7 @@ document.addEventListener("DOMContentLoaded", () => {
       scrollTrigger: {
         trigger: ".wims-gallery",
         start: "top 80%",
-        toggleActions: "restart none none reverse", // 👈 replay animation when re-entered
-        once: false, // 👈 ensures it runs every time
+        toggleActions: "play none none reverse",
       },
     });
   }
