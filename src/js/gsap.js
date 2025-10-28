@@ -274,3 +274,42 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 });
+
+
+/* ===============================
+   ABOUT IMAGE FLASH OPACITY ANIMATION
+   =============================== */
+(function animateAboutImages() {
+  const images = document.querySelectorAll(".about-g-main, .about-g-1, .about-g-2");
+  if (!images.length) return;
+
+  images.forEach((img, i) => {
+    gsap.set(img, { opacity: 0, scale: 0.95, y: 40 });
+
+    gsap.to(img, {
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      duration: 1.2,
+      delay: i * 0.2,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: img,
+        start: "top 85%",
+        end: "bottom 20%",
+        toggleActions: "restart none none reverse", // 👈 replay animation when re-entered
+        once: false, // 👈 ensures it runs every time
+      },
+      onComplete: () => {
+        // Flash/pulse effect after fade-in
+        gsap.to(img, {
+          opacity: 0.8,
+          duration: 0.5,
+          yoyo: true,
+          repeat: 1,
+          ease: "power1.inOut",
+        });
+      },
+    });
+  });
+})();
