@@ -2,55 +2,55 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WIMS</title>
-  <link rel="Icon" href="./public/images/logo.png" type="image/x-icon">
-  <script type="text/javascript">
-    // Helper to apply saved language from cookie
-    function getCookie(name) {
-      const value = `; ${document.cookie}`;
-      const parts = value.split(`; ${name}=`);
-      if (parts.length === 2) return parts.pop().split(';').shift();
-    }
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WIMS</title>
+    <link rel="Icon" href="./public/images/logo.png" type="image/x-icon">
+    <script type="text/javascript">
+        // Helper to apply saved language from cookie
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
 
-    function applySavedLanguage() {
-      const saved = getCookie('googtrans');
-      if (saved) {
-        document.cookie = `googtrans=${saved};path=/;domain=${window.location.hostname}`;
-        document.cookie = `googtrans=${saved};path=/`;
-      }
-    }
+        function applySavedLanguage() {
+            const saved = getCookie('googtrans');
+            if (saved) {
+                document.cookie = `googtrans=${saved};path=/;domain=${window.location.hostname}`;
+                document.cookie = `googtrans=${saved};path=/`;
+            }
+        }
 
-    // Apply saved language right away
-    applySavedLanguage();
+        // Apply saved language right away
+        applySavedLanguage();
 
-    // Initialize widget
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'en,fr,de,es,it',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-      }, 'google_translate_element');
-    }
-  </script>
-  <!-- External CSsS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="./public/output.css">
-  <link rel="stylesheet" href="./src/custom.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/duyplus/fontawesome-pro/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.0/swiper-bundle.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.0/swiper-bundle.min.js"></script>
+        // Initialize widget
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,fr,de,es,it',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <!-- External CSsS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./public/output.css">
+    <link rel="stylesheet" href="./src/custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/duyplus/fontawesome-pro/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.0/swiper-bundle.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.0/swiper-bundle.min.js"></script>
 
-  <style>
-    .VIpgJd-ZVi9od-xl07Ob-lTBxed>img  {
-      display: none !important;
-    }
-  </style>
-  <!-- AlpineJS -->
-  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        .VIpgJd-ZVi9od-xl07Ob-lTBxed>img {
+            display: none !important;
+        }
+    </style>
+    <!-- AlpineJS -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
 </head>
 
@@ -58,376 +58,1167 @@
 
 <!-- Cookie Consent Modal -->
 <div id="cookie-banner">
-  <div class="fixed inset-0 z-[9999] flex items-center justify-center bg-black/40 backdrop-blur-sm">
-    <div class="bg-white/80 backdrop-blur-md rounded-2xl shadow-xl p-8 max-w-md w-[90%] text-center">
-      <h2 class="text-3xl cal mb-3 text-gray-800">We Value Your <span class="tcolor">Privacy</span></h2>
-      <p class="text-gray-600 text-sm  poppins tracking-wide leading-relaxed mb-6">
-        We use cookies to improve your browsing experience and to analyze our traffic.
-        Please select your country and choose whether to accept or decline cookies.
-      </p>
+    <div class="fixed inset-0 z-[9999] flex items-center justify-center bg-black/40 backdrop-blur-sm">
+        <div class="bg-white/80 backdrop-blur-md rounded-2xl shadow-xl p-8 max-w-md w-[90%] text-center">
+            <h2 class="text-3xl cal mb-3 text-gray-800">We Value Your <span class="tcolor">Privacy</span></h2>
+            <p class="text-gray-600 text-sm  poppins tracking-wide leading-relaxed mb-6">
+                We use cookies to improve your browsing experience and to analyze our traffic.
+                Please select your country and choose whether to accept or decline cookies.
+            </p>
 
-      <!-- Country Selector -->
-      <div class="mb-6">
-        <label for="country" class="block text-gray-700 poppins text-sm font-medium mb-2">Select your country:</label>
-        <select id="country" name="country"
-          class="w-full px-4 py-2 rounded-xl poppins border border-gray-300 text-gray-700 text-sm focus:ring-2 focus:ring-[#4CAF50] focus:outline-none">
-          <option value="">-- Choose a country --</option>
-          <option value="US">United States</option>
-          <option value="UK">United Kingdom</option>
-          <option value="CA">Canada</option>
-          <option value="AU">Australia</option>
-          <option value="DE">Germany</option>
-          <option value="FR">France</option>
-          <option value="IT">Italy</option>
-          <option value="PK">Pakistan</option>
-          <option value="IN">India</option>
-          <option value="JP">Japan</option>
-          <option value="CN">China</option>
-          <option value="BR">Brazil</option>
-          <option value="ZA">South Africa</option>
-          <option value="AE">United Arab Emirates</option>
-        </select>
-      </div>
+            <!-- Country Selector -->
+            <div class="mb-6">
+                <label for="country" class="block text-gray-700 poppins text-sm font-medium mb-2">Select your
+                    country:</label>
+                <select id="country" name="country"
+                    class="w-full px-4 py-2 rounded-xl poppins border border-gray-300 text-gray-700 text-sm focus:ring-2 focus:ring-[#4CAF50] focus:outline-none">
+                    <option value="">-- Choose a country --</option>
+                    <option value="US">United States</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="CA">Canada</option>
+                    <option value="AU">Australia</option>
+                    <option value="DE">Germany</option>
+                    <option value="FR">France</option>
+                    <option value="IT">Italy</option>
+                    <option value="PK">Pakistan</option>
+                    <option value="IN">India</option>
+                    <option value="JP">Japan</option>
+                    <option value="CN">China</option>
+                    <option value="BR">Brazil</option>
+                    <option value="ZA">South Africa</option>
+                    <option value="AE">United Arab Emirates</option>
+                </select>
+            </div>
 
-      <div class="flex justify-center gap-4">
-        <button id="accept-cookies"
-          class="px-6 poppins py-2 rounded-xl bg-[#B4D5F9] text-gray-600 text-sm font-medium hover:bg-[#6ea9e8] transition-all shadow-sm">
-          Accept
-        </button>
-        <button id="decline-cookies"
-          class="px-6 poppins py-2 rounded-xl bg-gray-300 text-gray-700 text-sm font-medium hover:bg-gray-400 transition-all shadow-sm">
-          Decline
-        </button>
-      </div>
+            <div class="flex justify-center gap-4">
+                <button id="accept-cookies"
+                    class="px-6 poppins py-2 rounded-xl bg-[#B4D5F9] text-gray-600 text-sm font-medium hover:bg-[#6ea9e8] transition-all shadow-sm">
+                    Accept
+                </button>
+                <button id="decline-cookies"
+                    class="px-6 poppins py-2 rounded-xl bg-gray-300 text-gray-700 text-sm font-medium hover:bg-gray-400 transition-all shadow-sm">
+                    Decline
+                </button>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 <div class="z-[101] fixed">
-  <!-- Overlay -->
-  <div id="overlay"
-    class="fixed cal  inset-0 bg-black/50 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-500 ">
-  </div>
-
-  <!-- Sliding Menu Panel -->
-  <div id="menuPanel"
-    class="fixed top-0 right-0 h-full w-full sm:w-[400px] bg-[white] text-gray-900 p-6 transform translate-x-full transition-transform duration-500 ease-in-out z-50 flex flex-col justify-between">
-
-    <!-- Close Button -->
-    <button id="closeMenu" class="absolute top-4 right-4 bg-[white] text-gray-900 hover:text-black transition">
-      ✕
-    </button>
-
-    <!-- Logo -->
-    <div class="flex items-center gap-2 mt-8">
-      <div class="text-2xl font-bold bg-gradient-to-r text-[#a68b4a] bg-clip-text text-transparent">Wims
-        Textiles</div>
+    <!-- Overlay -->
+    <div id="overlay"
+        class="fixed cal  inset-0 bg-black/50 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-500 ">
     </div>
 
-    <!-- Title -->
-    <div class="mt-8 text-3xl raleway font-bold leading-snug">
-      We Shape Interior Designs,<br />
-      Crafting Timeless And<br />
-      Inspiring Spaces
-    </div>
+    <!-- Sliding Menu Panel -->
+    <div id="menuPanel"
+        class="fixed top-0 right-0 h-full w-full sm:w-[400px] bg-[white] text-gray-900 p-6 transform translate-x-full transition-transform duration-500 ease-in-out z-50 flex flex-col justify-between">
 
-    <!-- Images Grid -->
-    <div class="mt-8 grid grid-cols-3 gap-3">
-      <img  src="./public/images/u6.avif" alt="measurement and scissors" class="rounded-xl object-cover w-full h-24" />
+        <!-- Close Button -->
+        <button id="closeMenu" class="absolute top-4 right-4 bg-[white] text-gray-900 hover:text-black transition">
+            ✕
+        </button>
 
-      <img  src="./public/images/u1.avif" class="rounded-xl object-cover w-full h-24" />
-      <img  src="./public/images/u2.avif" class="rounded-xl object-cover w-full h-24" />
-      <img  src="./public/images/u3.avif" class="rounded-xl object-cover w-full h-24" />
-      <img  src="./public/images/u4.avif" class="rounded-xl object-cover w-full h-24" />
-      <img  src="./public/images/u5.avif" class="rounded-xl object-cover w-full h-24" />
-    </div>
+        <!-- Logo -->
+        <div class="flex items-center gap-2 mt-8">
+            <div class="text-2xl font-bold bg-gradient-to-r text-[#a68b4a] bg-clip-text text-transparent">Wims
+                Textiles</div>
+        </div>
 
-    <!-- Address -->
-    <div class="mt-10 text-gray-900 text-sm">
-      Bergstraße 34, 42651 <br> Solingen, Germany
+        <!-- Title -->
+        <div class="mt-8 text-3xl raleway font-bold leading-snug">
+            We Shape Interior Designs,<br />
+            Crafting Timeless And<br />
+            Inspiring Spaces
+        </div>
+
+        <!-- Images Grid -->
+        <div class="mt-8 grid grid-cols-3 gap-3">
+            <img src="./public/images/u6.avif" alt="measurement and scissors"
+                class="rounded-xl object-cover w-full h-24" />
+
+            <img src="./public/images/u1.avif" class="rounded-xl object-cover w-full h-24" />
+            <img src="./public/images/u2.avif" class="rounded-xl object-cover w-full h-24" />
+            <img src="./public/images/u3.avif" class="rounded-xl object-cover w-full h-24" />
+            <img src="./public/images/u4.avif" class="rounded-xl object-cover w-full h-24" />
+            <img src="./public/images/u5.avif" class="rounded-xl object-cover w-full h-24" />
+        </div>
+
+        <!-- Address -->
+        <div class="mt-10 text-gray-900 text-sm">
+            Bergstraße 34, 42651 <br> Solingen, Germany
+        </div>
     </div>
-  </div>
 </div>
 
 <body class="">
 
 
-  <!-- Preloader -->
-  <div id="preloader"
-    class="fixed inset-0 z-[99999] flex flex-col items-center justify-center bg-white/90 backdrop-blur-md">
-    <div class="w-16 h-16 border-4 border-[#B4D5F9] border-t-transparent rounded-full animate-spin"></div>
-    <p class="mt-4 mons text-gray-600 tracking-wider text-sm">Loading WIMS...</p>
-  </div>
+    <!-- Preloader -->
+    <div id="preloader"
+        class="fixed inset-0 z-[99999] flex flex-col items-center justify-center bg-white/90 backdrop-blur-md">
+        <div class="w-16 h-16 border-4 border-[#B4D5F9] border-t-transparent rounded-full animate-spin"></div>
+        <p class="mt-4 mons text-gray-600 tracking-wider text-sm">Loading WIMS...</p>
+    </div>
 
 
 
-  <!-- Desktop Navbar -->
-  <nav id="desktop-nav"
-    class="absolute border-b-[0.33px] bg-white border-[#636363]  hidden z-[100] transition-all lg:flex justify-around  items-center top-[0px] py-2 w-full">
-    <div class="w-fit text-2xl mons"><img  class="w-[100px] " src="./public/images/logo.png" alt=""></div>
-    <div class="w-fit">
-      <ul class="flex items-center gap-4 ">
-        <li><a href="./index.html" class="cal tracking-wider text-sm font-[500] text-gray-800">HOME</a></li>
-        <li><a href="#" class="cal tracking-wider s text-sm font-[500] text-gray-800">ABOUT</a></li>
-        <!-- <li             class="poppins tracking-wider text-sm font-[500] text-[#e0dfdf]"> </li> -->
+    <!-- Desktop Navbar -->
+    <nav id="desktop-nav"
+        class=" border-b-[0.33px] bg-white border-[#636363]  hidden z-[100] !top-0 transition-all lg:flex justify-around  items-center  py-2 w-full">
+        <div class="w-fit text-2xl mons"><img class="w-[100px] " src="./public/images/logo.png" alt=""></div>
+        <div class="w-fit">
+            <ul class="flex items-center gap-4 ">
+                <li><a href="./index.html" class="cal tracking-wider text-sm font-[500] text-gray-800">HOME</a></li>
+                <li><a href="#" class="cal tracking-wider s text-sm font-[500] text-gray-800">ABOUT</a></li>
+                <!-- <li             class="poppins tracking-wider text-sm font-[500] text-[#e0dfdf]"> </li> -->
 
-        <li data-dropdown-toggle="dropdown"><a href="#"
-            class="poppins tracking-wider text-sm font-[500] text-gray-800">SERVICES <i
-              class="fa-solid fa-chevron-down"></i></a>
-        </li>
+                <li data-dropdown-toggle="dropdown"><a href="#"
+                        class="poppins tracking-wider font-semibold text-sm  text-gray-800">PRODUCTS <i
+                            class="fa-solid fa-chevron-down"></i></a>
+                </li>
 
-        <!-- Dropdown menu -->
-        <div id="dropdown"
-          class="z-[100] hidden w-44 rounded-lg shadow-sm bg-white/20 backdrop-blur-md dark:bg-gray-700/30 divide-y divide-gray-100 dark:divide-gray-600">
-          <ul class="py-2 mons rounded-md text-sm text-[gray-600] dark:text-gray-200"
-            aria-labelledby="dropdownDefaultButton">
-            <li><a href="#"
-                class="block px-4 py-2 hover:bg-white/30 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-            </li>
-            <li><a href="#"
-                class="block px-4 py-2 hover:bg-white/30 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a></li>
-            <li><a href="#"
-                class="block px-4 py-2 hover:bg-white/30 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a></li>
-            <li><a href="#" class="block px-4 py-2 hover:bg-white/30 dark:hover:bg-gray-600 dark:hover:text-white">Sign
-                out</a></li>
-          </ul>
+                <!-- Dropdown menu -->
+                <div id="dropdown"
+                    class="z-[100] hidden w-[750px] grid grid-cols-2 md:grid-cols-3 gap-6 p-6 rounded-2xl shadow-lg bg-white">
+
+                    <!-- Kids -->
+                    <div class="space-y-2">
+                        <h3 class="cal text-lg font-semibold text-[#a68b4a]">Kids</h3>
+                        <p class="text-xs poppins text-black/70">Soft and safe textiles designed specially for
+                            children’s comfort and durability.</p>
+                    </div>
+
+                    <!-- Adults -->
+                    <div class="space-y-2">
+                        <h3 class="cal text-lg font-semibold text-[#a68b4a]">Adults</h3>
+                        <p class="text-xs poppins text-black/70">Premium clothing and home textiles tailored for
+                            everyday luxury and comfort.</p>
+                    </div>
+
+                    <!-- Dyed -->
+                    <div class="space-y-2">
+                        <h3 class="cal text-lg font-semibold text-[#a68b4a]">Dyed</h3>
+                        <p class="text-xs poppins text-black/70">Vibrant, colorfast dyed fabrics made with precision and
+                            long-lasting hues.</p>
+                    </div>
+
+                    <!-- Towel -->
+                    <div class="space-y-2">
+                        <h3 class="cal text-lg font-semibold text-[#a68b4a]">Towel</h3>
+                        <p class="text-xs poppins text-black/70">High-quality towels offering exceptional softness,
+                            absorbency, and durability.</p>
+                    </div>
+
+                    <!-- Hotel -->
+                    <div class="space-y-2">
+                        <h3 class="cal text-lg font-semibold text-[#a68b4a]">Hotel</h3>
+                        <p class="text-xs poppins text-black/70">Luxury hotel-grade textiles for premium comfort and a
+                            refined guest experience.</p>
+                    </div>
+
+                    <!-- Hospital -->
+                    <div class="space-y-2">
+                        <h3 class="cal text-lg font-semibold text-[#a68b4a]">Hospital</h3>
+                        <p class="text-xs poppins text-black/70">Durable, hygienic, and comfortable fabrics designed for
+                            healthcare environments.</p>
+                    </div>
+
+                </div>
+
+
+
+                <li><a href="#" class="cal tracking-wider text-sm font-[500] text-gray-800">E-BROUCHER</a></li>
+
+                <li><a href="./index copy.html" class="cal tracking-wider text-sm font-[500] text-gray-800">SHOP</a>
+                </li>
+
+                <li>
+                    <div id="google_translate_element" class=" bg-transparent"></div>
+                </li>
+            </ul>
         </div>
+        <div class="w-fit flex gap-x-3 cal">
+            <div id="google_translate_element"></div>
+            <button class="flex items-center  gap-2 ">
+                <i class="fa-solid text-white p-1.5 text-base rounded-full  fa-phone"></i>
+                <span class="cal tracking-wider text-base font-[500]  text-gray-800">+49 212 65001564 </span>
+            </button>
+            <a href="./contact.html" style="padding:15px 20px 15px 20px"
+                class="group relative flex items-center gap-2 font-bold text-white text-base cal rounded-full bg-[#a68b4a] transition-all duration-500 ease-out hover:scale-[1.03]">
+                <span>Get A Quote!</span>
 
-        <li><a href="#" class="cal tracking-wider text-sm font-[500] text-gray-800">E-BROUCHER</a></li>
-
-        <li><a href="./index copy.html" class="cal tracking-wider text-sm font-[500] text-gray-800">SHOP</a></li>
-
-        <li>
-          <div id="google_translate_element" class=" bg-transparent"></div>
-        </li>
-      </ul>
-    </div>
-    <div class="w-fit flex gap-x-3 cal">
-      <div id="google_translate_element"></div>
-      <button class="flex items-center  gap-2 ">
-        <i class="fa-solid text-white p-1.5 text-base rounded-full  fa-phone"></i>
-        <span class="cal tracking-wider text-base font-[500]  text-gray-800">(+49) 176 20171778</span>
-      </button>
-      <button style="padding:15px 20px 15px 20px"
-        class="group relative flex items-center gap-2 font-bold text-white text-base cal rounded-full bg-[#a68b4a] transition-all duration-500 ease-out hover:scale-[1.03]">
-        <span>Get A Quote!</span>
-
-      </button>
-      <button id="openMenu"><img  class="w-5 h-5" src="./public/images/download.png" alt=""></button>
+            </a>
+            <button id="openMenu"><img class="w-5 h-5" src="./public/images/download.png" alt=""></button>
 
 
 
 
-    </div>
-  </nav>
-
-  <!-- Mobile Navbar -->
-  <div class="lg:hidden">
-    <!-- Top bar -->
-    <nav id="desktop-nav2"
-      class="top-[0px] absolute z-[105] py-2 transition-all left-0 w-full flex items-center justify-between px-6   bg- bg-white ">
-      <!-- Logo -->
-      <div class="text-2xl mons text-[#e0dfdf]"><img  class="w-[100px]" src="./public/images/logo.png" alt=""></div>
-      <div class="flex items-center gap-4"><button style="padding:15px 20px 15px 20px" class="group relative flex items-center gap-2 font-bold text-white text-base cal rounded-full 
-overflow-hidden bg-[#a68b4a] transition-all duration-500 ease-out hover:scale-[1.03]">
-          <span>Get A Quote!</span>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-            class="w-5 h-5 transition-transform duration-300 ease-out group-hover:translate-x-1">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-          </svg>
-          <span
-            class="absolute inset-0 bg-gradient-to-r from-white/30 to-transparent opacity-0 group-hover:opacity-100 translate-x-[-100%] group-hover:translate-x-[100%] transition-all duration-700 ease-out"></span>
-        </button>
-        <!-- <button id="openMenu"><img  class="w-5 h-5" src="./public/images/download.png" alt=""></button> -->
-
-
-        <!-- Hamburger -->
-        <button id="menu-btn" class="flex w-fit z-[105] flex-col space-y-1">
-          <i class="fa-solid fa-bars text-2xl text-[#a68b4a]"></i>
-        </button>
-      </div>
+        </div>
     </nav>
 
-    <!-- Mobile Menu (Hidden by Default, Slides from Right) -->
-    <div id="mobile-menu" class="fixed !z-[107] top-0 right-0 w-3/4 max-w-xs h-screen bg-black/70 backdrop-blur-md  flex flex-col items-center justify-center space-y-6
+    <!-- Mobile Navbar -->
+    <div class="lg:hidden">
+        <!-- Top bar -->
+        <nav id="desktop-nav2"
+            class="top-[0px] absolute z-[105] py-2 transition-all left-0 w-full flex items-center justify-between px-6   bg- bg-white ">
+            <!-- Logo -->
+            <div class="text-2xl mons text-[#e0dfdf]"><img class="w-[100px]" src="./public/images/logo.png" alt="">
+            </div>
+            <div class="flex items-center gap-4"><button style="padding:15px 20px 15px 20px" class="group relative flex items-center gap-2 font-bold text-white text-base cal rounded-full 
+overflow-hidden bg-[#a68b4a] transition-all duration-500 ease-out hover:scale-[1.03]">
+                    <span>Get A Quote!</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        class="w-5 h-5 transition-transform duration-300 ease-out group-hover:translate-x-1">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                    <span
+                        class="absolute inset-0 bg-gradient-to-r from-white/30 to-transparent opacity-0 group-hover:opacity-100 translate-x-[-100%] group-hover:translate-x-[100%] transition-all duration-700 ease-out"></span>
+                </button>
+                <!-- <button id="openMenu"><img  class="w-5 h-5" src="./public/images/download.png" alt=""></button> -->
+
+
+                <!-- Hamburger -->
+                <button id="menu-btn" class="flex w-fit z-[105] flex-col space-y-1">
+                    <i class="fa-solid fa-bars text-2xl text-[#a68b4a]"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu (Hidden by Default, Slides from Right) -->
+        <div id="mobile-menu" class="fixed !z-[107] top-0 right-0 w-3/4 max-w-xs h-screen bg-black/70 backdrop-blur-md  flex flex-col items-center justify-center space-y-6
               transform translate-x-full transition-transform duration-500 ease-in-out">
 
-      <div class=" ">
-        <button id="closemenu"
-          class="poppins  absolute top-6 right-6  text-white bg-[#a68b4a] hover:bg-[#816b38] transition-all duration-300 rounded-full w-8 h-8 flex items-center justify-center shadow-lg">
-          <span class="text-lg font-bold">×</span>
-        </button>
+            <div class=" ">
+                <button id="closemenu"
+                    class="poppins  absolute top-6 right-6  text-white bg-[#a68b4a] hover:bg-[#816b38] transition-all duration-300 rounded-full w-8 h-8 flex items-center justify-center shadow-lg">
+                    <span class="text-lg font-bold">×</span>
+                </button>
 
-        <ul class="flex flex-col items-center gap-6">
-          <li><a href="#" class="mons tracking-wider text-sm font-[500] text-[#e0dfdf]">HOME</a></li>
-          <li><a href="#" class="mons tracking-wider text-sm font-[500] text-[#e0dfdf]">ABOUT</a></li>
-          <li><a href="#" class="mons tracking-wider text-sm font-[500] text-[#e0dfdf]">SERVICES</a></li>
+                <ul class="flex flex-col items-center gap-6">
+                    <li><a href="#" class="mons tracking-wider text-sm font-[500] text-[#e0dfdf]">HOME</a></li>
+                    <li><a href="#" class="mons tracking-wider text-sm font-[500] text-[#e0dfdf]">ABOUT</a></li>
+                    <li><a href="#" class="mons tracking-wider text-sm font-[500] text-[#e0dfdf]">SERVICES</a></li>
 
-          <li><a href="#" class="mons tracking-wider text-sm font-[500] text-[#e0dfdf]">E-BROCHURE</a></li>
-          <li><a href="#" class="mons tracking-wider text-sm font-[500] text-[#e0dfdf]">SHOP</a></li>
-          <li>
-        </ul>
+                    <li><a href="#" class="mons tracking-wider text-sm font-[500] text-[#e0dfdf]">E-BROCHURE</a></li>
+                    <li><a href="#" class="mons tracking-wider text-sm font-[500] text-[#e0dfdf]">SHOP</a></li>
+                    <li>
+                </ul>
 
-        <!-- Contact Button -->
-        <button
-          class="mons border border-[#e0dfdf] text-[#e0dfdf] text-[14px] px-6 py-2 mt-6 relative overflow-hidden transition-all duration-500 ease-out hover:text-gray-400">
-          <span class="relative z-10">CONTACT US</span>
-          <span
-            class="absolute inset-0 bg-[#f0f0f0] scale-x-0 origin-left transition-transform duration-500 ease-out hover:scale-x-100"></span>
-        </button>
-      </div>
+                <!-- Contact Button -->
+                <button
+                    class="mons border border-[#e0dfdf] text-[#e0dfdf] text-[14px] px-6 py-2 mt-6 relative overflow-hidden transition-all duration-500 ease-out hover:text-gray-400">
+                    <span class="relative z-10">CONTACT US</span>
+                    <span
+                        class="absolute inset-0 bg-[#f0f0f0] scale-x-0 origin-left transition-transform duration-500 ease-out hover:scale-x-100"></span>
+                </button>
+            </div>
+        </div>
     </div>
-  </div>
+
+
+    <section class="relative h-[350px] bg-center flex items-end bg-cover bg-no-repeat w-full pt-[100px]"
+        style="background-image: url(./public/images/privacypolicy.jpg);">
+
+        <!-- Bottom-to-top black gradient overlay -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
+
+
+
+        <div class="relative container 2xl:max-w-[1530px] mx-auto p px-4 pb-14">
+            <h1 class="cal text-5xl text-white text-start">General Terms and Condition</h1>
+        </div>
+
+    </section>
+
+
+    <section>
+        <div class="container 2xl:max-w-[1530px] mx-auto px-4">
+            <!-- Table of contents -->
+            <div class="grid relative gap-x-4  pt-8 lg:grid-cols-2">
+                <div class="w-full">
+                    <div class="toc-container pb-8" role="navigation" aria-label="Table of contents">
+                        <h2 class="toc-title cal text-4xl font-light">Table of contents</h2>
+
+                        <ul class="toc-list space-y-1 mt-4 poppins text-sm">
+                            <li><a href="#article-1" id="toc-article-1" class="block hover:text-[#a68b4a]">Article 1 –
+                                    Definitions</a></li>
+                            <li><a href="#article-2" id="toc-article-2" class="block hover:text-[#a68b4a]">Article 2 –
+                                    Identity
+                                    of the entrepreneur</a></li>
+                            <li><a href="#article-3" id="toc-article-3" class="block hover:text-[#a68b4a]">Article 3 –
+                                    Applicability</a></li>
+                            <li><a href="#article-4" id="toc-article-4" class="block hover:text-[#a68b4a]">Article 4 –
+                                    The
+                                    offer</a></li>
+                            <li><a href="#article-5" id="toc-article-5" class="block hover:text-[#a68b4a]">Article 5 –
+                                    The
+                                    agreement</a></li>
+                            <li><a href="#article-6" id="toc-article-6" class="block hover:text-[#a68b4a]">Article 6 –
+                                    Right of
+                                    withdrawal</a></li>
+                            <li><a href="#article-7" id="toc-article-7" class="block hover:text-[#a68b4a]">Article 7 –
+                                    Costs in
+                                    the event of withdrawal</a></li>
+                            <li><a href="#article-8" id="toc-article-8" class="block hover:text-[#a68b4a]">Article 8 –
+                                    Exclusion
+                                    of the right of withdrawal</a></li>
+                            <li><a href="#article-9" id="toc-article-9" class="block hover:text-[#a68b4a]">Article 9 –
+                                    The
+                                    price</a></li>
+                            <li><a href="#article-10" id="toc-article-10" class="block hover:text-[#a68b4a]">Article 10
+                                    –
+                                    Conformity and guarantee</a></li>
+                            <li><a href="#article-11" id="toc-article-11" class="block hover:text-[#a68b4a]">Article 11
+                                    –
+                                    Delivery and execution</a></li>
+                            <li><a href="#article-12" id="toc-article-12" class="block hover:text-[#a68b4a]">Article 12
+                                    –
+                                    Duration transactions: duration, termination and extension</a></li>
+                            <li><a href="#article-13" id="toc-article-13" class="block hover:text-[#a68b4a]">Article 13
+                                    –
+                                    Payment</a></li>
+                            <li><a href="#article-14" id="toc-article-14" class="block hover:text-[#a68b4a]">Article 14
+                                    –
+                                    Complaints procedure</a></li>
+                            <li><a href="#article-15" id="toc-article-15" class="block hover:text-[#a68b4a]">Article 15
+                                    –
+                                    Disputes</a></li>
+                            <li><a href="#article-16" id="toc-article-16" class="block hover:text-[#a68b4a]">Article 16
+                                    –
+                                    Additional or deviating provisions</a></li>
+                        </ul>
+                    </div>
+
+                    <div class=""> <!-- Parent container (50% width) -->
+                        <div class="w-full  py-4 poppins text-black space-y-4">
+
+                            <!-- Article title -->
+                            <h2 id="article-1" class="text-2xl font-semibold">Article 1 – Definitions</h2>
+
+                            <!-- Subtitle -->
+                            <p class="font-semibold">
+                                In these terms and conditions the following terms shall have the following meanings:
+                            </p>
+
+                            <!-- List of definitions -->
+                            <ol class="list-decimal list-inside space-y-2 text-[15px] leading-relaxed">
+                                <li><span class="font-semibold italic">Reflection period:</span> the period within which
+                                    the
+                                    consumer can exercise his right of withdrawal; Read all about the reflection period.
+                                </li>
+                                <li><span class="font-semibold italic">Consumer:</span> the natural person who does not
+                                    act in the
+                                    exercise of a profession or business and who enters into a distance contract with
+                                    the
+                                    entrepreneur.</li>
+                                <li><span class="font-semibold italic">Day:</span> calendar day.</li>
+                                <li><span class="font-semibold italic">Duration transaction:</span> a distance contract
+                                    relating to
+                                    a series of products and/or services, the supply and/or purchase obligation of which
+                                    is spread
+                                    over time.</li>
+                                <li><span class="font-semibold italic">Durable medium:</span> any instrument which
+                                    enables the
+                                    consumer or entrepreneur to store information addressed personally to him in a way
+                                    accessible
+                                    for future consultation and unaltered reproduction of the stored information.</li>
+                                <li><span class="font-semibold italic">Right of withdrawal:</span> the option for the
+                                    consumer to
+                                    cancel the distance contract within the cooling-off period.</li>
+                                <li><span class="font-semibold italic">Model form:</span> the model withdrawal form made
+                                    available
+                                    by the trader that a consumer can fill out when he wishes to exercise his right of
+                                    withdrawal.
+                                </li>
+                                <li><span class="font-semibold italic">Entrepreneur:</span> the natural or legal person
+                                    who offers
+                                    products and/or services remotely to consumers.</li>
+                                <li><span class="font-semibold italic">Distance contract:</span> an agreement concluded
+                                    between the
+                                    consumer within the framework of a system organised by the entrepreneur for the
+                                    distance sale of
+                                    products and/or services, whereby up to and including the moment the agreement is
+                                    concluded
+                                    exclusive use is made of one or more techniques for distance communication.</li>
+                                <li><span class="font-semibold italic">Distance communication technology:</span> means
+                                    that can be
+                                    used to conclude an agreement without the consumer and the entrepreneur being in the
+                                    same place
+                                    at the same time.</li>
+                                <li><span class="font-semibold italic">General Terms and Conditions:</span> these
+                                    General Terms and
+                                    Conditions of the entrepreneur.</li>
+                            </ol>
+
+                        </div>
+
+                        <!-- Parent container (50% width) -->
+                        <div class="w-full py-4 poppins text-black space-y-4">
+
+                            <!-- Article title -->
+                            <h2 id="article-2" class="text-2xl font-semibold">Article 2 – Identity of the entrepreneur
+                            </h2>
+
+                            <!-- Business details -->
+                            <div class="text-[15px] leading-relaxed space-y-1">
+                                <p><span class="font-semibold">Wims Textiles</span></p>
+                                <p>Bergstraße 34, </p>
+                                <p>42651 Solingen</p>
+                                <p>Germany</p>
+                                <p><span class="font-semibold">T:</span> +49 212 65001564</p>
+                                <p><span class="font-semibold">E:</span> <a href="mailto:info@wims-textiles.com"
+                                        class="text-[#a68b4a] hover:underline">info@wims-textiles.com</a></p>
+                            </div>
+
+                        </div>
+                        <!-- Article 3 – Applicability -->
+                        <div class="w-full py-4 poppins text-black space-y-4">
+
+                            <!-- Article title -->
+                            <h2 id="article-3" class="text-2xl font-semibold">Article 3 – Applicability</h2>
+
+                            <!-- Article content -->
+                            <div class="text-[15px] leading-relaxed space-y-3">
+                                <p>These general terms and conditions apply to every offer made by the entrepreneur and
+                                    to every
+                                    distance contract and orders concluded between the entrepreneur and the consumer.
+                                </p>
+
+                                <p>Before the distance contract is concluded, the text of these general terms and
+                                    conditions will be
+                                    made available to the consumer. If this is not reasonably possible, the consumer
+                                    will be
+                                    informed before the distance contract is concluded that the general terms and
+                                    conditions are
+                                    available for inspection at the company's premises and will be sent to the consumer
+                                    free of
+                                    charge as soon as possible upon request.</p>
+
+                                <p>If the distance contract is concluded electronically, notwithstanding the previous
+                                    paragraph, and
+                                    before the distance contract is concluded, the text of these general terms and
+                                    conditions may be
+                                    made available to the consumer electronically in such a way that the consumer can
+                                    easily store
+                                    them on a durable data carrier. If this is not reasonably possible, before the
+                                    distance contract
+                                    is concluded, the consumer will be informed where the general terms and conditions
+                                    can be
+                                    consulted electronically and that they will be sent free of charge to the consumer
+                                    electronically or otherwise at the consumer's request.</p>
+
+                                <p>In the event that specific product or service conditions apply in addition to these
+                                    general terms
+                                    and conditions, the second and third paragraphs apply accordingly and, in the event
+                                    of
+                                    conflicting general terms and conditions, the consumer can always rely on the
+                                    applicable
+                                    provision that is most favourable to him.</p>
+
+                                <p>If one or more provisions in these general terms and conditions are at any time
+                                    wholly or
+                                    partially null and void or are annulled, the agreement and these terms and
+                                    conditions will
+                                    otherwise remain in force and the provision in question will be replaced without
+                                    delay by mutual
+                                    agreement with a provision that approximates the purport of the original as closely
+                                    as possible.
+                                </p>
+
+                                <p>Situations not covered by these terms and conditions must be assessed 'in the spirit'
+                                    of these
+                                    terms and conditions.</p>
+
+                                <p>Any ambiguities regarding the interpretation or content of one or more provisions of
+                                    our terms
+                                    and conditions should be interpreted 'in the spirit' of these terms and conditions.
+                                </p>
+                            </div>
+
+                        </div>
+                        <!-- Article 4 – The offer -->
+                        <div class="w-full py-4 poppins text-black space-y-4">
+
+                            <!-- Article title -->
+                            <h2 id="article-4" class="text-2xl font-semibold">Article 4 – The offer</h2>
+
+                            <!-- Article content -->
+                            <div class="text-[15px] leading-relaxed space-y-3">
+                                <p>If an offer has a limited period of validity or is made subject to conditions, this
+                                    will be
+                                    explicitly stated in the offer.</p>
+
+                                <p>The offer is non-binding. The entrepreneur is entitled to modify and adjust the
+                                    offer.</p>
+
+                                <p>The offer contains a complete and accurate description of the products and/or
+                                    services offered.
+                                    The description is sufficiently detailed to enable the consumer to properly assess
+                                    the offer. If
+                                    the entrepreneur uses images, these must be a true representation of the products
+                                    and/or
+                                    services offered. Obvious mistakes or errors in the offer are not binding on the
+                                    entrepreneur.
+                                </p>
+
+                                <p>All images, specifications, and data in this offer are indicative and cannot give
+                                    rise to
+                                    compensation or termination of the agreement.</p>
+
+                                <p>Product images are a true representation of the products offered. The company cannot
+                                    guarantee
+                                    that the displayed colors exactly match the actual colors of the products.</p>
+
+                                <p>Each offer contains sufficient information to clearly indicate to the consumer the
+                                    rights and
+                                    obligations associated with accepting the offer. This specifically concerns:</p>
+
+                                <!-- Sublist -->
+                                <ul class="list-disc list-inside space-y-1 pl-2">
+                                    <li>the price including taxes;</li>
+                                    <li>any shipping costs;</li>
+                                    <li>the manner in which the agreement will be concluded and the actions required for
+                                        this;</li>
+                                    <li>whether or not the right of withdrawal applies;</li>
+                                    <li>the method of payment, delivery and execution of the agreement;</li>
+                                    <li>the period for accepting the offer, or the period within which the entrepreneur
+                                        guarantees
+                                        the price;</li>
+                                    <li>the amount of the rate for distance communication if the costs of using the
+                                        distance
+                                        communication technology are calculated on a basis other than the regular basic
+                                        rate for the
+                                        means of communication used;</li>
+                                    <li>whether the agreement is archived after it has been concluded, and if so, where
+                                        the consumer
+                                        can consult it;</li>
+                                    <li>the manner in which the consumer, before concluding the agreement, can check
+                                        and, if
+                                        necessary, correct the data provided by him in connection with the agreement;
+                                    </li>
+                                    <li>any other languages in which, in addition to Dutch, the agreement may be
+                                        concluded;</li>
+                                    <li>the codes of conduct to which the trader has submitted and the way in which the
+                                        consumer can
+                                        consult these codes of conduct electronically; and</li>
+                                    <li>the minimum duration of the distance contract in the case of a long-term
+                                        transaction.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <!-- Article 5 – The Agreement -->
+                        <div class="w-full py-4 poppins text-black space-y-4">
+                            <h2 id="article-5" class="text-2xl font-semibold">Article 5 – The Agreement</h2>
+                            <div class="text-[15px] leading-relaxed space-y-3">
+                                <p>Subject to the provisions of paragraph 4, the agreement is concluded at the moment
+                                    the consumer
+                                    accepts the offer and meets the conditions set therein.</p>
+                                <p>If the consumer has accepted the offer electronically, the entrepreneur will
+                                    immediately confirm
+                                    receipt of acceptance of the offer electronically. As long as the entrepreneur has
+                                    not confirmed
+                                    this acceptance, the consumer may terminate the agreement.</p>
+                                <p>If the agreement is concluded electronically, the entrepreneur will take appropriate
+                                    technical
+                                    and organizational measures to secure the electronic transfer of data and ensure a
+                                    secure web
+                                    environment. If the consumer can pay electronically, the entrepreneur will implement
+                                    appropriate
+                                    security measures.</p>
+                                <p>The entrepreneur may, within legal frameworks, investigate whether the consumer can
+                                    meet their
+                                    payment obligations, as well as all the facts and factors relevant to responsibly
+                                    entering into
+                                    the distance contract. If, based on this investigation, the entrepreneur has good
+                                    reason not to
+                                    enter into the contract, they are entitled to refuse an order or request with
+                                    reasons or to
+                                    impose special conditions on its execution.</p>
+                                <p>In the case of a long-term transaction, the provision in the previous paragraph only
+                                    applies to
+                                    the first delivery.</p>
+                                <p>Each agreement is entered into under the suspensive conditions of sufficient
+                                    availability of the
+                                    products concerned.</p>
+                                <p>The entrepreneur will send the following information to the consumer with the product
+                                    or service,
+                                    in writing or in such a way that the consumer can store it in an accessible manner
+                                    on a durable
+                                    data carrier:</p>
+                                <ul class="list-disc list-inside space-y-1 pl-2">
+                                    <li>the visiting address of the entrepreneur's establishment where the consumer can
+                                        go with
+                                        complaints;</li>
+                                    <li>the conditions under which and the manner in which the consumer can exercise the
+                                        right of
+                                        withdrawal, or a clear statement regarding the exclusion of the right of
+                                        withdrawal;</li>
+                                    <li>the information about warranties and existing after-sales service;</li>
+                                    <li>the information included in Article 4, paragraph 3 of these terms and
+                                        conditions, unless the
+                                        entrepreneur has already provided this information to the consumer prior to the
+                                        execution of
+                                        the agreement;</li>
+                                    <li>the requirements for terminating the agreement if the agreement has a duration
+                                        of more than
+                                        one year or is of indefinite duration.</li>
+                                </ul>
+                                <p>Goods remain our property until full payment has been made.</p>
+                            </div>
+                        </div>
+
+                        <!-- Article 6 – Right of withdrawal -->
+                        <div class="w-full py-4 poppins text-black space-y-4">
+                            <h2 id="article-6" class="text-2xl font-semibold">Article 6 – Right of withdrawal</h2>
+                            <div class="text-[15px] leading-relaxed space-y-3">
+                                <p><strong>Upon delivery of products:</strong></p>
+                                <p>When purchasing products, consumers have the right to cancel the agreement without
+                                    giving reasons
+                                    within 14 days. This cooling-off period begins on the day after the consumer, or a
+                                    representative designated in advance by the consumer and notified to the company,
+                                    receives the
+                                    product.</p>
+                                <p>During the cooling-off period, the consumer will handle the product and its packaging
+                                    with care.
+                                    They will only unpack or use the product to the extent necessary to assess whether
+                                    they wish to
+                                    keep it. If they exercise their right of withdrawal, they will return the product
+                                    with all
+                                    accessories supplied and – if reasonably possible – in its original condition and
+                                    packaging to
+                                    the entrepreneur, in accordance with the reasonable and clear instructions provided
+                                    by the
+                                    entrepreneur.</p>
+                                <p>If the consumer wishes to exercise their right of withdrawal, they are required to
+                                    notify the
+                                    entrepreneur within 14 days of receiving the product. This notification must be made
+                                    using the
+                                    standard form or another means of communication, such as email. After the consumer
+                                    has indicated
+                                    their intention to exercise their right of withdrawal, they must return the product
+                                    within 14
+                                    days. The consumer must prove that the delivered goods were returned on time, for
+                                    example, by
+                                    providing proof of shipment.</p>
+                                <p>If the customer has not indicated that they wish to exercise their right of
+                                    withdrawal after the
+                                    periods mentioned in paragraphs 2 and 3 have expired, or has not returned the
+                                    product to the
+                                    entrepreneur, the purchase is final.</p>
+
+                                <p><strong>When providing services:</strong></p>
+                                <p>When providing services, the consumer has the option to cancel the contract without
+                                    giving any
+                                    reason for at least 14 days, starting on the day the contract is concluded. In order
+                                    to exercise
+                                    his right of withdrawal, the consumer will follow the reasonable and clear
+                                    instructions provided
+                                    by the entrepreneur with the offer and/or at the latest upon delivery.</p>
+                            </div>
+                        </div>
+
+                        <!-- Article 7 – Costs in case of revocation -->
+                        <div class="w-full py-4 poppins text-black space-y-4">
+                            <h2 id="article-7" class="text-2xl font-semibold">Article 7 – Costs in case of revocation
+                            </h2>
+                            <div class="text-[15px] leading-relaxed space-y-3">
+                                <p>If the consumer exercises his right of withdrawal, he will be responsible for at most
+                                    the costs
+                                    of return.</p>
+                                <p>If the consumer has paid an amount, the entrepreneur will refund this amount as soon
+                                    as possible,
+                                    but no later than 14 days after cancellation. This is subject to the condition that
+                                    the product
+                                    has already been received by the online retailer or conclusive proof of complete
+                                    return can be
+                                    provided. Refunds will be made via the same payment method used by the consumer,
+                                    unless the
+                                    consumer explicitly consents to a different payment method.</p>
+                                <p>In the event of damage to the product due to careless handling by the consumer, the
+                                    consumer is
+                                    liable for any decrease in value of the product.</p>
+                                <p>The consumer cannot be held liable for any diminished value of the product if the
+                                    entrepreneur
+                                    has not provided all legally required information about the right of withdrawal,
+                                    which must be
+                                    provided before concluding the purchase agreement.</p>
+                            </div>
+                        </div>
+
+                        <!-- Article 8 – Exclusion of the right of withdrawal -->
+                        <div class="w-full py-4 poppins text-black space-y-4">
+                            <h2 id="article-8" class="text-2xl font-semibold">Article 8 – Exclusion of the right of
+                                withdrawal</h2>
+                            <div class="text-[15px] leading-relaxed space-y-3">
+                                <p>The entrepreneur can exclude the consumer's right of withdrawal for products as
+                                    described in
+                                    paragraphs 2 and 3. The exclusion of the right of withdrawal only applies if the
+                                    entrepreneur
+                                    has clearly stated this in the offer, at least in good time before the conclusion of
+                                    the
+                                    agreement.</p>
+                                <p><strong>Exclusion of the right of withdrawal is only possible for services:</strong>
+                                </p>
+                                <ul class="list-disc list-inside space-y-1 pl-2">
+                                    <li>concerning accommodation, transport, restaurant business or leisure activities
+                                        to be
+                                        performed on a specific date or during a specific period;</li>
+                                    <li>the supply of which has begun with the express consent of the consumer before
+                                        the
+                                        cooling-off period has expired;</li>
+                                    <li>concerning betting and lotteries.</li>
+                                </ul>
+                                <p><strong>Exclusion of the right of withdrawal is only possible for products:</strong>
+                                </p>
+                                <ul class="list-disc list-inside space-y-1 pl-2">
+                                    <li>which have been created by the entrepreneur in accordance with the consumer's
+                                        specifications;</li>
+                                    <li>that are clearly personal in nature;</li>
+                                    <li>which by their nature cannot be returned;</li>
+                                    <li>that can spoil or become outdated quickly;</li>
+                                    <li>the price of which is subject to fluctuations in the financial market over which
+                                        the
+                                        entrepreneur has no influence;</li>
+                                    <li>for individual newspapers and magazines;</li>
+                                    <li>for audio and video recordings and computer software of which the consumer has
+                                        broken the
+                                        seal;</li>
+                                    <li>for hygiene products where the consumer has broken the seal.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Article 9 – The price -->
+                        <div class="w-full py-4 poppins text-black space-y-4">
+                            <h2 id="article-9" class="text-2xl font-semibold">Article 9 – The price</h2>
+                            <div class="text-[15px] leading-relaxed space-y-3">
+                                <p>During the validity period stated in the offer, the prices of the products and/or
+                                    services offered will not be increased, except for price changes due to changes in
+                                    VAT rates.</p>
+                                <p>Notwithstanding the previous paragraph, the entrepreneur may offer products or
+                                    services with variable prices, the prices of which are subject to fluctuations in
+                                    the financial market over which the entrepreneur has no control. This subjection to
+                                    fluctuations and the fact that any stated prices are target prices will be stated in
+                                    the offer.</p>
+                                <p>Price increases within 3 months after the conclusion of the agreement are only
+                                    permitted if they are the result of statutory regulations or provisions.</p>
+                                <p>The prices stated in the offer of products or services include VAT.</p>
+                                <p>All prices are subject to printing and typographical errors. We accept no liability
+                                    for the consequences of printing and typographical errors. In the event of printing
+                                    or typographical errors, the entrepreneur is not obligated to deliver the product at
+                                    the incorrect price.</p>
+                                <p>Price increases from 3 months after the conclusion of the agreement are only
+                                    permitted if the entrepreneur has stipulated this and:</p>
+                                <ul class="list-disc list-inside space-y-1 pl-2">
+                                    <li>these are the result of statutory regulations or provisions; or</li>
+                                    <li>the consumer has the authority to cancel the agreement with effect from the day
+                                        on which the price increase takes effect.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Article 10 – Conformity and warranty -->
+                        <div class="w-full py-4 poppins text-black space-y-4">
+                            <h2 id="article-10" class="text-2xl font-semibold">Article 10 – Conformity and warranty</h2>
+                            <div class="text-[15px] leading-relaxed space-y-3">
+                                <p>The entrepreneur guarantees that the products and/or services comply with the
+                                    agreement, the specifications stated in the offer, the reasonable requirements of
+                                    soundness and/or usability, and the legal provisions and/or government regulations
+                                    in force on the date the agreement is concluded. If agreed, the entrepreneur also
+                                    guarantees that the product is suitable for other than normal use.</p>
+                                <p>A guarantee provided by the entrepreneur, manufacturer or importer does not affect
+                                    the statutory rights and claims that the consumer can assert against the
+                                    entrepreneur under the agreement.</p>
+                                <p>Any defects or incorrectly delivered products must be reported to the entrepreneur in
+                                    writing within 2 months of discovering the defect.</p>
+                                <p>The entrepreneur's warranty period corresponds to the manufacturer's warranty period.
+                                    However, the entrepreneur is never responsible for the ultimate suitability of the
+                                    products for each individual application by the consumer, nor for any advice
+                                    regarding the use or application of the products.</p>
+                                <p>The warranty does not apply if:</p>
+                                <ul class="list-disc list-inside space-y-1 pl-2">
+                                    <li>the consumer has repaired and/or modified the delivered products themselves or
+                                        has had them repaired and/or modified by third parties;</li>
+                                    <li>the delivered products have been exposed to abnormal conditions or have
+                                        otherwise been treated carelessly or contrary to the instructions of the
+                                        entrepreneur and/or on the packaging;</li>
+                                    <li>the defectiveness is wholly or partly the result of regulations that the
+                                        government has imposed or will impose with regard to the nature or quality of
+                                        the materials used.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Article 11 – Delivery and execution -->
+                        <div class="w-full py-4 poppins text-black space-y-4">
+                            <h2 id="article-11" class="text-2xl font-semibold">Article 11 – Delivery and execution</h2>
+                            <div class="text-[15px] leading-relaxed space-y-3">
+                                <p>The entrepreneur will exercise the utmost care when receiving and executing orders
+                                    for products and when assessing applications for the provision of services.</p>
+                                <p>The place of delivery is the address that the consumer has provided to the company.
+                                </p>
+                                <p>Subject to the provisions of paragraph 4 of this article, the company will fulfill
+                                    accepted orders expeditiously, but no later than within 30 days, unless the consumer
+                                    has agreed to a longer delivery period. If delivery is delayed, or if an order
+                                    cannot be fulfilled or can only be partially fulfilled, the consumer will be
+                                    notified of this no later than 30 days after placing the order. In that case, the
+                                    consumer has the right to terminate the agreement free of charge. The consumer is
+                                    not entitled to compensation.</p>
+                                <p>All delivery times are indicative. Consumers cannot derive any rights from any stated
+                                    delivery times. Exceeding a delivery time does not entitle the consumer to
+                                    compensation.</p>
+                                <p>In the event of dissolution in accordance with paragraph 3 of this article, the
+                                    entrepreneur will refund the amount paid by the consumer as soon as possible, but no
+                                    later than 14 days after dissolution.</p>
+                                <p>If delivery of an ordered product proves impossible, the entrepreneur will endeavor
+                                    to provide a replacement item. The fact that a replacement item is being delivered
+                                    will be clearly and comprehensibly communicated at the time of delivery. The right
+                                    of withdrawal cannot be excluded for replacement items. The costs of any return
+                                    shipping are borne by the entrepreneur.</p>
+                                <p>The risk of damage and/or loss of products rests with the entrepreneur until the
+                                    moment of delivery to the consumer or a previously designated representative made
+                                    known to the entrepreneur, unless expressly agreed otherwise.</p>
+                            </div>
+                        </div>
+
+                        <!-- Article 12 – Duration transactions: duration, termination and extension -->
+                        <div class="w-full py-4 poppins text-black space-y-4">
+                            <h2 id="article-12" class="text-2xl font-semibold">Article 12 – Duration transactions:
+                                duration, termination and extension</h2>
+                            <div class="text-[15px] leading-relaxed space-y-3">
+                                <p><strong>Cancellation</strong></p>
+                                <p>The consumer may at any time terminate an agreement concluded for an indefinite
+                                    period and which extends to the regular delivery of products (including electricity)
+                                    or services, taking into account the agreed termination rules and a notice period of
+                                    no more than one month.</p>
+                                <p>The consumer may terminate an agreement concluded for a definite period and which
+                                    extends to the regular delivery of products (including electricity) or services at
+                                    any time towards the end of the fixed term, taking into account agreed termination
+                                    rules and a notice period of no more than one month.</p>
+                                <p>The consumer may, in the agreements referred to in the previous paragraphs:</p>
+                                <ul class="list-disc list-inside space-y-1 pl-2">
+                                    <li>cancel at any time and not be limited to cancellation at a specific time or
+                                        during a specific period;</li>
+                                    <li>at least cancel them in the same manner as they were entered into by him;</li>
+                                    <li>always cancel with the same notice period as the entrepreneur has stipulated for
+                                        himself.</li>
+                                </ul>
+                                <p><strong>Extension</strong></p>
+                                <p>An agreement entered into for a fixed period and which provides for the regular
+                                    delivery of products (including electricity) or services may not be tacitly extended
+                                    or renewed for a fixed period.</p>
+                                <p>By way of exception to the previous paragraph, an agreement concluded for a fixed
+                                    period and aimed at the regular delivery of daily newspapers, weekly newspapers and
+                                    magazines may be tacitly extended for a fixed period of up to three months, if the
+                                    consumer can cancel this extended agreement at the end of the extension period with
+                                    a notice period of up to one month.</p>
+                                <p>An agreement entered into for a fixed period and which provides for the regular
+                                    delivery of products or services may only be tacitly extended for an indefinite
+                                    period if the consumer may cancel at any time with a notice period of no more than
+                                    one month and a notice period of no more than three months in the event the
+                                    agreement provides for the regular, but less than monthly, delivery of daily
+                                    newspapers, news and weekly newspapers and magazines.</p>
+                                <p>A limited-term agreement for the regular delivery of daily newspapers, news and
+                                    weekly newspapers and magazines for trial purposes (trial or introductory
+                                    subscription) will not be automatically renewed and will end automatically after the
+                                    trial or introductory period.</p>
+                                <p><strong>Duration</strong></p>
+                                <p>If an agreement has a duration of more than one year, the consumer may terminate the
+                                    agreement at any time after one year with a notice period of no more than one month,
+                                    unless reasonableness and fairness oppose termination before the end of the agreed
+                                    duration.</p>
+                            </div>
+                        </div>
+
+                        <!-- Article 13 – Payment -->
+                        <div class="w-full py-4 poppins text-black space-y-4">
+                            <h2 id="article-13" class="text-2xl font-semibold">Article 13 – Payment</h2>
+                            <div class="text-[15px] leading-relaxed space-y-3">
+                                <p>Unless otherwise agreed, amounts owed by the consumer must be paid within 7 working
+                                    days after the start of the cooling-off period as referred to in Article 6 paragraph
+                                    1. In the case of an agreement to provide a service, this period commences after the
+                                    consumer has received confirmation of the agreement.</p>
+                                <p>The consumer has the duty to report any inaccuracies in payment details provided or
+                                    stated to the entrepreneur without delay.</p>
+                                <p>In the event of non-payment by the consumer, the entrepreneur has the right, subject
+                                    to legal restrictions, to charge the consumer reasonable costs made known in
+                                    advance.</p>
+                            </div>
+                        </div>
+
+                        <!-- Article 14 – Complaints procedure -->
+                        <div class="w-full py-4 poppins text-black space-y-4">
+                            <h2 id="article-14" class="text-2xl font-semibold">Article 14 – Complaints procedure</h2>
+                            <div class="text-[15px] leading-relaxed space-y-3">
+                                <p>The entrepreneur has a sufficiently well-known complaints procedure and handles the
+                                    complaint in accordance with this complaints procedure.</p>
+                                <p>Complaints about the performance of the agreement must be submitted to the
+                                    entrepreneur fully and clearly described within 2 months after the consumer has
+                                    discovered the defects.</p>
+                                <p>Complaints submitted to the entrepreneur will be answered within 14 days from the
+                                    date of receipt. If a complaint requires a foreseeably longer processing time, the
+                                    entrepreneur will respond within 14 days with a confirmation of receipt and an
+                                    indication of when the consumer can expect a more detailed response.</p>
+                                <p>If the complaint cannot be resolved by mutual agreement, a dispute arises that is
+                                    subject to the dispute resolution procedure.</p>
+                                <p>In the event of a complaint, a consumer should first contact the entrepreneur. If the
+                                    online store is affiliated with WebwinkelKeur and complaints cannot be resolved
+                                    amicably, the consumer should contact WebwinkelKeur (<a
+                                        href="https://www.webwinkelkeur.nl"
+                                        class="text-blue-600 underline">www.webwinkelkeur.nl</a>), which will mediate
+                                    free of charge. Check whether this online store has a current membership via <a
+                                        href="https://www.webwinkelkeur.nl/ledenlijst/"
+                                        class="text-blue-600 underline">this link</a>. If a solution is still not
+                                    reached, the consumer has the option to have their complaint handled by the
+                                    independent dispute committee appointed by WebwinkelKeur. The decision of this
+                                    committee is binding, and both the entrepreneur and the consumer agree to this
+                                    binding decision. Submitting a dispute to this dispute committee involves costs that
+                                    the consumer must pay to the committee in question. It is also possible to register
+                                    complaints via the European ODR platform (<a href="http://ec.europa.eu/odr"
+                                        class="text-blue-600 underline">http://ec.europa.eu/odr</a>).</p>
+                                <p>A complaint does not suspend the entrepreneur's obligations, unless the entrepreneur
+                                    indicates otherwise in writing.</p>
+                                <p>If a complaint is found to be justified by the entrepreneur, the entrepreneur will,
+                                    at its discretion, either replace or repair the delivered products free of charge.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Article 15 – Disputes -->
+                        <div class="w-full py-4 poppins text-black space-y-4">
+                            <h2 id="article-15" class="text-2xl font-semibold">Article 15 – Disputes</h2>
+                            <div class="text-[15px] leading-relaxed space-y-3">
+                                <p>Agreements between the entrepreneur and the consumer to which these terms and
+                                    conditions apply are governed exclusively by Dutch law, even if the consumer resides
+                                    abroad.</p>
+                                <p>The Vienna Sales Convention does not apply.</p>
+                            </div>
+                        </div>
+
+                        <!-- Article 16 – Additional or deviating provisions -->
+                        <div class="w-full py-4 poppins text-black space-y-4">
+                            <h2 id="article-16" class="text-2xl font-semibold">Article 16 – Additional or deviating
+                                provisions</h2>
+                            <div class="text-[15px] leading-relaxed space-y-3">
+                                <p>Additional or deviating provisions from these general terms and conditions may not be
+                                    to the detriment of the consumer and must be recorded in writing or in such a way
+                                    that they can be stored by the consumer in an accessible manner on a durable data
+                                    carrier.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-end w-full">
+                    <!-- Sticky Table of Contents -->
+                    <aside
+                        class="poppins lg:block hidden w-3/4 h-fit sticky top-10 bg-[#f9fafb] border border-gray-200 rounded-xl p-6 shadow-sm">
+                        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Table of contents</h2>
+                        <ul class="space-y-2 text-gray-700 text-[15px] leading-relaxed">
+                            <li><a href="#article-1" class="hover:text-blue-600 transition">Article 1 – Definitions</a>
+                            </li>
+                            <li><a href="#article-2" class="hover:text-blue-600 transition">Article 2 – Identity of the
+                                    entrepreneur</a></li>
+                            <li><a href="#article-3" class="hover:text-blue-600 transition">Article 3 –
+                                    Applicability</a></li>
+                            <li><a href="#article-4" class="hover:text-blue-600 transition">Article 4 – The offer</a>
+                            </li>
+                            <li><a href="#article-5" class="hover:text-blue-600 transition">Article 5 – The
+                                    agreement</a></li>
+                            <li><a href="#article-6" class="hover:text-blue-600 transition">Article 6 – Right of
+                                    withdrawal</a></li>
+                            <li><a href="#article-7" class="hover:text-blue-600 transition">Article 7 – Costs in the
+                                    event of withdrawal</a></li>
+                            <li><a href="#article-8" class="hover:text-blue-600 transition">Article 8 – Exclusion of the
+                                    right of withdrawal</a></li>
+                            <li><a href="#article-9" class="hover:text-blue-600 transition">Article 9 – The price</a>
+                            </li>
+                            <li><a href="#article-10" class="hover:text-blue-600 transition">Article 10 – Conformity and
+                                    guarantee</a></li>
+                            <li><a href="#article-11" class="hover:text-blue-600 transition">Article 11 – Delivery and
+                                    execution</a></li>
+                            <li><a href="#article-12" class="hover:text-blue-600 transition">Article 12 – Duration
+                                    transactions: duration, termination and extension</a></li>
+                            <li><a href="#article-13" class="hover:text-blue-600 transition">Article 13 – Payment</a>
+                            </li>
+                            <li><a href="#article-14" class="hover:text-blue-600 transition">Article 14 – Complaints
+                                    procedure</a></li>
+                            <li><a href="#article-15" class="hover:text-blue-600 transition">Article 15 – Disputes</a>
+                            </li>
+                            <li><a href="#article-16" class="hover:text-blue-600 transition">Article 16 – Additional or
+                                    deviating provisions</a></li>
+                        </ul>
+                    </aside>
+
+                </div>
+            </div>
+
+
+        </div>
+    </section>
 
 
 
 
+    <footer class="relative bg-cover py-10 bg-center bg-no-repeat"
+        style="background-image: url('./public/images/h1_bg-2.jpg');">
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
 
+        <!-- Content Wrapper -->
+        <div class="relative container 2xl:max-w-[1530px] mx-auto px-4 sm:px-10  grid md:grid-cols-1 gap-10 text-white">
 
-  <footer class="relative bg-cover py-10 bg-center bg-no-repeat"
-    style="background-image: url('./public/images/h1_bg-2.jpg');">
-    <!-- Overlay -->
-    <div class="absolute inset-0 bg-black bg-opacity-60"></div>
-
-    <!-- Content Wrapper -->
-    <div class="relative container 2xl:max-w-[1530px] mx-auto px-4 sm:px-10  grid md:grid-cols-1 gap-10 text-white">
-
-      <!-- Text Content -->
-      <div class="w-full">
-        <span class="text-sm poppins font-semibold text-yellow-400 mb-2 block">✦ 09. GET IN TOUCH</span>
-        <!-- <h2 class="text-5xl sm:text-[65px]  w-full text-start leading-[55px] sm:leading-[70px] mt-8 cal">
+            <!-- Text Content -->
+            <div class="w-full">
+                <span class="text-sm poppins font-semibold text-yellow-400 mb-2 block">✦ 09. GET IN TOUCH</span>
+                <!-- <h2 class="text-5xl sm:text-[65px]  w-full text-start leading-[55px] sm:leading-[70px] mt-8 cal">
           Need Any Textiles <br class="sm:block hidden" />
           Services Help?
         </h2> -->
 
-        <!-- Contact Info -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
-          <!-- Support -->
-          <div>
-            <h4 class="font-semibold mt-8 poppins text-white mb-2">Support</h4>
-            <p class="text-yellow-400 poppins font-semibold text-lg">+49 176 20171778</p>
-            <p class="text-white text-base  font-light poppins ">info@wims-textiles.com</p>
-            <h4 class="font-semibold mt-8 poppins text-white mb-2">Address</h4>
-            <p class="text-white text-base mt-4 font-light poppins ">
-              Bergstraße 34, 42651 Solingen
-            </p>
-          </div>
+                <!-- Contact Info -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
+                    <!-- Support -->
+                    <div>
+                        <h4 class="font-semibold mt-8 poppins text-white mb-2">Support</h4>
+                        <p class="text-yellow-400 poppins font-semibold text-lg">+49 212 65001564 </p>
+                        <p class="text-white text-base  font-light poppins ">info@wims-textiles.com</p>
+                        <h4 class="font-semibold mt-8 poppins text-white mb-2">Address</h4>
+                        <p class="text-white text-base mt-4 font-light poppins ">
+                            Bergstraße 34, 42651 Solingen
+                        </p>
+                    </div>
 
-          <!-- Address -->
-          <div>
-            <h4 class="font-semibold  poppins text-white mb-4">Quick Links</h4>
-            <ul class="space-y-2">
-              <li><a href="/" class="text-white text-sm poppins hover:text-[#a68b4a] transition duration-300">Home</a>
-              </li>
-              <li><a href="/about" class="text-white text-sm poppins hover:text-[#a68b4a] transition duration-300">About
-                  Us</a></li>
-              <li><a href="/services"
-                  class="text-white text-sm poppins hover:text-[#a68b4a] transition duration-300">Services</a></li>
-              <li><a href="/products"
-                  class="text-white text-sm poppins hover:text-[#a68b4a] transition duration-300">Products</a></li>
-              <li><a href="/gallery"
-                  class="text-white text-sm poppins hover:text-[#a68b4a] transition duration-300">Gallery</a></li>
-              <li><a href="/contact"
-                  class="text-white text-sm poppins hover:text-[#a68b4a] transition duration-300">Contact</a></li>
-            </ul>
-          </div>
-          <div>
-            <div class="mt-0 text-white ">
-              <h4 class="font-semibold poppins text-white mb-2 text-lg tracking-wide">
-                Textiles With Trust
-              </h4>
-              <p class="text-sm poppins text-gray-200 leading-relaxed ">
-                As a second-generation family business, we work fairly, flexibly and reliably.
-                Meeting at eye level with mutual trust.
-              </p>
-            </div>
-            <div class="] py-10">
-              <div class="max-w-[1530px] mx-auto ">
-                <h4
-                  class="font-semibold poppins text-white mb-6 text-lg tracking-wide relative inline-block after:content-[''] after:block after:w-10 after:h-[2px] after:bg-[#a68b4a] after:mx-auto after:mt-2">
-                  Connect With Us
-                </h4>
+                    <!-- Address -->
+                    <div>
+                        <h4 class="font-semibold  poppins text-white mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="/"
+                                    class="text-white text-sm poppins hover:text-[#a68b4a] transition duration-300">Home</a>
+                            </li>
+                            <li><a href="/about"
+                                    class="text-white text-sm poppins hover:text-[#a68b4a] transition duration-300">About
+                                    Us</a></li>
+                            <li><a href="/services"
+                                    class="text-white text-sm poppins hover:text-[#a68b4a] transition duration-300">Services</a>
+                            </li>
+                            <li><a href="/products"
+                                    class="text-white text-sm poppins hover:text-[#a68b4a] transition duration-300">Products</a>
+                            </li>
+                            <li><a href="/gallery"
+                                    class="text-white text-sm poppins hover:text-[#a68b4a] transition duration-300">Gallery</a>
+                            </li>
+                            <li><a href="/contact"
+                                    class="text-white text-sm poppins hover:text-[#a68b4a] transition duration-300">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="mt-0 text-white ">
+                            <h4 class="font-semibold poppins text-white mb-2 text-lg tracking-wide">
+                                Textiles With Trust
+                            </h4>
+                            <p class="text-sm poppins text-gray-200 leading-relaxed ">
+                                As a second-generation family business, we work fairly, flexibly and reliably.
+                                Meeting at eye level with mutual trust.
+                            </p>
+                        </div>
+                        <div class="] py-10">
+                            <div class="max-w-[1530px] mx-auto ">
+                                <h4
+                                    class="font-semibold poppins text-white mb-6 text-lg tracking-wide relative inline-block after:content-[''] after:block after:w-10 after:h-[2px] after:bg-[#a68b4a] after:mx-auto after:mt-2">
+                                    Connect With Us
+                                </h4>
 
-                <div class="flex justify-start gap-6 mt-6">
-                  <!-- Facebook -->
-                  <a href="#"
-                    class="text-white hover:text-[#a68b4a] transition transform hover:-translate-y-1 duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path
-                        d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-3h2v-2.3c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V12h2.6l-.4 3h-2.2v7A10 10 0 0 0 22 12" />
-                    </svg>
-                  </a>
+                                <div class="flex justify-start gap-6 mt-6">
+                                    <!-- Facebook -->
+                                    <a href="#"
+                                        class="text-white hover:text-[#a68b4a] transition transform hover:-translate-y-1 duration-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-3h2v-2.3c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V12h2.6l-.4 3h-2.2v7A10 10 0 0 0 22 12" />
+                                        </svg>
+                                    </a>
 
-                  <!-- Instagram -->
-                  <a href="#"
-                    class="text-white hover:text-[#a68b4a] transition transform hover:-translate-y-1 duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path
-                        d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h10zm-5 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm5.5-2a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
-                    </svg>
-                  </a>
+                                    <!-- Instagram -->
+                                    <a href="#"
+                                        class="text-white hover:text-[#a68b4a] transition transform hover:-translate-y-1 duration-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h10zm-5 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm5.5-2a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                                        </svg>
+                                    </a>
 
-                  <!-- LinkedIn -->
-                  <a href="#"
-                    class="text-white hover:text-[#a68b4a] transition transform hover:-translate-y-1 duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path
-                        d="M19 0h-14C2.2 0 0 2.2 0 5v14c0 2.8 2.2 5 5 5h14c2.8 0 5-2.2 5-5V5c0-2.8-2.2-5-5-5zM7.1 20.5H3.6V9h3.5v11.5zM5.4 7.6C4.2 7.6 3.3 6.7 3.3 5.5S4.2 3.4 5.4 3.4s2.1.9 2.1 2.1-.9 2.1-2.1 2.1zm15.1 12.9h-3.5v-5.6c0-1.3-.5-2.2-1.7-2.2-.9 0-1.4.6-1.7 1.2-.1.2-.1.5-.1.7v5.9H10v-11h3.4v1.5c.5-.7 1.3-1.5 2.9-1.5 2.1 0 3.7 1.4 3.7 4.3v6.7z" />
-                    </svg>
-                  </a>
+                                    <!-- LinkedIn -->
+                                    <a href="#"
+                                        class="text-white hover:text-[#a68b4a] transition transform hover:-translate-y-1 duration-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M19 0h-14C2.2 0 0 2.2 0 5v14c0 2.8 2.2 5 5 5h14c2.8 0 5-2.2 5-5V5c0-2.8-2.2-5-5-5zM7.1 20.5H3.6V9h3.5v11.5zM5.4 7.6C4.2 7.6 3.3 6.7 3.3 5.5S4.2 3.4 5.4 3.4s2.1.9 2.1 2.1-.9 2.1-2.1 2.1zm15.1 12.9h-3.5v-5.6c0-1.3-.5-2.2-1.7-2.2-.9 0-1.4.6-1.7 1.2-.1.2-.1.5-.1.7v5.9H10v-11h3.4v1.5c.5-.7 1.3-1.5 2.9-1.5 2.1 0 3.7 1.4 3.7 4.3v6.7z" />
+                                        </svg>
+                                    </a>
 
-                  <!-- Twitter -->
-                  <a href="#"
-                    class="text-white hover:text-[#a68b4a] transition transform hover:-translate-y-1 duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path
-                        d="M22.46 6c-.77.35-1.6.58-2.46.69a4.26 4.26 0 0 0 1.88-2.35 8.27 8.27 0 0 1-2.7 1.03 4.22 4.22 0 0 0-7.2 3.84A12 12 0 0 1 3.1 4.6a4.22 4.22 0 0 0 1.31 5.64 4.2 4.2 0 0 1-1.9-.52v.05a4.22 4.22 0 0 0 3.38 4.13 4.25 4.25 0 0 1-1.89.07 4.22 4.22 0 0 0 3.94 2.93A8.46 8.46 0 0 1 2 19.54a11.9 11.9 0 0 0 6.29 1.84c7.55 0 11.68-6.26 11.68-11.68 0-.18 0-.36-.01-.54A8.36 8.36 0 0 0 22.46 6z" />
-                    </svg>
-                  </a>
+                                    <!-- Twitter -->
+                                    <a href="#"
+                                        class="text-white hover:text-[#a68b4a] transition transform hover:-translate-y-1 duration-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M22.46 6c-.77.35-1.6.58-2.46.69a4.26 4.26 0 0 0 1.88-2.35 8.27 8.27 0 0 1-2.7 1.03 4.22 4.22 0 0 0-7.2 3.84A12 12 0 0 1 3.1 4.6a4.22 4.22 0 0 0 1.31 5.64 4.2 4.2 0 0 1-1.9-.52v.05a4.22 4.22 0 0 0 3.38 4.13 4.25 4.25 0 0 1-1.89.07 4.22 4.22 0 0 0 3.94 2.93A8.46 8.46 0 0 1 2 19.54a11.9 11.9 0 0 0 6.29 1.84c7.55 0 11.68-6.26 11.68-11.68 0-.18 0-.36-.01-.54A8.36 8.36 0 0 0 22.46 6z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
                 </div>
-              </div>
-            </div>
 
-
-          </div>
-
-        </div>
-
-        <div class="flex sm:flex-row flex-col gap-y-3 sm:items-center w-full">
-          <!-- Button -->
-          <button class="group w-full max-w-[170px] relative flex items-center gap-2 px-6 py-3 font-bold text-white text-base rounded-full 
+                <div class="flex sm:flex-row flex-col gap-y-3 sm:items-center w-full">
+                    <!-- Button -->
+                    <button class="group w-full max-w-[170px] relative flex items-center gap-2 px-6 py-3 font-bold text-white text-base rounded-full 
         overflow-hidden bg-[#a68b4a] 
         transition-all duration-500 ease-out hover:scale-[1.03]">
-            <span>Contact Us</span>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-              class="w-5 h-5 transition-transform duration-300 ease-out group-hover:translate-x-1">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-            <span
-              class="absolute inset-0 bg-gradient-to-r from-white/30 to-transparent opacity-0 group-hover:opacity-100 translate-x-[-100%] group-hover:translate-x-[100%] transition-all duration-700 ease-out"></span>
-          </button>
-          <div class="py-4  w-full border-t border-white/10">
-            <div
-              class=" mx-auto flex flex-col sm:flex-row w-full sm:items-center justify-between px-4 sm:text-center sm:text-left">
+                        <span>Contact Us</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            class="w-5 h-5 transition-transform duration-300 ease-out group-hover:translate-x-1">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                        <span
+                            class="absolute inset-0 bg-gradient-to-r from-white/30 to-transparent opacity-0 group-hover:opacity-100 translate-x-[-100%] group-hover:translate-x-[100%] transition-all duration-700 ease-out"></span>
+                    </button>
+                    <div class="py-4  w-full border-t border-white/10">
+                        <div
+                            class=" mx-auto flex flex-col sm:flex-row w-full sm:items-center justify-between px-4 sm:text-center sm:text-left">
 
-              <!-- Copyright Text -->
-              <p class="text-white text-sm poppins mb-3 sm:mb-0">
-                © 2025 <span class="text-[#a68b4a] font-medium">WIMS Textiles</span>. All rights reserved.
-              </p>
+                            <!-- Copyright Text -->
+                            <p class="text-white text-sm poppins mb-3 sm:mb-0">
+                                © 2025 <span class="text-[#a68b4a] font-medium">WIMS Textiles</span>. All rights
+                                reserved.
+                            </p>
 
-              <!-- Links -->
-              <div class="flex items-center gap-6 text-sm poppins">
-                <a href="#" class="text-white hover:text-[#a68b4a] transition duration-300">Terms & Conditions</a>
-                <a href="#" class="text-white hover:text-[#a68b4a] transition duration-300">Privacy Policy</a>
-              </div>
+                            <!-- Links -->
+                            <div class="flex items-center gap-6 text-sm poppins">
+                                <a href="#" class="text-white hover:text-[#a68b4a] transition duration-300">Terms &
+                                    Conditions</a>
+                                <a href="#" class="text-white hover:text-[#a68b4a] transition duration-300">Privacy
+                                    Policy</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
 
             </div>
-          </div>
-
         </div>
-
-      </div>
-    </div>
-  </footer>
+    </footer>
 
 </body>
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
@@ -435,64 +1226,64 @@ overflow-hidden bg-[#a68b4a] transition-all duration-500 ease-out hover:scale-[1
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"
-  integrity="sha512-8Wy4KH0O+AuzjMm1w5QfZ5j5/y8Q/kcUktK9mPUVaUoBvh3QPUZB822W/vy7ULqri3yR8daH3F58+Y8Z08qzeg=="
-  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    integrity="sha512-8Wy4KH0O+AuzjMm1w5QfZ5j5/y8Q/kcUktK9mPUVaUoBvh3QPUZB822W/vy7ULqri3yR8daH3F58+Y8Z08qzeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
-  AOS.init();
+    AOS.init();
 </script>
 <script src="./src/js/gsap.js"></script>
 <script defer src="./src/js/"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <script>
-  const menuBtn = document.getElementById('menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const close = document.getElementById('closemenu')
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const close = document.getElementById('closemenu')
 
-  menuBtn.addEventListener('click', () => {
-    // Toggle slide-in
-    mobileMenu.classList.toggle('translate-x-full'); // Hidden
-    mobileMenu.classList.toggle('translate-x-0');    // Visible
-  });
-  close.addEventListener('click', () => {
-    // Toggle slide-in
-    mobileMenu.classList.toggle('translate-x-full'); // Hidden
-    mobileMenu.classList.toggle('translate-x-0');    // Visible
-  });
+    menuBtn.addEventListener('click', () => {
+        // Toggle slide-in
+        mobileMenu.classList.toggle('translate-x-full'); // Hidden
+        mobileMenu.classList.toggle('translate-x-0');    // Visible
+    });
+    close.addEventListener('click', () => {
+        // Toggle slide-in
+        mobileMenu.classList.toggle('translate-x-full'); // Hidden
+        mobileMenu.classList.toggle('translate-x-0');    // Visible
+    });
 </script>
 <script>
-  const menu = document.getElementById('menuPanel');
-  const overlay = document.getElementById('overlay');
-  const openBtn = document.getElementById('openMenu');
-  const closeBtn = document.getElementById('closeMenu');
+    const menu = document.getElementById('menuPanel');
+    const overlay = document.getElementById('overlay');
+    const openBtn = document.getElementById('openMenu');
+    const closeBtn = document.getElementById('closeMenu');
 
-  openBtn.addEventListener('click', () => {
-    menu.classList.remove('translate-x-full');
-    overlay.classList.remove('opacity-0', 'pointer-events-none');
-    overlay.classList.add('opacity-100');
-  });
+    openBtn.addEventListener('click', () => {
+        menu.classList.remove('translate-x-full');
+        overlay.classList.remove('opacity-0', 'pointer-events-none');
+        overlay.classList.add('opacity-100');
+    });
 
-  closeBtn.addEventListener('click', () => {
-    menu.classList.add('translate-x-full');
-    overlay.classList.add('opacity-0', 'pointer-events-none');
-    overlay.classList.remove('opacity-100');
-  });
+    closeBtn.addEventListener('click', () => {
+        menu.classList.add('translate-x-full');
+        overlay.classList.add('opacity-0', 'pointer-events-none');
+        overlay.classList.remove('opacity-100');
+    });
 
-  overlay.addEventListener('click', () => {
-    menu.classList.add('translate-x-full');
-    overlay.classList.add('opacity-0', 'pointer-events-none');
-    overlay.classList.remove('opacity-100');
-  });
+    overlay.addEventListener('click', () => {
+        menu.classList.add('translate-x-full');
+        overlay.classList.add('opacity-0', 'pointer-events-none');
+        overlay.classList.remove('opacity-100');
+    });
 </script>
 <script>
-  window.addEventListener("load", () => {
-    const preloader = document.getElementById("preloader");
-    preloader.style.opacity = "0";
-    preloader.style.transition = "opacity 0.5s ease";
-    setTimeout(() => {
-      preloader.style.display = "none";
-    }, 500);
-  });
+    window.addEventListener("load", () => {
+        const preloader = document.getElementById("preloader");
+        preloader.style.opacity = "0";
+        preloader.style.transition = "opacity 0.5s ease";
+        setTimeout(() => {
+            preloader.style.display = "none";
+        }, 500);
+    });
 </script>
 
 
@@ -500,4 +1291,4 @@ overflow-hidden bg-[#a68b4a] transition-all duration-500 ease-out hover:scale-[1
 <script defer src="./src/js/index.js"></script>
 <script defer src="./src//js/scrollbar.js"></script>
 
-</html>
+</html>x
