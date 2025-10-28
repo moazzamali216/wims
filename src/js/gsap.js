@@ -313,3 +313,113 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 })();
+
+
+
+
+/* ===============================
+   WELLNESS & WIMS SECTION
+   =============================== */
+(function wellnessWimsAnimations() {
+  const section = document.querySelector(".wellness-section");
+  if (!section) return;
+
+  // Animate text block
+  gsap.from(".wellness-text", {
+    x: -120,
+    opacity: 0,
+    duration: 1.2,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".wellness-text",
+      start: "top 85%",
+        toggleActions: "restart none none reverse", // 👈 replay animation when re-entered
+        once: false, // 👈 ensures it runs every time
+    },
+  });
+
+  // Animate image block
+  gsap.from(".wellness-image", {
+    x: 120,
+    opacity: 0,
+    duration: 1.3,
+    delay: 0.2,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".wellness-image",
+      start: "top 85%",
+        toggleActions: "restart none none reverse", // 👈 replay animation when re-entered
+        once: false, // 👈 ensures it runs every time
+    },
+  });
+
+  // Animate CTA button
+  gsap.from(".wellness-btn", {
+    scale: 0.9,
+    opacity: 0,
+    duration: 0.8,
+    delay: 0.4,
+    ease: "back.out(1.7)",
+    scrollTrigger: {
+      trigger: ".wellness-btn",
+      start: "top 90%",
+        toggleActions: "restart none none reverse", // 👈 replay animation when re-entered
+        once: false, // 👈 ensures it runs every time
+    },
+  });
+})();
+
+
+/* ===============================
+   WIMS GALLERY SECTION
+   =============================== */
+(function animateWimsGallery() {
+  const cards = document.querySelectorAll(".gallery-card");
+  const heading = document.querySelector(".gallery-heading");
+
+  if (heading) {
+    gsap.from(heading, {
+      opacity: 0,
+      y: 40,
+      duration: 1.2,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: heading,
+        start: "top 85%",
+        toggleActions: "restart none none reverse", // 👈 replay animation when re-entered
+        once: false, // 👈 ensures it runs every time
+      },
+    });
+  }
+
+  if (cards.length) {
+    gsap.from(cards, {
+      opacity: 0,
+      y: 60,
+      scale: 0.95,
+      duration: 1,
+      ease: "power3.out",
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".wims-gallery",
+        start: "top 80%",
+        toggleActions: "restart none none reverse", // 👈 replay animation when re-entered
+        once: false, // 👈 ensures it runs every time
+      },
+    });
+  }
+
+  // Subtle parallax hover effect
+  cards.forEach((card) => {
+    const imageDiv = card.querySelector("div[style]");
+    if (!imageDiv) return;
+
+    card.addEventListener("mouseenter", () => {
+      gsap.to(imageDiv, { scale: 1.08, duration: 0.8, ease: "power3.out" });
+    });
+
+    card.addEventListener("mouseleave", () => {
+      gsap.to(imageDiv, { scale: 1, duration: 0.8, ease: "power3.out" });
+    });
+  });
+})();
