@@ -832,14 +832,21 @@
     });
 </script>
 <script>
-    window.addEventListener("load", () => {
-        const preloader = document.getElementById("preloader");
-        preloader.style.opacity = "0";
-        preloader.style.transition = "opacity 0.5s ease";
-        setTimeout(() => {
-            preloader.style.display = "none";
-        }, 500);
-    });
+  function hidePreloader() {
+    const preloader = document.getElementById("preloader");
+    preloader.style.opacity = "0";
+    preloader.style.transition = "opacity 0.5s ease";
+    setTimeout(() => {
+      preloader.style.display = "none";
+    }, 500);
+  }
+
+  document.onreadystatechange = function () {
+    // When document is at 'interactive', the DOM is ready (~50% loaded)
+    if (document.readyState === "interactive") {
+      hidePreloader();
+    }
+  };
 </script>
 
 
