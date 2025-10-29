@@ -361,7 +361,7 @@
   </div>
 
   <section class="relative h-[350px] bg-center flex items-end bg-cover bg-no-repeat w-full pt-[100px]"
-    style="background-image: url(./public/images/hotel-bg.jpg);">
+    style="background-image: url(./public/images/d1.webp);">
 
     <!-- Bottom-to-top black gradient overlay -->
     <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
@@ -369,475 +369,424 @@
 
 
     <div class="relative container 2xl:max-w-[1530px] mx-auto p px-4 pb-14">
-      <h1 class="cal text-5xl text-white text-start">Hotel</h1>
+      <h1 class="cal text-5xl text-white text-start">Dyed</h1>
     </div>
 
   </section>
 
 
-  <section class="relative py-10 w-full flex items-center justify-center overflow-hidden bg-white">
-    <!-- Background Gradient Accent -->
-    <div class="absolute inset-0 bg-gradient-to-br from-[#f9f6f1] via-white to-[#f1ede7]"></div>
+<section class="relative overflow-hidden bg-[#f5f4f1]">
+  <!-- Background Animation (Subtle Gradient Flow) -->
+  <div class="absolute inset-0 bg-gradient-to-r from-[#a68b4a]/10 via-[#f0eade]/40 to-[#a68b4a]/10 animate-gradient-x"></div>
 
-    <!-- Subtle Overlay Pattern -->
-    <div class="absolute inset-0 bg-[#a68b4a] opacity-[0.05] bg-cover bg-center"></div>
+  <div class="2xl:max-w-[1530px] container mx-auto px-4 py-20 relative z-10 flex flex-col lg:flex-row items-center gap-10">
 
-    <div class="relative z-[5] 2xl:max-w-[1530px] container mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+    <!-- Text Section -->
+    <div class="lg:w-1/2 space-y-6 text-center lg:text-left">
+      <h1 class="text-5xl sm:text-6xl font-bold cal text-gray-900 leading-tight">
+        <span class="text-[#a68b4a]">Dyed Elegance,</span><br>
+        Crafted for Vibrant Living.
+      </h1>
+      <p class="poppins text-gray-700 text-base sm:text-lg leading-relaxed max-w-lg mx-auto lg:mx-0">
+        At <strong>Wims Textiles</strong>, our dyed bedsets redefine sophistication with vibrant hues and long-lasting colorfast technology — merging art and comfort into every thread.
+      </p>
 
-      <!-- Left Side: Elegant Text -->
-      <div class="space-y-6">
-        <div class="relative">
-          <span class="  left-0 text-sm tracking-[4px] text-[#a68b4a] uppercase poppins font-semibold">WIMS
-            Textiles</span>
-          <h1 class="text-5xl mt-4 md:text-6xl cal font-semibold leading-[1.1] text-gray-900">
-            Crafted Luxury<br />for Modern Hospitality
-          </h1>
-        </div>
+      <!-- Interactive Color Swatches -->
+      <div class="flex justify-center lg:justify-start gap-3 mt-6">
+        <div class="w-8 h-8 rounded-full bg-[#a68b4a] hover:scale-110 transition-all cursor-pointer"></div>
+        <div class="w-8 h-8 rounded-full bg-[#b99f73] hover:scale-110 transition-all cursor-pointer"></div>
+        <div class="w-8 h-8 rounded-full bg-[#d4c6a8] hover:scale-110 transition-all cursor-pointer"></div>
+        <div class="w-8 h-8 rounded-full bg-[#e8e2d1] hover:scale-110 transition-all cursor-pointer"></div>
+      </div>
 
-        <p class="text-gray-600 poppins leading-relaxed text-[16px] max-w-[500px]">
-          Redefining comfort with the art of fine weaving. WIMS Hotel Textiles blend understated elegance and unmatched
-          durability — designed to elevate every guest experience with fabrics that whisper sophistication.
-        </p>
+      <!-- Disabled Button -->
+      <button disabled
+        class="mt-8 poppins font-semibold text-sm sm:text-base px-8 py-3 rounded-full border border-[#a68b4a] text-[#a68b4a]/60 bg-transparent cursor-not-allowed">
+        Explore Collection (Coming Soon)
+      </button>
+    </div>
 
-        <div class="flex items-center gap-6">
-          <a href="./contact.html"
-            class="px-6 py-3 bg-[#a68b4a] text-white rounded-full cal text-base font-semibold transition-all duration-500 hover:bg-[#8d763e] hover:scale-[1.05]">
-            Get in Touch
-          </a>
-          <a href="./ebrochure.html"
-            class="text-[#a68b4a] poppins text-base font-medium underline hover:text-[#8d763e] transition-all">
-            View E-Brochure
-          </a>
+    <!-- Image Showcase Slider -->
+    <div class="lg:w-1/2 w-full relative group">
+      <!-- Image Container -->
+      <div id="dyedSliderImage"
+        class="h-[400px] w-full rounded-3xl bg-[#e0d8c6] overflow-hidden shadow-lg transition-all duration-700 bg-cover bg-center">
+      </div>
+
+      <!-- Floating Card Effect -->
+      <div
+        class="absolute -bottom-6 left-6 bg-white shadow-xl w-full max-w-[250px] rounded-2xl px-6 py-4  transition-opacity duration-700"
+        id="dyedSliderText">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+ <section class="py- sm:py-14">
+    <div class="container  mx-auto 2xl:max-w-[1530px] mt-10 py-10 px-4">
+      <h1 class="text-gray-900 text-center tracking-widest leading-[50px] cal font-[600] text-4xl sm:text-5xl">
+        WIMS Dyed Bedset Collection
+      </h1>
+      <div class="text-gray-900 mt-12 flex flex-col items-center cal text-base "><a href="./dyed.html">SEE MORE</a>
+        <hr class="w-[75px] border-[#a68b4a] border-t-[0.5px]">
+      </div>
+      <div class="swiper mySwiper2 mt-10">
+        <div class="swiper-wrapper">
+
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <div
+              class="relative group overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-500">
+
+              <!-- Image with animation -->
+              <div style="background-image: url(./public/images/WhatsApp\ Image\ 2025-10-15\ at\ 22.49.35.jpeg);"
+                class="w-full bg-contain bg-no-repeat bg-center h-[300px] rounded-lg transition-transform duration-700 ease-out group-hover:scale-110">
+              </div>
+
+              <!-- Black Overlay (swipes down on hover) -->
+              <div
+                class="absolute inset-0 bg-black/40 translate-y-[-100%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
+              </div>
+
+              <!-- Text Content -->
+              <div
+                class="absolute bottom-0 left-0 right-0 p-6 text-white opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 ease-out z-10">
+                <div class="cal text-2xl font-semibold mb-2">Blue Flowers Bedset
+                  <hr class="w-full border-[#CD8B62] border-t-[0.5px]">
+                </div>
+                <p class="poppins text-sm leading-relaxed mb-4">
+                  Sourced from the finest fibers, our yarn offers exceptional strength, softness, and consistency, ideal
+                  for durable and high-performance fabrics.
+                </p>
+                <button
+                  class="poppins tracking-widest px-3 py-2 border border-white bg-white/20 backdrop-blur-sm text-white transition-all duration-300 hover:bg-white hover:text-gray-900 rounded-full text-sm">
+                  LEARN MORE
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <div
+              class="relative group overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-500">
+              <div style="background-image: url(./public/images/WhatsApp\ Image\ 2025-10-15\ at\ 22.49.35\ \(1\).jpeg);"
+                class="w-full bg-contain bg-no-repeat bg-center h-[300px] rounded-lg transition-transform duration-700 ease-out group-hover:scale-110">
+              </div>
+              <div
+                class="absolute inset-0 bg-black/40 translate-y-[-100%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
+              </div>
+              <div
+                class="absolute bottom-0 left-0 right-0 p-6 text-white opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 ease-out z-10">
+                <div class="cal text-2xl font-semibold mb-2">Sandstone Flowers Bedset
+                  <hr class="w-full border-[#CD8B62] border-t-[0.5px]">
+                </div>
+                <p class="poppins text-sm leading-relaxed mb-4">
+                  Sourced from the finest fibers, our yarn offers exceptional strength, softness, and consistency, ideal
+                  for durable and high-performance fabrics.
+                </p>
+                <button
+                  class="poppins tracking-widest px-3 py-2 border border-white bg-white/20 backdrop-blur-sm text-white transition-all duration-300 hover:bg-white hover:text-gray-900 rounded-full text-sm">
+                  LEARN MORE
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <div
+              class="relative group overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-500">
+              <div style="background-image: url(./public/images/WhatsApp\ Image\ 2025-10-15\ at\ 22.49.35\ \(2\).jpeg);"
+                class="w-full bg-contain bg-no-repeat bg-center h-[300px] rounded-lg transition-transform duration-700 ease-out group-hover:scale-110">
+              </div>
+              <div
+                class="absolute inset-0 bg-black/40 translate-y-[-100%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
+              </div>
+              <div
+                class="absolute bottom-0 left-0 right-0 p-6 text-white opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 ease-out z-10">
+                <div class="cal text-2xl font-semibold mb-2">Black Flowers Bedset
+                  <hr class="w-full border-[#CD8B62] border-t-[0.5px]">
+                </div>
+                <p class="poppins text-sm leading-relaxed mb-4">
+                  Sourced from the finest fibers, our yarn offers exceptional strength, softness, and consistency, ideal
+                  for durable and high-performance fabrics.
+                </p>
+                <button
+                  class="poppins tracking-widest px-3 py-2 border border-white bg-white/20 backdrop-blur-sm text-white transition-all duration-300 hover:bg-white hover:text-gray-900 rounded-full text-sm">
+                  LEARN MORE
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="swiper-slide">
+            <div
+              class="relative group overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-500">
+              <div style="background-image: url(./public/images/WhatsApp\ Image\ 2025-10-15\ at\ 22.49.35\ \(3\).jpeg);"
+                class="w-full bg-contain bg-no-repeat bg-center h-[300px] rounded-lg transition-transform duration-700 ease-out group-hover:scale-110">
+              </div>
+              <div
+                class="absolute inset-0 bg-black/40 translate-y-[-100%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
+              </div>
+              <div
+                class="absolute bottom-0 left-0 right-0 p-6 text-white opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 ease-out z-10">
+                <div class="cal text-2xl font-semibold mb-2">Green Flowers Bedset
+                  <hr class="w-full border-[#CD8B62] border-t-[0.5px]">
+                </div>
+                <p class="poppins text-sm leading-relaxed mb-4">
+                  Sourced from the finest fibers, our yarn offers exceptional strength, softness, and consistency, ideal
+                  for durable and high-performance fabrics.
+                </p>
+                <button
+                  class="poppins tracking-widest px-3 py-2 border border-white bg-white/20 backdrop-blur-sm text-white transition-all duration-300 hover:bg-white hover:text-gray-900 rounded-full text-sm">
+                  LEARN MORE
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 5 -->
+          <div class="swiper-slide">
+            <div
+              class="relative group overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-500">
+              <div style="background-image: url(./public/images/WhatsApp\ Image\ 2025-10-15\ at\ 22.49.35\ \(4\).jpeg);"
+                class="w-full bg-contain bg-no-repeat bg-center h-[300px] rounded-lg transition-transform duration-700 ease-out group-hover:scale-110">
+              </div>
+              <div
+                class="absolute inset-0 bg-black/40 translate-y-[-100%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
+              </div>
+              <div
+                class="absolute bottom-0 left-0 right-0 p-6 text-white opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 ease-out z-10">
+                <div class="cal text-2xl font-semibold mb-2">Formula Design Bedset
+                  <hr class="w-full border-[#CD8B62] border-t-[0.5px]">
+                </div>
+                <p class="poppins text-sm leading-relaxed mb-4">
+                  Sourced from the finest fibers, our yarn offers exceptional strength, softness, and consistency, ideal
+                  for durable and high-performance fabrics.
+                </p>
+                <button
+                  class="poppins tracking-widest px-3 py-2 border border-white bg-white/20 backdrop-blur-sm text-white transition-all duration-300 hover:bg-white hover:text-gray-900 rounded-full text-sm">
+                  LEARN MORE
+                </button>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 
-      <!-- Right Side: Layered Visual Composition -->
-      <div class="relative w-full h-[480px] flex items-center justify-center">
-        <!-- Background Placeholder -->
-        <div style="background-image: url(./public/images/hotel4.jpg);"
-          class="absolute  bg-center bg-no-repeat bg-cover inset-0  rounded-2xl shadow-xl"></div>
 
-        <!-- Floating smaller card for texture preview -->
-        <div
-          class="absolute top-[12%] right-[-5%] w-[220px] h-[160px] bg-[#c4b89d] rounded-2xl shadow-lg rotate-[6deg] opacity-90">
-        </div>
-
-        <!-- Floating label -->
-        <div
-          class="absolute bottom-[15%] left-[-5%] bg-white shadow-md rounded-xl px-6 py-3 flex items-center gap-3 border border-gray-100">
-          <div class="w-3 h-3 rounded-full bg-[#a68b4a]"></div>
-          <span class="text-gray-700 poppins text-sm font-medium">Refined Hotel Textures</span>
-        </div>
-      </div>
     </div>
   </section>
 
+<section class="py-16 bg-gray-50 relative">
+  <div class="container 2xl:max-w-[1530px] mx-auto px-4 text-center">
+    
+    <!-- Heading -->
+    <h2 class="text-4xl sm:text-5xl font-bold cal text-gray-900 mb-6">
+      Explore Our <span class="text-[#a68b4a]">Color Palette</span>
+    </h2>
+    <p class="text-gray-700 poppins max-w-2xl mx-auto mb-12">
+      Discover the vibrant and versatile colors available for our dyed textiles. From subtle neutrals to bold statement shades, we offer a palette that brings every space to life.
+    </p>
 
-
-
-
-  <!-- Material & Fabric Innovations -->
-  <section class="relative bg-transparent py-10 overflow-hidden">
-    <div class="2xl:max-w-[1530px] container mx-auto px-4">
-
-      <!-- Section Heading -->
-      <div class="text-center mb-16">
-        <h2 class="cal text-3xl md:text-4xl font-bold text-[#a68b4a] mb-4">
-          Material & Fabric Innovations
-        </h2>
-        <p class="poppins text-gray-600 max-w-2xl mx-auto text-[15px] leading-relaxed">
-          At WIMS Textiles, we combine precision weaving, premium fibers, and eco-conscious dyeing
-          to create fabrics that not only feel luxurious but perform beautifully under hospitality demands.
-        </p>
-      </div>
-
-      <!-- Content Grid -->
-      <div class="grid lg:grid-cols-3 gap-10 items-stretch">
-
-        <!-- Feature 1 -->
-        <div class="rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-all duration-500">
-          <div style="background-image: url(./public/images/hotel1.jpeg);"
-            class="h-60 bg-center bg-no-repeat bg-cover  flex items-center justify-center">
-            <!-- Placeholder Image -->
-
-          </div>
-          <div class="p-6">
-            <h3 class="cal text-lg font-semibold text-gray-800 mb-2">Luxury Cotton Blend</h3>
-            <p class="poppins text-gray-600 text-sm leading-relaxed">
-              Engineered for softness and resilience, our cotton-rich fabrics maintain a fresh and refined feel even
-              after repeated use.
-            </p>
-          </div>
-        </div>
-
-        <!-- Feature 2 -->
-        <div class="rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-all duration-500">
-          <div style="background-image: url(./public/images/hotel2.jpeg);"
-            class="h-60 bg-center bg-no-repeat bg-cover  flex items-center justify-center">
-            <!-- Placeholder Image -->
-
-          </div>
-          <div class="p-6">
-            <h3 class="cal text-lg font-semibold text-gray-800 mb-2">Advanced Weaving Technology</h3>
-            <p class="poppins text-gray-600 text-sm leading-relaxed">
-              Using modern jacquard and terry weaving techniques, we ensure precise density, exceptional absorbency, and
-              a smooth, elegant drape.
-            </p>
-          </div>
-        </div>
-
-        <!-- Feature 3 -->
-        <div class="rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-all duration-500">
-          <div style="background-image: url(./public/images/hotel3.jpeg);"
-            class="h-60 bg-center bg-no-repeat bg-cover  flex items-center justify-center">
-            <!-- Placeholder Image -->
-
-          </div>
-          <div class="p-6">
-            <h3 class="cal text-lg font-semibold text-gray-800 mb-2">Eco-Friendly Dye Process</h3>
-            <p class="poppins text-gray-600 text-sm leading-relaxed">
-              Our dyeing methods minimize water use and chemical waste while delivering consistent, long-lasting hues
-              that retain their brilliance.
-            </p>
-          </div>
-        </div>
-
-      </div>
+    <!-- Color Swatches Grid -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-6 max-w-4xl mx-auto">
+      <div class="w-20 h-20 rounded-full shadow-lg border border-gray-200 bg-[#a68b4a]"></div>
+      <div class="w-20 h-20 rounded-full shadow-lg border border-gray-200 bg-[#b99f73]"></div>
+      <div class="w-20 h-20 rounded-full shadow-lg border border-gray-200 bg-[#d4c6a8]"></div>
+      <div class="w-20 h-20 rounded-full shadow-lg border border-gray-200 bg-[#e8e2d1]"></div>
+      <div class="w-20 h-20 rounded-full shadow-lg border border-gray-200 bg-[#f2c6a8]"></div>
+      <div class="w-20 h-20 rounded-full shadow-lg border border-gray-200 bg-[#c6b49f]"></div>
+      <div class="w-20 h-20 rounded-full shadow-lg border border-gray-200 bg-[#8b5a2b]"></div>
+      <div class="w-20 h-20 rounded-full shadow-lg border border-gray-200 bg-[#5a3e2b]"></div>
+      <div class="w-20 h-20 rounded-full shadow-lg border border-gray-200 bg-[#ffe8d1]"></div>
+      <div class="w-20 h-20 rounded-full shadow-lg border border-gray-200 bg-[#f0d8c6]"></div>
+      <div class="w-20 h-20 rounded-full shadow-lg border border-gray-200 bg-[#d1c4b0]"></div>
+      <div class="w-20 h-20 rounded-full shadow-lg border border-gray-200 bg-[#b4a68b]"></div>
     </div>
-  </section>
 
-
-  <!-- Why Choose WIMS Hotel Textiles -->
-  <section class="relative bg-white py-10 overflow-hidden">
-    <div class="absolute inset-0 bg-[url('./public/images/pattern-bg.png')] opacity-[0.05] bg-cover bg-center"></div>
-
-    <div class="2xl:max-w-[1530px] container mx-auto px-4">
-      <div class="text-center mb-14">
-        <h2 class="cal text-3xl md:text-4xl font-bold text-[#a68b4a] mb-4">
-          Why Choose WIMS Hotel Textiles?
-        </h2>
-        <p class="poppins text-gray-600 max-w-2xl mx-auto text-[15px] leading-relaxed">
-          Every fabric we produce carries the soul of craftsmanship, innovation, and comfort —
-          designed to elevate your guest experience and meet the rigorous demands of the hospitality industry.
-        </p>
-      </div>
-
-      <!-- Features Grid -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-
-        <!-- Card 1 -->
-        <div
-          class="p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-500 bg-white">
-          <div class="mb-4">
-            <i class="fa-solid fa-feather text-[#a68b4a] text-3xl"></i>
-          </div>
-          <h3 class="cal text-lg font-semibold text-gray-800 mb-2">Unmatched Softness</h3>
-          <p class="poppins text-gray-600 text-sm leading-relaxed">
-            Crafted with premium cotton blends that deliver a plush, cloud-like touch — giving guests a feeling of pure
-            indulgence.
-          </p>
-        </div>
-
-        <!-- Card 2 -->
-        <div
-          class="p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-500 bg-white">
-          <div class="mb-4">
-            <i class="fa-solid fa-droplet text-[#a68b4a] text-3xl"></i>
-          </div>
-          <h3 class="cal text-lg font-semibold text-gray-800 mb-2">Superior Absorbency</h3>
-          <p class="poppins text-gray-600 text-sm leading-relaxed">
-            Engineered fibers ensure quick-drying, high-absorption performance that stays reliable after countless
-            washes.
-          </p>
-        </div>
-
-        <!-- Card 3 -->
-        <div
-          class="p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-500 bg-white">
-          <div class="mb-4">
-            <i class="fa-solid fa-wand-magic-sparkles text-[#a68b4a] text-3xl"></i>
-          </div>
-          <h3 class="cal text-lg font-semibold text-gray-800 mb-2">Timeless Design</h3>
-          <p class="poppins text-gray-600 text-sm leading-relaxed">
-            Clean lines, classic textures, and subtle tones — our textiles complement every interior with understated
-            elegance.
-          </p>
-        </div>
-
-        <!-- Card 4 -->
-        <div
-          class="p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-500 bg-white">
-          <div class="mb-4">
-            <i class="fa-solid fa-recycle text-[#a68b4a] text-3xl"></i>
-          </div>
-          <h3 class="cal text-lg font-semibold text-gray-800 mb-2">Eco-Conscious Production</h3>
-          <p class="poppins text-gray-600 text-sm leading-relaxed">
-            Produced responsibly with sustainable materials and low-impact dyes — ensuring a greener, more ethical
-            hospitality experience.
-          </p>
-        </div>
-
-        <!-- Card 5 -->
-        <div
-          class="p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-500 bg-white">
-          <div class="mb-4">
-            <i class="fa-solid fa-hands-bubbles text-[#a68b4a] text-3xl"></i>
-          </div>
-          <h3 class="cal text-lg font-semibold text-gray-800 mb-2">Easy Maintenance</h3>
-          <p class="poppins text-gray-600 text-sm leading-relaxed">
-            Designed for long-lasting freshness — minimal shrinkage, easy laundering, and enduring whiteness.
-          </p>
-        </div>
-
-        <!-- Card 6 -->
-        <div
-          class="p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-500 bg-white">
-          <div class="mb-4">
-            <i class="fa-solid fa-award text-[#a68b4a] text-3xl"></i>
-          </div>
-          <h3 class="cal text-lg font-semibold text-gray-800 mb-2">Trusted by Leading Hotels</h3>
-          <p class="poppins text-gray-600 text-sm leading-relaxed">
-            Our collections are favored by top hospitality brands across the globe — built on reliability and
-            excellence.
-          </p>
-        </div>
-
-      </div>
+    <!-- Optional CTA -->
+    <div class="mt-12">
+      <a href="./contact.html" 
+         class="inline-block px-8 py-3 rounded-full bg-[#a68b4a] text-white font-semibold poppins shadow-lg hover:bg-[#8b6b3a] transition-all duration-300">
+        Request Your Custom Color
+      </a>
     </div>
-  </section>
 
+  </div>
+</section>
 
-  <!-- Customization & Branding Section -->
-  <section class="relative bg-white py-10 overflow-hidden">
-    <!-- Decorative Background Pattern -->
-    <div class="absolute inset-0 opacity-[0.05] bg-[#a68b4a] bg-cover bg-center"></div>
+  
+  <section class="relative bg-[#f5f4f1] py-10">
+  <div class="container mx-auto px-4 text-center lg:text-left">
+    <!-- Heading -->
+    <h2 class="text-4xl sm:text-5xl font-bold cal text-gray-900 mb-4">
+      Request a Bedset Dyed Sample
+    </h2>
+    <!-- Description -->
+    <p class="poppins text-gray-700 mb-8 max-w-2xl mx-auto lg:mx-0 text-base sm:text-lg">
+      Experience the quality and vibrancy of our dyed textiles firsthand.  
+      WIMS Textiles offers tailored samples for your preferred colors and designs, so you can make informed decisions before placing your order.
+    </p>
 
-    <div class="relative container 2xl:max-w-[1500px] mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">
+    <!-- Call-to-Action Button -->
+    <a href="./contact.html"
+      class="inline-block px-10 py-4 rounded-full bg-[#a68b4a] text-white font-semibold poppins text-lg hover:scale-105 transition-transform duration-300">
+      Request a Sample
+    </a>
+  </div>
+</section>
 
-      <!-- Image Side -->
-      <div class="relative group">
-        <div style="background-image: url(./public/images/custom-hotel.webp);"
-          class="w-full h-[420px] bg-center bg-no-repeat bg-cover rounded-2xl shadow-lg overflow-hidden">
-        </div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent rounded-2xl"></div>
-        <div
-          class="absolute bottom-6 left-6 text-white/90 backdrop-blur-md bg-black/30 px-4 py-2 rounded-full text-sm poppins tracking-wide">
-          WIMS Exclusive Designs
+<section class="py-8 bg-gray-50">
+  <div class="container 2xl:max-w-[1530px] px-4 mx-auto">
+    <h2 class="text-4xl sm:text-5xl font-bold text-center cal text-gray-900 mb-6">
+  Explore Our <span class="text-[#a68b4a]">Dyed Range</span>
+</h2>
+
+    <div class="w-full mx-auto grid md:grid-cols-2 gap-8 items-center">
+
+      <!-- Left side: Image placeholders -->
+      <div class="space-y-2 about-images">
+        <div class="h-72 w-full rounded-2xl bg-center bg-no-repeat bg-cover about-g-main"
+             style="background-image: url(./public/images/d9.webp);"></div>
+        <div class="grid grid-cols-2 gap-2">
+          <div class="h-52 rounded-2xl bg-center bg-no-repeat bg-cover about-g-1"
+                      style="background-image: url(./public/images/d8.webp);"></div>
+          <div class="h-52 rounded-2xl bg-center bg-no-repeat bg-cover about-g-2"
+                 style="background-image: url(./public/images/d7.webp);"></div>
         </div>
       </div>
 
-      <!-- Text Side -->
-      <div class="space-y-6">
-        <span class="text-sm poppins font-semibold text-[#a68b4a] uppercase tracking-wide">
-          ✦ Tailored Perfection
-        </span>
+      <!-- Right side: Product Types text -->
+      <div class="space-y-8 poppins text-black">
+        <div>
+          <h3 class="text-2xl cal font-semibold mb-2">Fabric</h3>
+          <p class="text-black/80 font-light">
+            WIMS Textiles provides premium dyed fabrics suitable for tailoring, upholstery, and creative DIY projects.  
+            Each fabric is treated with colorfast techniques to ensure long-lasting vibrancy.
+          </p>
+        </div>
 
-        <h2 class="text-4xl sm:text-5xl cal font-semibold text-gray-900 leading-snug">
-          Customization & Branding
-        </h2>
+        <div>
+          <h3 class="text-2xl cal font-semibold mb-2">Pillows & Cushions</h3>
+          <p class="text-black/80 font-light">
+            Explore our range of dyed pillow covers and cushions, crafted to bring elegance, comfort, and a splash of color to your living spaces.  
+            Designed for both style and durability, they complement any interior effortlessly.
+          </p>
+        </div>
 
-        <p class="text-gray-600 poppins leading-relaxed text-[15px]">
-          At <span class="text-[#a68b4a] font-semibold">WIMS Textiles</span>, we believe that luxury is personal.
-          Our hotel textile range offers exclusive customization options to reflect your brand’s elegance —
-          from embroidered logos to signature color palettes and bespoke finishes.
-        </p>
-
-        <p class="text-gray-600 poppins leading-relaxed text-[15px]">
-          Whether you’re crafting a tranquil spa aesthetic or a five-star contemporary atmosphere,
-          our design team collaborates with you to ensure every fabric detail aligns with your brand identity.
-        </p>
-
-        <ul class="space-y-3 text-gray-700 poppins text-[15px]">
-          <li class="flex items-center gap-2">
-            <span class="text-[#a68b4a]">✔</span> Custom embroidery & logo placement
-          </li>
-          <li class="flex items-center gap-2">
-            <span class="text-[#a68b4a]">✔</span> Tailored fabric colors and trims
-          </li>
-          <li class="flex items-center gap-2">
-            <span class="text-[#a68b4a]">✔</span> Exclusive weaving patterns and monograms
-          </li>
-          <li class="flex items-center gap-2">
-            <span class="text-[#a68b4a]">✔</span> Personalized packaging and labeling
-          </li>
-        </ul>
-
-        <a href="./contact.html"
-          class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#a68b4a] text-white cal font-semibold text-base transition-all duration-500 ease-out hover:scale-[1.05]">
-          <span>Request Custom Design</span>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-            class="w-5 h-5 transition-transform duration-300 ease-out group-hover:translate-x-1">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-          </svg>
-        </a>
+        <div>
+          <h3 class="text-2xl cal font-semibold mb-2">Sheets</h3>
+          <p class="text-black/80 font-light">
+            Our dyed bed sheets offer luxurious softness and rich, lasting colors.  
+            Available in a variety of patterns and shades, they are perfect for creating a vibrant and inviting bedroom ambiance.
+          </p>
+        </div>
       </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="py-10 bg-white">
-    <div class="2xl:max-w-[1530px] container mx-auto px-4">
-      <!-- Heading -->
-      <h2 class="cal text-3xl md:text-4xl font-semibold text-[#a68b4a] mb-6 text-center">
-        Our Hotel Textile Range
+
+<section class="relative bg-[#f5f4f1] py-20">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-4xl sm:text-5xl font-bold cal text-gray-900 mb-8">
+      Why Choose Our Dyed Textiles
+    </h2>
+    <p class="poppins text-gray-700 max-w-2xl mx-auto mb-12">
+      Our dyed fabrics are carefully crafted to combine vibrant colors, lasting quality, and comfort — making your home stylish and cozy.
+    </p>
+
+    <!-- Benefits Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <!-- Card 1 -->
+      <div class="p-6 rounded-2xl shadow-lg bg-[#a68b4a]/20 hover:bg-[#a68b4a]/30 transition-all duration-500">
+        <h3 class="text-xl font-semibold cal mb-2">Long-Lasting Colors</h3>
+        <p class="text-gray-700 text-sm poppins">
+          Our dyes are designed to stay vibrant wash after wash, maintaining their brilliance over time.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="p-6 rounded-2xl shadow-lg bg-[#b99f73]/20 hover:bg-[#b99f73]/30 transition-all duration-500">
+        <h3 class="text-xl font-semibold cal mb-2">Soft & Comfortable</h3>
+        <p class="text-gray-700 text-sm poppins">
+          Fabrics are soft to touch, ensuring ultimate comfort for your bedding, curtains, and upholstery.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="p-6 rounded-2xl shadow-lg bg-[#d4c6a8]/20 hover:bg-[#d4c6a8]/30 transition-all duration-500">
+        <h3 class="text-xl font-semibold cal mb-2">Eco-Friendly Dyes</h3>
+        <p class="text-gray-700 text-sm poppins">
+          Safe for you and the environment, our dyes are non-toxic and responsibly sourced.
+        </p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="p-6 rounded-2xl shadow-lg bg-[#e8e2d1]/20 hover:bg-[#e8e2d1]/30 transition-all duration-500">
+        <h3 class="text-xl font-semibold cal mb-2">Easy Care</h3>
+        <p class="text-gray-700 text-sm poppins">
+          Machine washable and low maintenance, keeping your fabrics looking fresh without hassle.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="relative bg-gradient-to-r from-[#a68b4a]/30 via-[#f0eade]/40 to-[#a68b4a]/30 py-20">
+  <!-- Overlay / subtle background pattern -->
+  <div class="absolute inset-0 bg-[url('./public/images/textile-pattern.webp')] bg-cover bg-center opacity-10 pointer-events-none"></div>
+
+  <div class="relative container mx-auto px-4 text-center lg:text-left flex flex-col lg:flex-row items-center justify-between gap-8">
+    
+    <!-- Text Content -->
+    <div class="lg:w-2/3 space-y-4">
+      <h2 class="text-4xl sm:text-5xl font-bold cal text-gray-900 leading-snug">
+        Ready to Transform Your Space with <span class="text-[#a68b4a]">Vibrant Dyed Textiles</span>?
       </h2>
-      <p class="poppins text-gray-600 text-center max-w-2xl mx-auto mb-16">
-        At Wims Textiles, every fabric is crafted with a vision — to enhance the hospitality experience through
-        timeless elegance, unmatched comfort, and lasting quality. Our hotel textile range reflects our commitment
-        to excellence and innovation in every thread.
-      </p>
-
-      <!-- Bed Linens -->
-      <div class="mb-12">
-        <h3 class="cal text-2xl font-semibold text-[#a68b4a] mb-3">Bed Linens</h3>
-        <p class="poppins text-gray-600 leading-relaxed">
-          Indulge your guests in a world of comfort with our finely woven bed linens. Crafted from premium cotton
-          blends,
-          our sheets and duvet covers provide an ultra-smooth touch and a crisp, fresh feel. Designed for durability and
-          easy care, they retain their luxurious finish even after repeated washes — perfect for hotels that value both
-          elegance and efficiency.
-        </p>
-      </div>
-
-      <!-- Bathrobes -->
-      <div class="mb-12">
-        <h3 class="cal text-2xl font-semibold text-[#a68b4a] mb-3">Bathrobes</h3>
-        <p class="poppins text-gray-600 leading-relaxed">
-          Elevate relaxation with our plush hotel bathrobes — soft, absorbent, and irresistibly comfortable. Available
-          in
-          a variety of weaves and styles, each robe combines modern design with classic comfort. Whether for in-room
-          lounging or spa areas, Wims bathrobes embody refined indulgence.
-        </p>
-      </div>
-
-      <!-- Towels -->
-      <div class="mb-12">
-        <h3 class="cal text-2xl font-semibold text-[#a68b4a] mb-3">Towels</h3>
-        <p class="poppins text-gray-600 leading-relaxed">
-          Experience true softness with our range of hotel towels, engineered for superior absorbency and long-term use.
-          Their dense loops and fine fibers ensure quick drying and lasting plushness — an essential blend of function
-          and
-          luxury that your guests will notice instantly.
-        </p>
-      </div>
-
-      <!-- Curtains -->
-      <div class="mb-12">
-        <h3 class="cal text-2xl font-semibold text-[#a68b4a] mb-3">Curtains</h3>
-        <p class="poppins text-gray-600 leading-relaxed">
-          Designed to complement modern hotel interiors, our curtains strike the perfect balance between aesthetics and
-          utility. Available in light-filtering and blackout varieties, they enhance privacy, ambience, and energy
-          efficiency while maintaining a refined visual appeal.
-        </p>
-      </div>
-
-      <!-- Mattress Protectors -->
-      <div>
-        <h3 class="cal text-2xl font-semibold text-[#a68b4a] mb-3">Mattress Protectors</h3>
-        <p class="poppins text-gray-600 leading-relaxed">
-          Built for hygiene and comfort, our mattress protectors feature breathable, waterproof layers that safeguard
-          mattresses from spills and wear. Lightweight yet durable, they ensure a consistently fresh sleeping
-          environment
-          without compromising on comfort.
-        </p>
-      </div>
-
-      <!-- Row 1 -->
-      <div class="gallery-row mt-14 flex flex-wrap gap-3">
-        <!-- Premium Bath Towels -->
-        <div class="gallery-card relative w-full sm:w-[48%] lg:w-[22%]  overflow-hidden">
-          <div style="background-image: url(./public/images/bathrobe3.png);"
-            class="h-72 bg-cover bg-center bg-no-repeat w-full"></div>
-          <div class="absolute inset-0 bg-black/25"></div>
-          <div class="absolute bottom-4 left-4">
-            <h3 class="text-white text-lg font-semibold poppins">Bathrobe</h3>
-          </div>
-        </div>
-
-        <!-- Cotton Comfort Collection -->
-        <div class="gallery-card relative w-full sm:w-[48%] lg:w-[52%]  overflow-hidden">
-          <div style="background-image: url(./public/images/hotel1.jpeg);"
-            class="bg-cover bg-center bg-no-repeat h-72 w-full"></div>
-          <div class="absolute inset-0 bg-black/25"></div>
-          <div class="absolute bottom-4 left-4">
-            <h3 class="text-white text-lg font-semibold poppins">Bed Linen</h3>
-          </div>
-        </div>
-
-        <!-- Signature Terry Weave -->
-        <div class="gallery-card relative w-full sm:w-[100%] lg:w-[22%]  overflow-hidden">
-          <div style="background-image: url(./public/images/towel10.jpeg);"
-            class="h-72 bg-cover bg-no-repeat bg-center w-full"></div>
-          <div class="absolute inset-0 bg-black/25"></div>
-          <div class="absolute bottom-4 left-4">
-            <h3 class="text-white text-lg font-semibold poppins">Towel</h3>
-          </div>
-        </div>
-      </div>
-
-      <!-- Row 2 -->
-      <div class="gallery-row flex flex-wrap gap-3 mt-3">
-        <!-- Wims Luxury Collection -->
-        <div class="gallery-card relative w-full sm:w-[49%] lg:w-[68%]  overflow-hidden">
-          <div style="background-image: url(./public/images/matress.webp);"
-            class="h-72 bg-no-repeat bg-center bg-cover w-full"></div>
-          <div class="absolute inset-0 bg-black/25"></div>
-          <div class="absolute bottom-4 left-4">
-            <h3 class="text-white text-lg font-semibold poppins">Mattress Protector</h3>
-          </div>
-        </div>
-
-
-
-        <!-- Everyday Soft Line -->
-        <div class="gallery-card relative w-full sm:w-[49%] lg:w-[30%]  overflow-hidden">
-          <div style="background-image: url(./public/images/curtain.jpg);"
-            class="h-72 bg-no-repeat bg-center bg-cover w-full"></div>
-          <div class="absolute inset-0 bg-black/25"></div>
-          <div class="absolute bottom-4 left-4">
-            <h3 class="text-white text-lg font-semibold poppins">Curtain</h3>
-          </div>
-        </div>
-      </div>
-
-      <div class="text-center mt-12">
-        <a href="./contact.html"
-          class="inline-flex items-center gap-2 px-8 py-3 bg-[#a68b4a] text-white cal font-semibold text-base rounded-full shadow-md transition-all duration-500 ease-out hover:bg-[#8c773d] hover:scale-[1.05]">
-          <span>Request Enquiry</span>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-            class="w-5 h-5 transition-transform duration-300 ease-out group-hover:translate-x-1">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-          </svg>
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-
-  <section class="relative bg-gradient-to-b from-white via-[#f9f7f3] to-[#efe8d8] py-24 overflow-hidden">
-    <div class="absolute inset-0 bg-[url('./public/images/pattern-light.png')] bg-cover bg-center opacity-10"></div>
-
-    <div class="relative z-10 max-w-4xl mx-auto text-center px-6">
-      <h2 class="cal text-3xl md:text-4xl font-bold text-[#a68b4a] mb-6 tracking-wide">
-        The Essence of Elegance
-      </h2>
-      <p class="poppins text-base md:text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto">
-        At <span class="font-semibold text-[#a68b4a]">WIMS Textiles</span>, we believe elegance lies not in
-        extravagance,
-        but in the quiet sophistication of every fold, every thread, and every touch.
-        Our hotel collection reflects a timeless harmony between luxury and comfort —
-        crafted for those who understand that true refinement is felt, not seen.
-      </p>
-
-      <div class="mt-10 flex justify-center">
-        <div class="h-[1px] w-32 bg-[#a68b4a]"></div>
-      </div>
-
-      <p class="italic poppins text-sm md:text-base text-gray-600 mt-8">
-        “Elegance is the whisper of quality in a world full of noise.”
+      <p class="poppins text-gray-700 text-base sm:text-lg max-w-lg">
+        Contact our experts to request a quote, order samples, or learn more about our luxurious dyed fabric collections.
       </p>
     </div>
-  </section>
+
+    <!-- Buttons -->
+    <div class="flex flex-col sm:flex-row items-center gap-4 lg:gap-6">
+      <a href="./contact.html"
+        class="group relative flex items-center justify-center px-8 py-4 text-white font-semibold text-base sm:text-lg rounded-full bg-[#a68b4a] overflow-hidden transition-transform duration-500 ease-out hover:scale-105">
+        <span>Get a Quote</span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+          class="w-5 h-5 ml-2 transition-transform duration-300 ease-out group-hover:translate-x-1">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
+      </a>
+
+      <a href="mailto:info@wims-textiles.com"
+        class="group relative flex items-center justify-center px-8 py-4 text-[#a68b4a] font-semibold text-base sm:text-lg rounded-full border border-[#a68b4a] overflow-hidden transition-all duration-500 ease-out hover:bg-[#a68b4a] hover:text-white">
+        <span>Email Us</span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+          class="w-5 h-5 ml-2 transition-transform duration-300 ease-out group-hover:translate-x-1">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
+      </a>
+    </div>
+    
+  </div>
+</section>
+
+
+
 
 
   <footer class="relative bg-cover py-10 bg-center bg-no-repeat"
@@ -1088,6 +1037,49 @@
       hidePreloader();
     }
   };
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      breakpoints: {
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 4 }
+      },
+      grabCursor: true,
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  });
+  const swiper = new Swiper(".mySwiper2", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      640: { slidesPerView: 2 },
+      1024: { slidesPerView: 4 },
+    },
+  });
 </script>
 
 

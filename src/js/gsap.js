@@ -390,3 +390,43 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 })();
+
+
+
+
+const dyedSlides = [
+      {
+        img: './public/images/d2.webp',
+        text: '“A perfect blend of comfort and creativity — our Dyed Bedsets bring life and luxury into your space.”'
+      },
+      {
+        img: './public/images/d3.webp',
+        text: '“Crafted with precision-dyeing to ensure lasting brilliance and enduring softness.”'
+      },
+      {
+        img: './public/images/d4.webp',
+        text: '“Colors that speak elegance — enhancing every room with timeless vibrancy.”'
+      }
+    ];
+
+    let currentIndex = 0;
+    const imgEl = document.getElementById('dyedSliderImage');
+    const textEl = document.getElementById('dyedSliderText');
+
+    function updateDyedSlide() {
+      imgEl.style.opacity = 0;
+      textEl.style.opacity = 0;
+
+      setTimeout(() => {
+        imgEl.style.backgroundImage = `url(${dyedSlides[currentIndex].img})`;
+        textEl.textContent = dyedSlides[currentIndex].text;
+        imgEl.style.opacity = 1;
+        textEl.style.opacity = 1;
+
+        currentIndex = (currentIndex + 1) % dyedSlides.length;
+      }, 600);
+    }
+
+    // Initialize first slide
+    updateDyedSlide();
+    setInterval(updateDyedSlide, 5000);
