@@ -639,63 +639,64 @@ overflow-hidden bg-[#a68b4a] transition-all duration-500 ease-out hover:scale-[1
   </section>
 
   <section class="">
+  <!-- Hero Section -->
+  <div class="relative w-full h-[300px] bg-cover bg-center flex items-center"
+    style="background-image: url('./public/images/bedding-grid.jpg');">
 
-    <div class="relative w-full h-[300px] bg-cover bg-center flex items-center"
-      style="background-image: url('./public/images/bedding-grid.jpg');">
+    <!-- Black Overlay -->
+    <div class="absolute inset-0 bg-black/40"></div>
 
-      <!-- Black Overlay -->
-      <div class="absolute inset-0 bg-black/40"></div>
+    <!-- Text Content -->
+    <div class="relative z-10 sale-small-img -2 text-white max-w-lg px-4 opacity-0 translate-y-10" id="hero-text">
+      <h2 class="cal tracking-wider mb-2 uppercase text-lg sm:text-xl">
+        Contemporary Comfort
+      </h2>
+      <p class="poppins text-sm sm:text-base leading-relaxed mb-6">
+        Explore the harmony of design and comfort — where modern aesthetics meet timeless elegance. <br class="sm:block hidden">
+        Our exclusive bedding and fabric collections bring serenity and sophistication to every space.
+      </p>
+      <button
+        class="poppins bg-white/50 text-gray-300 font-semibold px-6 py-3 rounded-full text-sm sm:text-base 
+        border border-white/50 cursor-not-allowed pointer-events-none">
+        Discover our collections
+      </button>
+    </div>
+  </div>
 
-      <!-- Text Content -->
-      <div class="relative z-10 sale-small-img -2 text-white max-w-lg px-4 opacity-0 translate-y-10"
-        id="hero-text">
-        <h2 class="cal tracking-wider mb-2 uppercase text-lg sm:text-xl">
-          Contemporary Comfort
-        </h2>
-        <p class="poppins text-sm sm:text-base  leading-relaxed mb-6">
-          HIP defines bold sophistication with vibrant accents and modern design. <br class="sm:block hidden">
-          Descanso reflects pure calm through understated tones and graceful softness.
+  <!-- Collection Highlight Section -->
+  <div class="grid sm:grid-cols-2">
+    <div class="grid grid-cols-1">
+      <!-- Text Block -->
+      <div
+        class="bg-[#ac4820] sale-text text-white px-10 sm:px-12 lg:px-14 xl:px-16 py-10 sm:py-12 lg:py-16 xl:py-20 w-full mx-auto space-y-4 opacity-0">
+        <div class="text-sm font-semibold uppercase tracking-wider cal">Featured Collection</div>
+        <h1 class="text-4xl cal sm:text-5xl leading-tight">
+          The Essence of Modern Living
+        </h1>
+        <p class="text-sm poppins sm:text-base text-white/90">
+          Experience the perfect blend of quality, design, and comfort in our latest home textile range. From luxurious
+          duvet covers to soft throws and elegant cushions, every piece reflects craftsmanship and attention to detail.
+          <br>
+          Discover textiles that redefine comfort and aesthetics.
         </p>
-        <button class="poppins bg-white text-gray-900 font-semibold px-6 py-3 rounded-full text-sm sm:text-base 
-        transition-all duration-300 hover:bg-transparent hover:text-white border border-white">
-          Shop our home collection
+        <button
+          class="bg-white/50 text-gray-300 sm:text-base text-sm font-semibold px-5 py-2 rounded-full shadow border border-white/50 cursor-not-allowed pointer-events-none">
+          Explore More Designs
         </button>
       </div>
-    </div>
 
-    <!-- Sale Section -->
-    <div class="grid sm:grid-cols-2">
-      <div class="grid grid-cols-1">
-        <!-- Text Block -->
-        <div
-          class="bg-[#ac4820]   sale-text text-white px-10 sm:px-12 lg:px-14 xl:px-16 py-10 sm:py-12 lg:py-16 xl:py-20 w-full mx-auto space-y-4 opacity-0">
-          <div class="text-sm font-semibold uppercase tracking-wider cal">Clearance</div>
-          <h1 class="text-4xl cal sm:text-5xl  leading-tight">
-            Mega Sale – Up to <br class="sm:hidden"> 70% Off!
-          </h1>
-          <p class="text-sm poppins sm:text-base text-white/90">
-            Take advantage of great discounts on textiles for your home and garden. Duvet covers for adults and
-            children, fitted sheets, decorative pillows, throws, beach towels, sports and travel towels, beach bags, and
-            more.
-            Check out our sale items now – while supplies last!
-          </p>
-          <button
-            class="bg-white text-black sm:text-base text-sm font-semibold px-5 py-2 rounded-full shadow hover:bg-gray-100 transition">
-            View the clearance sale
-          </button>
-        </div>
-
-        <!-- Small Image -->
-        <div class="bg-center sale-small-img  bg-cover h-[300px] bg-no-repeat scale-95 opacity-0"
-          style="background-image:url(./public/images/bedding3-grid.avif);">
-        </div>
+      <!-- Small Image -->
+      <div class="bg-center sale-small-img bg-cover h-[300px] bg-no-repeat scale-95 opacity-0"
+        style="background-image:url(./public/images/bedding3-grid.avif);">
       </div>
-
-      <!-- Large Image -->
-      <div style="background-image:url(./public/images/bedding2-grid.jpg);"
-        class=" min-h-[400px] sm:min-h-[600px] bg-center bg-no-repeat bg-cover  sale-large-img  opacity-0"></div>
     </div>
-  </section>
+
+    <!-- Large Image -->
+    <div style="background-image:url(./public/images/bedding2-grid.jpg);"
+      class="min-h-[400px] sm:min-h-[600px] bg-center bg-no-repeat bg-cover sale-large-img opacity-0"></div>
+  </div>
+</section>
+
 
 
 
@@ -835,81 +836,66 @@ overflow-hidden bg-[#a68b4a] transition-all duration-500 ease-out hover:scale-[1
     </div>
   </section>
   <section class="bg-gray-100 py-10 px-4">
-    <div class="max-w-[1530px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
+  <div class="2xl:max-w-[1530px] container mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
 
-      <!-- Main large card -->
-      <div class="card relative md:row-span-2 h-[500px] rounded-lg text-white overflow-hidden group">
-        <div style="background-image: url(./public/images/bedset.avif);"
-          class="card-bg absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-110">
-        </div>
-        <!-- Black overlay -->
-        <div class="absolute inset-0 bg-black/50 group-hover:bg-black/60 transition-all duration-300"></div>
-        <!-- Content -->
-        <span
-          class="absolute top-4 right-4 bg-white text-black text-sm font-semibold px-3 py-1 rounded-full shadow z-10">
-          €5.93–39.95
-        </span>
-        <div class="absolute bottom-4 left-4 text-xl font-semibold max-w-xs z-10">
-          Soft flannel duvet covers – warm and cozy for young and old
-        </div>
+    <!-- Main large card -->
+    <div class="card relative md:row-span-2 h-[500px] rounded-lg text-white overflow-hidden group">
+      <div style="background-image: url(./public/images/bedset.avif);"
+        class="card-bg absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-110">
       </div>
-
-      <!-- Card 1 -->
-      <div class="card relative h-[240px] rounded-lg text-white overflow-hidden group">
-        <div style="background-image: url(./public/images/winter.jpg)"
-          class="card-bg absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-110">
-        </div>
-        <div class="absolute inset-0 bg-black/50 group-hover:bg-black/60 transition-all duration-300"></div>
-        <span
-          class="absolute top-4 right-4 bg-white text-black text-xs font-semibold px-2 py-1 rounded-full shadow z-10">
-          From €15.23–21.95
-        </span>
-        <div class="absolute bottom-4 left-4 text-lg font-medium z-10">
-          Winter details
-        </div>
+      <!-- Black overlay -->
+      <div class="absolute inset-0 bg-black/50 group-hover:bg-black/60 transition-all duration-300"></div>
+      <!-- Content -->
+      <div class="absolute bottom-4 left-4 text-xl font-semibold max-w-xs z-10">
+        Soft flannel duvet covers – warm and cozy for young and old
       </div>
-
-      <!-- Card 2 -->
-      <div class="card relative h-[240px] rounded-lg text-white overflow-hidden group">
-        <div style="background-image: url(./public/images/colorful%20bedset.jpeg);"
-          class="card-bg absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-110">
-        </div>
-        <div class="absolute inset-0 bg-black/50 group-hover:bg-black/60 transition-all duration-300"></div>
-        <span
-          class="absolute top-4 right-4 bg-white text-black text-sm font-semibold px-3 py-1 rounded-full shadow z-10">
-          €10.20–44.95
-        </span>
-        <div class="absolute bottom-4 left-4 text-lg font-medium z-10">
-          Colorful flannel duvet covers
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="card relative h-[240px] rounded-lg text-white overflow-hidden group">
-        <div style="background-image: url(./public/images/children-bedset.webp);"
-          class="card-bg absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-110">
-        </div>
-        <div class="absolute inset-0 bg-black/50 group-hover:bg-black/60 transition-all duration-300"></div>
-        <span
-          class="absolute bottom-4 right-4 bg-white text-black text-sm font-semibold px-3 py-1 rounded-full shadow z-10">
-          €5.00–39.95
-        </span>
-        <div class="absolute top-4 left-4 text-lg font-medium z-10">
-          Flannel children's covers
-        </div>
-      </div>
-
-      <!-- View More button -->
-      <div
-        class="    flex items-center justify-center bg-[#a68b4a] text-white text-lg font-semibold rounded-lg hover:bg-[#8c753d] transition cursor-pointer h-[240px]">
-        <a href="#" class="flex items-center text-4xl cal gap-2">
-          View more
-          <span class="text-2xl">→</span>
-        </a>
-      </div>
-
     </div>
-  </section>
+
+    <!-- Card 1 -->
+    <div class="card relative h-[240px] rounded-lg text-white overflow-hidden group">
+      <div style="background-image: url(./public/images/winter.jpg)"
+        class="card-bg absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-110">
+      </div>
+      <div class="absolute inset-0 bg-black/50 group-hover:bg-black/60 transition-all duration-300"></div>
+      <div class="absolute bottom-4 left-4 text-lg font-medium z-10">
+        Winter details
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card relative h-[240px] rounded-lg text-white overflow-hidden group">
+      <div style="background-image: url(./public/images/colorful%20bedset.jpeg);"
+        class="card-bg absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-110">
+      </div>
+      <div class="absolute inset-0 bg-black/50 group-hover:bg-black/60 transition-all duration-300"></div>
+      <div class="absolute bottom-4 left-4 text-lg font-medium z-10">
+        Colorful flannel duvet covers
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card relative h-[240px] rounded-lg text-white overflow-hidden group">
+      <div style="background-image: url(./public/images/children-bedset.webp);"
+        class="card-bg absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-110">
+      </div>
+      <div class="absolute inset-0 bg-black/50 group-hover:bg-black/60 transition-all duration-300"></div>
+      <div class="absolute top-4 left-4 text-lg font-medium z-10">
+        Flannel children's covers
+      </div>
+    </div>
+
+    <!-- Explore Collection Button -->
+    <div
+      class="flex items-center justify-center bg-[#a68b4a] text-white text-lg font-semibold rounded-lg hover:bg-[#8c753d] transition cursor-pointer h-[240px]">
+      <a href="#" class="flex items-center text-3xl cal gap-2">
+        Explore the Collection
+        <span class="text-2xl">→</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
 
 
   <!-- FAQS -->
