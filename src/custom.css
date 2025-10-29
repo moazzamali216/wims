@@ -49,7 +49,7 @@ html{
   background-image: 
 
     linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
-    url('../public/images/hero.png')  !important;
+    url('../public/images/d3.webp')  !important;
   width: 100%;
   
   height: 900px;
@@ -118,7 +118,7 @@ html{
 
 
 .t-box{
-  background-image: url('../public/images/t1.jpg') !important;
+  background-image: url('../public/images/d7.webp') !important;
   background-size: cover;
   background-position: center;
   border-radius: 24px;
