@@ -429,4 +429,4 @@ const dyedSlides = [
 
     // Initialize first slide
     updateDyedSlide();
-    setInterval(updateDyedSlide, 5000);
+    setInterval(updateDyedSlide, 3000);
