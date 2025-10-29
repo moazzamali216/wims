@@ -583,43 +583,22 @@
     </div>
   </section>
 
-<section class="py-16 bg-gray-50 relative">
+<section class="py-16 lg:block hidden bg-gray-50">
   <div class="container 2xl:max-w-[1530px] mx-auto px-4 text-center">
-    
-    <!-- Heading -->
+
     <h2 class="text-4xl sm:text-5xl font-bold cal text-gray-900 mb-6">
       Explore Our <span class="text-[#a68b4a]">Color Palette</span>
     </h2>
     <p class="text-gray-700 poppins max-w-2xl mx-auto mb-12">
-      Discover the vibrant and versatile colors available for our dyed textiles. From subtle neutrals to bold statement shades, we offer a palette that brings every space to life.
+      Discover the vibrant shades available for our dyed textiles. Hover over a color to explore its elegance.
     </p>
 
-    <!-- Color Swatches Grid -->
-    <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-6 max-w-4xl mx-auto">
-      <div class="w-20 h-20 rounded-full shadow-lg border border-gray-200 bg-[#a68b4a]"></div>
-      <div class="w-20 h-20 rounded-full shadow-lg border border-gray-200 bg-[#b99f73]"></div>
-      <div class="w-20 h-20 rounded-full shadow-lg border border-gray-200 bg-[#d4c6a8]"></div>
-      <div class="w-20 h-20 rounded-full shadow-lg border border-gray-200 bg-[#e8e2d1]"></div>
-      <div class="w-20 h-20 rounded-full shadow-lg border border-gray-200 bg-[#f2c6a8]"></div>
-      <div class="w-20 h-20 rounded-full shadow-lg border border-gray-200 bg-[#c6b49f]"></div>
-      <div class="w-20 h-20 rounded-full shadow-lg border border-gray-200 bg-[#8b5a2b]"></div>
-      <div class="w-20 h-20 rounded-full shadow-lg border border-gray-200 bg-[#5a3e2b]"></div>
-      <div class="w-20 h-20 rounded-full shadow-lg border border-gray-200 bg-[#ffe8d1]"></div>
-      <div class="w-20 h-20 rounded-full shadow-lg border border-gray-200 bg-[#f0d8c6]"></div>
-      <div class="w-20 h-20 rounded-full shadow-lg border border-gray-200 bg-[#d1c4b0]"></div>
-      <div class="w-20 h-20 rounded-full shadow-lg border border-gray-200 bg-[#b4a68b]"></div>
-    </div>
-
-    <!-- Optional CTA -->
-    <div class="mt-12">
-      <a href="./contact.html" 
-         class="inline-block px-8 py-3 rounded-full bg-[#a68b4a] text-white font-semibold poppins shadow-lg hover:bg-[#8b6b3a] transition-all duration-300">
-        Request Your Custom Color
-      </a>
-    </div>
-
+    <!-- Rectangular Color Grid -->
+    <div class="grid grid-cols-12 gap-1 justify-center" id="color-grid"></div>
   </div>
 </section>
+
+
 
   
   <section class="relative bg-[#f5f4f1] py-10">
@@ -1085,6 +1064,7 @@
 
 
 <script defer src="./src/js/index.js"></script>
+<script src="./src/js/color.js"></script>
 <script defer src="./src//js/scrollbar.js"></script>
 
 </html>
