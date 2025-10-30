@@ -178,7 +178,12 @@
         </li>
 
         <div id="dropdown"
-          class="z-[100] hidden w-[750px] grid grid-cols-2 md:grid-cols-3 gap-6 p-6 rounded-2xl shadow-lg bg-white">
+          class="z-[100] hidden w-[750px] grid grid-cols-2 md:grid-cols-3 gap-6 p-6 rounded-2xl shadow-lg bg-white">  <!-- Kitchen -->
+  <div class="space-y-2">
+    <a href='./kitchen.html' class="cal text-lg font-semibold text-[#a68b4a]">Kitchen</a>
+    <p class="text-xs poppins text-black/70">Vibrant, colorfast dyed fabrics made with precision and
+      long-lasting hues.</p>
+  </div>
 
           <!-- Kids -->
           <div class="space-y-2">
@@ -238,7 +243,7 @@
       </ul>
     </div>
     <div class="w-fit flex gap-x-3 cal">
-   
+
       <a href="tel:+4921265001564" class="flex items-center flex-col">
         <span class="cal tracking-wider text-base font-[500] text-gray-800">+49 212 65001564</span>
         <span class="cal tracking-wider text-base font-[500] text-gray-800">+49 176 20171778</span>
@@ -375,56 +380,60 @@
   </section>
 
 
-<section class="relative overflow-hidden bg-[#f5f4f1]">
-  <!-- Background Animation (Subtle Gradient Flow) -->
-  <div class="absolute inset-0 bg-gradient-to-r from-[#a68b4a]/10 via-[#f0eade]/40 to-[#a68b4a]/10 animate-gradient-x"></div>
-
-  <div class="2xl:max-w-[1530px] container mx-auto px-4 py-20 relative z-10 flex flex-col lg:flex-row items-center gap-10">
-
-    <!-- Text Section -->
-    <div class="lg:w-1/2 space-y-6 text-center lg:text-left">
-      <h1 class="text-5xl sm:text-6xl font-bold cal text-gray-900 leading-tight">
-        <span class="text-[#a68b4a]">Dyed Elegance,</span><br>
-        Crafted for Vibrant Living.
-      </h1>
-      <p class="poppins text-gray-700 text-base sm:text-lg leading-relaxed max-w-lg mx-auto lg:mx-0">
-        At <strong>Wims Textiles</strong>, our dyed bedsets redefine sophistication with vibrant hues and long-lasting colorfast technology — merging art and comfort into every thread.
-      </p>
-
-      <!-- Interactive Color Swatches -->
-      <div class="flex justify-center lg:justify-start gap-3 mt-6">
-        <div class="w-8 h-8 rounded-full bg-[#a68b4a] hover:scale-110 transition-all cursor-pointer"></div>
-        <div class="w-8 h-8 rounded-full bg-[#b99f73] hover:scale-110 transition-all cursor-pointer"></div>
-        <div class="w-8 h-8 rounded-full bg-[#d4c6a8] hover:scale-110 transition-all cursor-pointer"></div>
-        <div class="w-8 h-8 rounded-full bg-[#e8e2d1] hover:scale-110 transition-all cursor-pointer"></div>
-      </div>
-
-      <!-- Disabled Button -->
-      <button disabled
-        class="mt-8 poppins font-semibold text-sm sm:text-base px-8 py-3 rounded-full border border-[#a68b4a] text-[#a68b4a]/60 bg-transparent cursor-not-allowed">
-        Explore Collection (Coming Soon)
-      </button>
+  <section class="relative overflow-hidden bg-[#f5f4f1]">
+    <!-- Background Animation (Subtle Gradient Flow) -->
+    <div
+      class="absolute inset-0 bg-gradient-to-r from-[#a68b4a]/10 via-[#f0eade]/40 to-[#a68b4a]/10 animate-gradient-x">
     </div>
 
-    <!-- Image Showcase Slider -->
-    <div class="lg:w-1/2 w-full relative group">
-      <!-- Image Container -->
-      <div id="dyedSliderImage"
-        class="h-[400px] w-full rounded-3xl bg-[#e0d8c6] overflow-hidden shadow-lg transition-all duration-700 bg-cover bg-center">
+    <div
+      class="2xl:max-w-[1530px] container mx-auto px-4 py-20 relative z-10 flex flex-col lg:flex-row items-center gap-10">
+
+      <!-- Text Section -->
+      <div class="lg:w-1/2 space-y-6 text-center lg:text-left">
+        <h1 class="text-5xl sm:text-6xl font-bold cal text-gray-900 leading-tight">
+          <span class="text-[#a68b4a]">Dyed Elegance,</span><br>
+          Crafted for Vibrant Living.
+        </h1>
+        <p class="poppins text-gray-700 text-base sm:text-lg leading-relaxed max-w-lg mx-auto lg:mx-0">
+          At <strong>Wims Textiles</strong>, our dyed bedsets redefine sophistication with vibrant hues and long-lasting
+          colorfast technology — merging art and comfort into every thread.
+        </p>
+
+        <!-- Interactive Color Swatches -->
+        <div class="flex justify-center lg:justify-start gap-3 mt-6">
+          <div class="w-8 h-8 rounded-full bg-[#a68b4a] hover:scale-110 transition-all cursor-pointer"></div>
+          <div class="w-8 h-8 rounded-full bg-[#b99f73] hover:scale-110 transition-all cursor-pointer"></div>
+          <div class="w-8 h-8 rounded-full bg-[#d4c6a8] hover:scale-110 transition-all cursor-pointer"></div>
+          <div class="w-8 h-8 rounded-full bg-[#e8e2d1] hover:scale-110 transition-all cursor-pointer"></div>
+        </div>
+
+        <!-- Disabled Button -->
+        <button disabled
+          class="mt-8 poppins font-semibold text-sm sm:text-base px-8 py-3 rounded-full border border-[#a68b4a] text-[#a68b4a]/60 bg-transparent cursor-not-allowed">
+          Explore Collection (Coming Soon)
+        </button>
       </div>
 
-      <!-- Floating Card Effect -->
-      <div
-        class="absolute -bottom-6 left-6 bg-white shadow-xl w-full max-w-[250px] rounded-2xl px-6 py-4  transition-opacity duration-700"
-        id="dyedSliderText">
+      <!-- Image Showcase Slider -->
+      <div class="lg:w-1/2 w-full relative group">
+        <!-- Image Container -->
+        <div id="dyedSliderImage"
+          class="h-[400px] w-full rounded-3xl bg-[#e0d8c6] overflow-hidden shadow-lg transition-all duration-700 bg-cover bg-center">
+        </div>
+
+        <!-- Floating Card Effect -->
+        <div
+          class="absolute -bottom-6 left-6 bg-white shadow-xl w-full max-w-[250px] rounded-2xl px-6 py-4  transition-opacity duration-700"
+          id="dyedSliderText">
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
 
- <section class="py- sm:py-14">
+  <section class="py- sm:py-14">
     <div class="container  mx-auto 2xl:max-w-[1530px] mt-10 py-10 px-4">
       <h1 class="text-gray-900 text-center tracking-widest leading-[50px] cal font-[600] text-4xl sm:text-5xl">
         WIMS Dyed Bedset Collection
@@ -582,240 +591,310 @@
 
     </div>
   </section>
-<section class="relative h-[450px] bg-cover bg-center flex items-center justify-center"
-         style="background-image: url('./public/images/d6.webp');">
-  <!-- Overlay for readability -->
-  <div class="absolute inset-0 bg-black/50"></div>
+  <section class="relative h-[450px] bg-cover bg-center flex items-center justify-center"
+    style="background-image: url('./public/images/d6.webp');">
+    <!-- Overlay for readability -->
+    <div class="absolute inset-0 bg-black/50"></div>
 
-  <div class="relative text-center text-white px-6 max-w-3xl">
-    <h2 class="text-4xl cal sm:text-5xl font-bold mb-4 tracking‑wide">
-      We Shape Interior Designs,<br>
-      Crafting Timeless And Inspiring Spaces
-    </h2>
-    <p class="text-lg poppins sm:text-xl leading-relaxed mb-6">
-      From concept to creation — bringing elegance, comfort and lasting impact to every thread.
-    </p>
-    <a href="./contact.html"
-       class="inline-block poppins px-8 py-3 bg-[#a68b4a] hover:bg-[#816b38] rounded-full text-white font-semibold transition-all duration-300">
-      Get a Quote
-    </a>
-  </div>
-</section>
-
-
-<section class="py-16 lg:block hidden bg-gray-50">
-  <div class="container 2xl:max-w-[1530px] mx-auto px-4 text-center">
-
-    <h2 class="text-4xl sm:text-5xl font-bold cal text-gray-900 mb-6">
-      Explore Our <span class="text-[#a68b4a]">Color Palette</span>
-    </h2>
-    <p class="text-gray-700 poppins max-w-2xl mx-auto mb-12">
-      Discover the vibrant shades available for our dyed textiles. Hover over a color to explore its elegance.
-    </p>
-
-    <!-- Rectangular Color Grid -->
-    <div class="grid grid-cols-12 gap-1 justify-center" id="color-grid"></div>
-  </div>
-</section>
+    <div class="relative text-center text-white px-6 max-w-3xl">
+      <h2 class="text-4xl cal sm:text-5xl font-bold mb-4 tracking‑wide">
+        We Shape Interior Designs,<br>
+        Crafting Timeless And Inspiring Spaces
+      </h2>
+      <p class="text-lg poppins sm:text-xl leading-relaxed mb-6">
+        From concept to creation — bringing elegance, comfort and lasting impact to every thread.
+      </p>
+      <a href="./contact.html"
+        class="inline-block poppins px-8 py-3 bg-[#a68b4a] hover:bg-[#816b38] rounded-full text-white font-semibold transition-all duration-300">
+        Get a Quote
+      </a>
+    </div>
+  </section>
 
 
 
-  
+  <section class="py-16 lg:block hidden bg-gray-50">
+    <div class="container 2xl:max-w-[1530px] mx-auto px-4 text-center">
+
+      <h2 class="text-4xl sm:text-5xl font-bold cal text-gray-900 mb-6">
+        Explore Our <span class="text-[#a68b4a]">Color Palette</span>
+      </h2>
+      <p class="text-gray-700 poppins max-w-2xl mx-auto mb-12">
+        Discover the vibrant shades available for our dyed textiles. Hover over a color to explore its elegance.
+      </p>
+
+      <!-- Rectangular Color Grid -->
+      <div class="grid grid-cols-12 gap-1 justify-center" id="color-grid"></div>
+    </div>
+  </section>
+
+
+
+
   <section class="relative bg-[#f5f4f1] py-10">
-  <div class="container mx-auto px-4 text-center lg:text-left">
-    <!-- Heading -->
-    <h2 class="text-4xl sm:text-5xl font-bold cal text-gray-900 mb-4">
-      Request a Bedset Dyed Sample
-    </h2>
-    <!-- Description -->
-    <p class="poppins text-gray-700 mb-8 max-w-2xl mx-auto lg:mx-0 text-base sm:text-lg">
-      Experience the quality and vibrancy of our dyed textiles firsthand.  
-      WIMS Textiles offers tailored samples for your preferred colors and designs, so you can make informed decisions before placing your order.
-    </p>
+    <div class="container mx-auto px-4 text-center lg:text-left">
+      <!-- Heading -->
+      <h2 class="text-4xl sm:text-5xl font-bold cal text-gray-900 mb-4">
+        Request a Bedset Dyed Sample
+      </h2>
+      <!-- Description -->
+      <p class="poppins text-gray-700 mb-8 max-w-2xl mx-auto lg:mx-0 text-base sm:text-lg">
+        Experience the quality and vibrancy of our dyed textiles firsthand.
+        WIMS Textiles offers tailored samples for your preferred colors and designs, so you can make informed decisions
+        before placing your order.
+      </p>
 
-    <!-- Call-to-Action Button -->
-    <a href="./contact.html"
-      class="inline-block px-10 py-4 rounded-full bg-[#a68b4a] text-white font-semibold poppins text-lg hover:scale-105 transition-transform duration-300">
-      Request a Sample
-    </a>
-  </div>
-</section>
+      <!-- Call-to-Action Button -->
+      <a href="./contact.html"
+        class="inline-block px-10 py-4 rounded-full bg-[#a68b4a] text-white font-semibold poppins text-lg hover:scale-105 transition-transform duration-300">
+        Request a Sample
+      </a>
+    </div>
+  </section>
 
-<section class="py-8 bg-gray-50">
-  <div class="container 2xl:max-w-[1530px] px-4 mx-auto">
-    <h2 class="text-4xl sm:text-5xl font-bold text-center cal text-gray-900 mb-6">
-      Explore Our <span class="text-[#a68b4a]">Dyed Range</span>
-    </h2>
 
-    <div class="w-full mx-auto grid md:grid-cols-2 gap-8 items-center">
+  <!-- Pillow Collection Section -->
+  <section class="py-16 bg-amber-50">
+    <div class="max-w-6xl mx-auto px-4 text-amber-900">
 
-      <!-- Left side: Image placeholders -->
-      <div class="space-y-2 about-images">
-        <div class="h-72 about-g-main w-full rounded-2xl bg-center bg-no-repeat bg-cover"
-             style="background-image: url(./public/images/d9.webp);"></div>
-        <div class="grid grid-cols-2 gap-2">
-          <div class="h-52 about-g-1 rounded-2xl bg-center bg-no-repeat bg-cover"
-               style="background-image: url(./public/images/d8.webp);"></div>
-          <div class="h-52 about-g-2 rounded-2xl bg-center bg-no-repeat bg-cover"
-               style="background-image: url(./public/images/d7.webp);"></div>
+      <!-- Heading -->
+      <div class="text-center mb-12">
+         <h2 class="text-4xl sm:text-5xl font-bold text-center cal text-gray-900 mb-6">
+       Dyed <span class="text-[#a68b4a]">Pillow Collection</span>
+      </h2>
+        <p class="mt-6 text-lg md:text-xl poppins text-amber-900/80 max-w-2xl mx-auto leading-relaxed">
+          Discover WIMS Textiles’ vibrant dyed pillow range — where elegance meets comfort,
+          and every shade adds warmth to your living spaces.
+        </p>
+      </div>
+
+
+      <!-- Pillow Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12">
+        <div class="aspect-square rounded-2xl overflow-hidden shadow-md">
+          <img src="./public/images/p1.webp" alt="Dyed Pillow 1"
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="aspect-square rounded-2xl overflow-hidden shadow-md">
+          <img src="./public/images/p2.webp" alt="Dyed Pillow 2"
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="aspect-square rounded-2xl overflow-hidden shadow-md">
+          <img src="./public/images/p3.webp" alt="Dyed Pillow 3"
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="aspect-square rounded-2xl overflow-hidden shadow-md">
+          <img src="./public/images/p4.webp" alt="Dyed Pillow 4"
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="aspect-square rounded-2xl overflow-hidden shadow-md">
+          <img src="./public/images/p5.webp" alt="Dyed Pillow 5"
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
         </div>
       </div>
 
-      <!-- Right side: Product Types text -->
-      <div class="space-y-8 poppins text-black">
-        <div>
-          <h3 class="text-2xl cal font-semibold mb-2">Fabric</h3>
-          <p class="text-black/80 font-light">
-            WIMS Textiles provides premium dyed fabrics suitable for tailoring, upholstery, and creative DIY projects.  
-            Each fabric is treated with colorfast techniques to ensure long-lasting vibrancy.
-          </p>
-        </div>
-
-        <div>
-          <h3 class="text-2xl cal font-semibold mb-2">Pillows & Cushions</h3>
-          <p class="text-black/80 font-light">
-            Explore our range of dyed pillow covers and cushions, crafted to bring elegance, comfort, and a splash of color to your living spaces.  
-            Designed for both style and durability, they complement any interior effortlessly.
-          </p>
-        </div>
-
-        <div>
-          <h3 class="text-2xl cal font-semibold mb-2">Sheets</h3>
-          <p class="text-black/80 font-light">
-            Our dyed bed sheets offer luxurious softness and rich, lasting colors.  
-            Available in a variety of patterns and shades, they are perfect for creating a vibrant and inviting bedroom ambiance.
-          </p>
-        </div>
+      <!-- About This Product -->
+      <div class="max-w-3xl mx-auto text-center space-y-6">
+        <h3 class="text-3xl font-semibold cal text-amber-800">About This Collection</h3>
+        <p class="poppins text-amber-900/80 text-lg leading-relaxed">
+          Each pillow in our dyed collection is a blend of artistry and craftsmanship.
+          Created with precision dyeing techniques, they retain their color and softness even after long use.
+          Whether you prefer soothing neutrals or bold statement hues, WIMS ensures every pillow delivers unmatched
+          comfort and elegance.
+        </p>
+        <p class="poppins text-amber-900/80 text-lg leading-relaxed">
+          Our fabrics are carefully chosen for breathability and durability,
+          ensuring your interiors reflect both sophistication and sustainability — a true hallmark of WIMS Textiles’
+          excellence.
+        </p>
+        <a href="contact.html"
+          class="inline-block mt-6 px-8 py-3 bg-[#a68b4a] text-white rounded-full hover:bg-[#8a753b] transition-colors duration-300 poppins font-medium">
+          Request More Details
+        </a>
       </div>
 
     </div>
-  </div>
-</section>
+  </section>
 
 
+  <section class="py-8 bg-gray-50">
+    <div class="container 2xl:max-w-[1530px] px-4 mx-auto">
+      <h2 class="text-4xl sm:text-5xl font-bold text-center cal text-gray-900 mb-6">
+        Explore Our <span class="text-[#a68b4a]">Dyed Range</span>
+      </h2>
 
-<section class="relative bg-[#f5f4f1] py-20">
-  <div class="container mx-auto px-4 text-center">
-    <h2 class="text-4xl sm:text-5xl font-bold cal text-gray-900 mb-8">
-      Why Choose Our Dyed Textiles
-    </h2>
-    <p class="poppins text-gray-700 max-w-2xl mx-auto mb-12">
-      Our dyed fabrics are carefully crafted to combine vibrant colors, lasting quality, and comfort — making your home stylish and cozy.
-    </p>
+      <div class="w-full mx-auto grid md:grid-cols-2 gap-8 items-center">
 
-    <!-- Benefits Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      
-      <!-- Card 1 -->
-      <div class="p-6 rounded-2xl shadow-lg bg-[#a68b4a]/20 hover:bg-[#a68b4a]/30 transition-all duration-500">
-        <h3 class="text-xl font-semibold cal mb-2">Long-Lasting Colors</h3>
-        <p class="text-gray-700 text-sm poppins">
-          Our dyes are designed to stay vibrant wash after wash, maintaining their brilliance over time.
-        </p>
+        <!-- Left side: Image placeholders -->
+        <div class="space-y-2 about-images">
+          <div class="h-72 about-g-main w-full rounded-2xl bg-center bg-no-repeat bg-cover"
+            style="background-image: url(./public/images/d9.webp);"></div>
+          <div class="grid grid-cols-2 gap-2">
+            <div class="h-52 about-g-1 rounded-2xl bg-center bg-no-repeat bg-cover"
+              style="background-image: url(./public/images/d8.webp);"></div>
+            <div class="h-52 about-g-2 rounded-2xl bg-center bg-no-repeat bg-cover"
+              style="background-image: url(./public/images/d7.webp);"></div>
+          </div>
+        </div>
+
+        <!-- Right side: Product Types text -->
+        <div class="space-y-8 poppins text-black">
+          <div>
+            <h3 class="text-2xl cal font-semibold mb-2">Fabric</h3>
+            <p class="text-black/80 font-light">
+              WIMS Textiles provides premium dyed fabrics suitable for tailoring, upholstery, and creative DIY projects.
+              Each fabric is treated with colorfast techniques to ensure long-lasting vibrancy.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-2xl cal font-semibold mb-2">Pillows & Cushions</h3>
+            <p class="text-black/80 font-light">
+              Explore our range of dyed pillow covers and cushions, crafted to bring elegance, comfort, and a splash of
+              color to your living spaces.
+              Designed for both style and durability, they complement any interior effortlessly.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-2xl cal font-semibold mb-2">Sheets</h3>
+            <p class="text-black/80 font-light">
+              Our dyed bed sheets offer luxurious softness and rich, lasting colors.
+              Available in a variety of patterns and shades, they are perfect for creating a vibrant and inviting
+              bedroom ambiance.
+            </p>
+          </div>
+        </div>
+
       </div>
-
-      <!-- Card 2 -->
-      <div class="p-6 rounded-2xl shadow-lg bg-[#b99f73]/20 hover:bg-[#b99f73]/30 transition-all duration-500">
-        <h3 class="text-xl font-semibold cal mb-2">Soft & Comfortable</h3>
-        <p class="text-gray-700 text-sm poppins">
-          Fabrics are soft to touch, ensuring ultimate comfort for your bedding, curtains, and upholstery.
-        </p>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="p-6 rounded-2xl shadow-lg bg-[#d4c6a8]/20 hover:bg-[#d4c6a8]/30 transition-all duration-500">
-        <h3 class="text-xl font-semibold cal mb-2">Eco-Friendly Dyes</h3>
-        <p class="text-gray-700 text-sm poppins">
-          Safe for you and the environment, our dyes are non-toxic and responsibly sourced.
-        </p>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="p-6 rounded-2xl shadow-lg bg-[#e8e2d1]/20 hover:bg-[#e8e2d1]/30 transition-all duration-500">
-        <h3 class="text-xl font-semibold cal mb-2">Easy Care</h3>
-        <p class="text-gray-700 text-sm poppins">
-          Machine washable and low maintenance, keeping your fabrics looking fresh without hassle.
-        </p>
-      </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
 
 
+  <section class="relative bg-[#f5f4f1] py-20">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl sm:text-5xl font-bold cal text-gray-900 mb-8">
+        Why Choose Our Dyed Textiles
+      </h2>
+      <p class="poppins text-gray-700 max-w-2xl mx-auto mb-12">
+        Our dyed fabrics are carefully crafted to combine vibrant colors, lasting quality, and comfort — making your
+        home stylish and cozy.
+      </p>
 
-<section class="py-16 bg-gray-50">
-  <div class="container 2xl:max-w-[1530px] mx-auto px-4">
-    <h2 class="text-4xl sm:text-5xl font-bold text-center cal text-gray-900 mb-12">
-      Related <span class="text-[#a68b4a]">Products</span>
-    </h2>
+      <!-- Benefits Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
-    <div class="grid md:grid-cols-3 lg:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="p-6 rounded-2xl shadow-lg bg-[#a68b4a]/20 hover:bg-[#a68b4a]/30 transition-all duration-500">
+          <h3 class="text-xl font-semibold cal mb-2">Long-Lasting Colors</h3>
+          <p class="text-gray-700 text-sm poppins">
+            Our dyes are designed to stay vibrant wash after wash, maintaining their brilliance over time.
+          </p>
+        </div>
 
-      <!-- Kids -->
-      <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition-all duration-300">
-        <h3 class="text-2xl cal font-semibold mb-2">
-          <a href="./kids.html" class="hover:text-[#a68b4a] transition-colors">Kids</a>
-        </h3>
-        <p class="text-gray-700 text-sm">
-          Soft and safe textiles designed specially for children’s comfort and durability.
-        </p>
+        <!-- Card 2 -->
+        <div class="p-6 rounded-2xl shadow-lg bg-[#b99f73]/20 hover:bg-[#b99f73]/30 transition-all duration-500">
+          <h3 class="text-xl font-semibold cal mb-2">Soft & Comfortable</h3>
+          <p class="text-gray-700 text-sm poppins">
+            Fabrics are soft to touch, ensuring ultimate comfort for your bedding, curtains, and upholstery.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="p-6 rounded-2xl shadow-lg bg-[#d4c6a8]/20 hover:bg-[#d4c6a8]/30 transition-all duration-500">
+          <h3 class="text-xl font-semibold cal mb-2">Eco-Friendly Dyes</h3>
+          <p class="text-gray-700 text-sm poppins">
+            Safe for you and the environment, our dyes are non-toxic and responsibly sourced.
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="p-6 rounded-2xl shadow-lg bg-[#e8e2d1]/20 hover:bg-[#e8e2d1]/30 transition-all duration-500">
+          <h3 class="text-xl font-semibold cal mb-2">Easy Care</h3>
+          <p class="text-gray-700 text-sm poppins">
+            Machine washable and low maintenance, keeping your fabrics looking fresh without hassle.
+          </p>
+        </div>
+
       </div>
-
-      <!-- Adults -->
-      <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition-all duration-300">
-        <h3 class="text-2xl cal font-semibold mb-2">
-          <a href="./adults.html" class="hover:text-[#a68b4a] transition-colors">Adults</a>
-        </h3>
-        <p class="text-gray-700 text-sm">
-          Premium clothing and home textiles tailored for everyday luxury and comfort.
-        </p>
-      </div>
-
-      <!-- Dyed -->
-      <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition-all duration-300">
-        <h3 class="text-2xl cal font-semibold mb-2">
-          <a href="./dyed.html" class="hover:text-[#a68b4a] transition-colors">Dyed</a>
-        </h3>
-        <p class="text-gray-700 text-sm">
-          Vibrant, colorfast dyed fabrics made with precision and long-lasting hues.
-        </p>
-      </div>
-
-      <!-- Towel -->
-      <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition-all duration-300">
-        <h3 class="text-2xl cal font-semibold mb-2">
-          <a href="./towels.html" class="hover:text-[#a68b4a] transition-colors">Towel</a>
-        </h3>
-        <p class="text-gray-700 text-sm">
-          High-quality towels offering exceptional softness, absorbency, and durability.
-        </p>
-      </div>
-
-      <!-- Hotel -->
-      <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition-all duration-300">
-        <h3 class="text-2xl cal font-semibold mb-2">
-          <a href="./hotel.html" class="hover:text-[#a68b4a] transition-colors">Hotel</a>
-        </h3>
-        <p class="text-gray-700 text-sm">
-          Luxury hotel-grade textiles for premium comfort and a refined guest experience.
-        </p>
-      </div>
-
-      <!-- Hospital -->
-      <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition-all duration-300">
-        <h3 class="text-2xl cal font-semibold mb-2">
-          <a href="./hospital.html" class="hover:text-[#a68b4a] transition-colors">Hospital</a>
-        </h3>
-        <p class="text-gray-700 text-sm">
-          Durable, hygienic, and comfortable fabrics designed for healthcare environments.
-        </p>
-      </div>
-
     </div>
-  </div>
-</section>
+  </section>
+
+
+
+
+  <section class="py-16 bg-gray-50">
+    <div class="container 2xl:max-w-[1530px] mx-auto px-4">
+      <h2 class="text-4xl sm:text-5xl font-bold text-center cal text-gray-900 mb-12">
+        Related <span class="text-[#a68b4a]">Products</span>
+      </h2>
+
+      <div class="grid md:grid-cols-3 lg:grid-cols-3 gap-8">
+
+        <!-- Kids -->
+        <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition-all duration-300">
+          <h3 class="text-2xl cal font-semibold mb-2">
+            <a href="./kids.html" class="hover:text-[#a68b4a] transition-colors">Kids</a>
+          </h3>
+          <p class="text-gray-700 text-sm">
+            Soft and safe textiles designed specially for children’s comfort and durability.
+          </p>
+        </div>
+
+        <!-- Adults -->
+        <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition-all duration-300">
+          <h3 class="text-2xl cal font-semibold mb-2">
+            <a href="./adults.html" class="hover:text-[#a68b4a] transition-colors">Adults</a>
+          </h3>
+          <p class="text-gray-700 text-sm">
+            Premium clothing and home textiles tailored for everyday luxury and comfort.
+          </p>
+        </div>
+
+        <!-- Dyed -->
+        <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition-all duration-300">
+          <h3 class="text-2xl cal font-semibold mb-2">
+            <a href="./dyed.html" class="hover:text-[#a68b4a] transition-colors">Dyed</a>
+          </h3>
+          <p class="text-gray-700 text-sm">
+            Vibrant, colorfast dyed fabrics made with precision and long-lasting hues.
+          </p>
+        </div>
+
+        <!-- Towel -->
+        <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition-all duration-300">
+          <h3 class="text-2xl cal font-semibold mb-2">
+            <a href="./towels.html" class="hover:text-[#a68b4a] transition-colors">Towel</a>
+          </h3>
+          <p class="text-gray-700 text-sm">
+            High-quality towels offering exceptional softness, absorbency, and durability.
+          </p>
+        </div>
+
+        <!-- Hotel -->
+        <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition-all duration-300">
+          <h3 class="text-2xl cal font-semibold mb-2">
+            <a href="./hotel.html" class="hover:text-[#a68b4a] transition-colors">Hotel</a>
+          </h3>
+          <p class="text-gray-700 text-sm">
+            Luxury hotel-grade textiles for premium comfort and a refined guest experience.
+          </p>
+        </div>
+
+        <!-- Hospital -->
+        <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition-all duration-300">
+          <h3 class="text-2xl cal font-semibold mb-2">
+            <a href="./hospital.html" class="hover:text-[#a68b4a] transition-colors">Hospital</a>
+          </h3>
+          <p class="text-gray-700 text-sm">
+            Durable, hygienic, and comfortable fabrics designed for healthcare environments.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
   <footer class="relative bg-cover py-10 bg-center bg-no-repeat"
     style="background-image: url('./public/images/h1_bg-2.jpg');">
@@ -872,7 +951,9 @@
           <div>
             <h4 class="font-semibold poppins text-white mb-4">Product Categories</h4>
             <ul class="space-y-2">
-              <li><a href="./kids.html"
+                 <li><a href="./kitchen.html"
+                  class="text-white text-sm poppins hover:text-[#a68b4a] transition duration-300">Kitchen</a>
+              </li><li><a href="./kids.html"
                   class="text-white text-sm poppins hover:text-[#a68b4a] transition duration-300">Kids</a>
               </li>
               <li><a href="./adults.html"
@@ -980,8 +1061,10 @@
 
               <!-- Links -->
               <div class="flex items-center gap-6 text-sm poppins">
-                <a href="./termsandconditions.html" class="text-white hover:text-[#a68b4a] transition duration-300">Terms & Conditions</a>
-                <a href="./termsandconditions.html" class="text-white hover:text-[#a68b4a] transition duration-300">Privacy
+                <a href="./termsandconditions.html"
+                  class="text-white hover:text-[#a68b4a] transition duration-300">Terms & Conditions</a>
+                <a href="./termsandconditions.html"
+                  class="text-white hover:text-[#a68b4a] transition duration-300">Privacy
                   Policy</a>
               </div>
 
