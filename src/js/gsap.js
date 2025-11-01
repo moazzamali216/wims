@@ -389,6 +389,7 @@ document.addEventListener("DOMContentLoaded", () => {
       gsap.to(imageDiv, { scale: 1, duration: 0.8, ease: "power3.out" });
     });
   });
+  
 })();
 
 
@@ -430,3 +431,9 @@ const dyedSlides = [
     // Initialize first slide
     updateDyedSlide();
     setInterval(updateDyedSlide, 3000);
+
+
+
+
+    
+      
