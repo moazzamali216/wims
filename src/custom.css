@@ -142,3 +142,30 @@ html{
     #dyedSliderText {
       transition: opacity 0.7s ease-in-out;
     }
+
+
+    @keyframes border-slide {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.border-gradient {
+  position: absolute;
+  top: -2px; left: -2px; bottom: -2px; right: -2px;
+  padding: 2px; /* border thickness */
+  background: linear-gradient(270deg, #a68b4a, #ffffff, #a68b4a);
+  background-size: 600% 600%;
+  border-radius: inherit;
+  z-index: -1;
+  animation: border-slide 4s linear infinite;
+  pointer-events: none;
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: subtract;
+}
