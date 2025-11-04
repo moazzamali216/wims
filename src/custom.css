@@ -170,3 +170,27 @@ html{
   mask-composite: subtract;
 }
 /* /* 3D Text Effect for All Headings * */
+
+/* ===== FUTURE UNIFORM IMAGE TECH SCAN EFFECT REAL ANIMATION ===== */
+.uniform-scan-lines{
+  pointer-events:none;
+  position:absolute;
+  inset:0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255,255,255,0) 0px,
+    rgba(255,255,255,0) 2px,
+    rgba(255,255,255,0.10) 3px,
+    rgba(255,255,255,0) 6px
+  );
+  animation: scanMove 6s linear infinite;
+  opacity:.55 !important;
+}
+
+@keyframes scanMove{
+  0%{ background-position:0px 0px; }
+  100%{ background-position:0px 600px; }  /* if your image is taller adjust this */
+}
+
+
+

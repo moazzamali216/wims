@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-gsap.registerPlugin(ScrollTrigger);
+
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ease: "power3.out",
     scrollTrigger:{
       trigger: "section#uniformHero",
-      start: "top 85%",
+      start: "top 60%",
               toggleActions: "play none none reverse",
     }
   });
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ease: "power3.out",
     scrollTrigger:{
       trigger: "section#uniformHero",
-      start: "top 85%",
+      start: "top 60%",
               toggleActions: "play none none reverse",
     }
   });
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ease: "power3.out",
     scrollTrigger:{
       trigger: "section#uniformHero",
-      start: "top 85%",
+      start: "top 60%",
               toggleActions: "play none none reverse",
     }
   });
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ease: "power3.out",
     scrollTrigger:{
       trigger: "section#uniformHero",
-      start: "top 85%",
+      start: "top 60%",
               toggleActions: "play none none reverse",
     }
   });
