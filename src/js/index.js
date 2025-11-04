@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const images = [
     
-    "url('./public/images/d7.webp')",
     "url('./public/images/hero.jpg')",
+    "url('./public/images/d7.webp')",
     "url('./public/images/d2.webp')",
     "url('./public/images/d9.webp')",
     "url('./public/images/d5.webp')",
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // initial bg
   heroBg.style.backgroundImage = images[0];
 
-  setInterval(changeHero, 4000);
+  setInterval(changeHero, 6500);
 });
 
 
