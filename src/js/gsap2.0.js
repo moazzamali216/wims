@@ -32,3 +32,65 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  // heading
+  gsap.from("section#uniformHero h1", {
+    x: -80,
+    opacity: 0,
+    duration: 1.3,
+    ease: "power3.out",
+    scrollTrigger:{
+      trigger: "section#uniformHero",
+      start: "top 85%",
+              toggleActions: "play none none reverse",
+    }
+  });
+
+  // subtext
+  gsap.from("section#uniformHero p", {
+    y: 50,
+    opacity: 0,
+    duration: 1.1,
+    delay: .2,
+    ease: "power3.out",
+    scrollTrigger:{
+      trigger: "section#uniformHero",
+      start: "top 85%",
+              toggleActions: "play none none reverse",
+    }
+  });
+
+  // CTA button
+  gsap.from("section#uniformHero a", {
+    scale: 0.75,
+    opacity: 0,
+    duration: .9,
+    delay: .35,
+    ease: "power3.out",
+    scrollTrigger:{
+      trigger: "section#uniformHero",
+      start: "top 85%",
+              toggleActions: "play none none reverse",
+    }
+  });
+
+  // image
+  gsap.from("section#uniformHero img", {
+    scale: 1.25,
+    opacity: 0,
+    duration: 1.6,
+    ease: "power3.out",
+    scrollTrigger:{
+      trigger: "section#uniformHero",
+      start: "top 85%",
+              toggleActions: "play none none reverse",
+    }
+  });
+
+});
+
