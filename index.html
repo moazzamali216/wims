@@ -166,7 +166,7 @@
 
   <!-- Desktop Navbar -->
   <nav id="desktop-nav"
-    class="absolute border-b-[0.33px] bg-white border-[#636363]  hidden z-[100] transition-all lg:flex justify-around  items-center top-[0px] py-2 w-full">
+    class=" border-b-[0.33px] bg-white border-[#636363]  hidden z-[100] transition-all lg:flex justify-around  items-center top-[0px] py-2 w-full">
     <div class="w-fit text-2xl mons"><img class="w-[100px] " src="./public/images/logo.png" alt=""></div>
     <div class="w-fit">
       <ul class="flex items-center gap-4 ">
@@ -276,7 +276,7 @@
   <div class="lg:hidden">
     <!-- Top bar -->
     <nav id="desktop-nav2"
-      class="top-[0px] absolute z-[105] py-2 transition-all left-0 w-full flex items-center justify-between px-6 bg-white">
+      class="top-[0px]  z-[105] py-2 transition-all left-0 w-full flex items-center justify-between px-6 bg-white">
       <!-- Logo -->
       <div class="text-2xl mons text-[#e0dfdf]">
 <a href="./index.html">
@@ -401,7 +401,10 @@
 
 
   <!-- Hero Section  -->
-  <section class=" hero-bg flex justify-center items-center ">
+  <section id="heroBg" class=" bg-center relative min-h-[700px] bg-no-repeat bg-cover flex justify-center items-center ">
+    <div id="bg1" class="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000"></div>
+<div id="bg2" class="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 opacity-0"></div>
+
     <div class="w-full h-full bg-black/30 absolute top-0 left-0 z-0"></div>
     <div
       class="max-w-[600px] h-full absolute top-0 left-0 z-0 bg-gradient-to-r from-[#cca34b]/10 via-[#cca34b]/10  to-transparent ">
@@ -409,7 +412,7 @@
 
 
     <div
-      class=" tex  z-10 gap-4 md:gap-0 section ] w-full  h-auto md:h-screen 2xl:max-w-[1530px] px-4   z-1 flex flex-col md:flex-row items-center justify-start">
+      class=" tex  z-10 gap-4 md:gap-0 section  w-full  h-auto md:h-screen 2xl:max-w-[1530px] px-4   z-1 flex flex-col md:flex-row items-center justify-start">
       <div class=" w-fit md:px-0  ">
         <div class="text-[#e0dfdf]   cal !md:leading-[60px] text-6xl md:text-[60px]">
           Global Leader <br> Technical <span class="text-[#a68b4a]">Textiles</span>

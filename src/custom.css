@@ -185,6 +185,7 @@ html{
   );
   animation: scanMove 6s linear infinite;
   opacity:.55 !important;
+
 }
 
 @keyframes scanMove{
@@ -193,4 +194,17 @@ html{
 }
 
 
+.fadeHero{
+  animation: fadeFlash 1s ease-in-out;
+}
 
+@keyframes fadeFlash {
+  0% {
+    opacity: .4;
+    filter: brightness(1.4);
+  }
+  100% {
+    opacity: 1;
+    filter: brightness(1);
+  }
+}
