@@ -1256,6 +1256,9 @@ input[type="range"]::-ms-fill-lower {
 .max-h-\[500px\] {
   max-height: 500px;
 }
+.min-h-\[700px\] {
+  min-height: 700px;
+}
 .min-h-\[500px\] {
   min-height: 500px;
 }
@@ -1264,12 +1267,6 @@ input[type="range"]::-ms-fill-lower {
 }
 .min-h-\[300px\] {
   min-height: 300px;
-}
-.min-h-\[900px\] {
-  min-height: 900px;
-}
-.min-h-\[700px\] {
-  min-height: 700px;
 }
 .w-\[90\%\] {
   width: 90%;
