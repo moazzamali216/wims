@@ -267,3 +267,14 @@ body{
 .VIpgJd-ZVi9od-xl07Ob-lTBxed.VIpgJd-ZVi9od-LgbsSe {
   background: rgba(0,0,0,0.06) !important;
 }
+
+.goog-te-combo option {
+  background-color: white !important;
+  color: black !important;
+}
+.goog-te-combo option:hover,
+.goog-te-combo option:focus,
+.goog-te-combo option:active {
+  background-color: rgba(0,0,0,0.06) !important;
+  color: #111 !important;
+}
