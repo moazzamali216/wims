@@ -1880,6 +1880,18 @@ input[type="range"]::-ms-fill-lower {
 .border-white\/20 {
   border-color: rgb(255 255 255 / 0.2);
 }
+.border-\[red\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 0 0 / var(--tw-border-opacity));
+}
+.border-red-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(240 82 82 / var(--tw-border-opacity));
+}
+.border-blue-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(63 131 248 / var(--tw-border-opacity));
+}
 .border-t-transparent {
   border-top-color: transparent;
 }
@@ -2056,6 +2068,9 @@ input[type="range"]::-ms-fill-lower {
 .bg-white\/30 {
   background-color: rgb(255 255 255 / 0.3);
 }
+.bg-\[\#00000094\] {
+  background-color: #00000094;
+}
 .bg-opacity-60 {
   --tw-bg-opacity: 0.6;
 }
@@ -2198,6 +2213,11 @@ input[type="range"]::-ms-fill-lower {
   --tw-gradient-to: rgb(0 0 0 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
+.from-blue-900 {
+  --tw-gradient-from: #233876;
+  --tw-gradient-to: rgb(35 56 118 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
 .via-black\/40 {
   --tw-gradient-to: rgb(0 0 0 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), rgb(0 0 0 / 0.4), var(--tw-gradient-to);
@@ -2250,6 +2270,10 @@ input[type="range"]::-ms-fill-lower {
   --tw-gradient-to: rgb(245 233 192 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), #f5e9c0, var(--tw-gradient-to);
 }
+.via-gray-800 {
+  --tw-gradient-to: rgb(31 41 55 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), #1F2937, var(--tw-gradient-to);
+}
 .to-transparent {
   --tw-gradient-to: transparent;
 }
@@ -2297,6 +2321,9 @@ input[type="range"]::-ms-fill-lower {
 }
 .to-white\/30 {
   --tw-gradient-to: rgb(255 255 255 / 0.3);
+}
+.to-gray-600 {
+  --tw-gradient-to: #4B5563;
 }
 .bg-cover {
   background-size: cover;
@@ -2482,6 +2509,9 @@ input[type="range"]::-ms-fill-lower {
 }
 .pt-4 {
   padding-top: 1rem;
+}
+.pb-5 {
+  padding-bottom: 1.25rem;
 }
 .text-left {
   text-align: left;
@@ -3438,6 +3468,10 @@ input[type="range"]::-ms-fill-lower {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .sm\:grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
   .sm\:flex-row {
     flex-direction: row;
   }
@@ -3693,6 +3727,11 @@ input[type="range"]::-ms-fill-lower {
 
   .md\:text-\[60px\] {
     font-size: 60px;
+  }
+
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
   }
 }
 
