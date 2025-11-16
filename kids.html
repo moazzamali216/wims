@@ -1459,16 +1459,20 @@
 
     });
     // Initialize Swiper for mobile area
-    const kidsSwiper = new Swiper('.kids-swiper', {
-        slidesPerView: 1.15,
-        spaceBetween: 6,
-        grabCursor: true,
-        breakpoints: {
-            640: { slidesPerView: 2 },
-            768: { slidesPerView: 3 },
+const kidsSwiper = new Swiper('.kids-swiper', {
+    slidesPerView: 1.15,
+    spaceBetween: 6,
+    grabCursor: true,
+    breakpoints: {
+        640: { slidesPerView: 2 },
+        768: { slidesPerView: 3 },
+    },
+    autoplay: {
+        delay: 1500,       // 3 seconds between slides
+        disableOnInteraction: false, // continue autoplay after user interacts
+    },
+});
 
-        },
-    });
 </script>
 
 <script src="https://cdn.botpress.cloud/webchat/v3.3/inject.js"></script>
