@@ -2396,11 +2396,6 @@ input[type="range"]::-ms-fill-lower {
   --tw-gradient-to: rgb(166 139 74 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
-.from-\[\#d4b87c\] {
-  --tw-gradient-from: #d4b87c;
-  --tw-gradient-to: rgb(212 184 124 / 0);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
 .via-black\/40 {
   --tw-gradient-to: rgb(0 0 0 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), rgb(0 0 0 / 0.4), var(--tw-gradient-to);
@@ -2990,15 +2985,15 @@ input[type="range"]::-ms-fill-lower {
   --tw-text-opacity: 1;
   color: rgb(214 31 105 / var(--tw-text-opacity));
 }
+.text-gray-700\/90 {
+  color: rgb(55 65 81 / 0.9);
+}
 .text-white\/80 {
   color: rgb(255 255 255 / 0.8);
 }
 .text-gray-100 {
   --tw-text-opacity: 1;
   color: rgb(243 244 246 / var(--tw-text-opacity));
-}
-.text-gray-700\/90 {
-  color: rgb(55 65 81 / 0.9);
 }
 .underline {
   text-decoration-line: underline;
@@ -3752,10 +3747,6 @@ input[type="range"]::-ms-fill-lower {
   opacity: 0.7;
 }
 
-.group:hover .group-hover\:opacity-90 {
-  opacity: 0.9;
-}
-
 .group:hover .group-hover\:blur-\[2px\] {
   --tw-blur: blur(2px);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -4209,12 +4200,12 @@ input[type="range"]::-ms-fill-lower {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .lg\:grid-cols-6 {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-  }
-
   .lg\:grid-cols-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
   .lg\:flex-row {
@@ -4233,16 +4224,16 @@ input[type="range"]::-ms-fill-lower {
     gap: 80px;
   }
 
+  .lg\:gap-6 {
+    gap: 1.5rem;
+  }
+
   .lg\:gap-16 {
     gap: 4rem;
   }
 
   .lg\:gap-10 {
     gap: 2.5rem;
-  }
-
-  .lg\:gap-6 {
-    gap: 1.5rem;
   }
 
   .lg\:border-r-\[0\.5px\] {
@@ -4291,11 +4282,6 @@ input[type="range"]::-ms-fill-lower {
   .lg\:text-5xl {
     font-size: 3rem;
     line-height: 1;
-  }
-
-  .lg\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
   }
 
   .lg\:text-lg {
