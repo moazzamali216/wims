@@ -29,21 +29,24 @@
     // Initialize widget
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({
-        
-        pageLanguage: 'en',includedLanguages: 'en,de,es,it,',
+
+        pageLanguage: 'en', includedLanguages: 'en,de,es,it,',
         layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
       }, 'google_translate_element');
     }
   </script>
   <!-- External CSsS -->
-    <link rel="stylesheet" href="./public/output.css">
+  <link rel="stylesheet" href="./public/output.css">
   <link rel="stylesheet" href="./src/custom.css">
-  
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.0/swiper-bundle.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.0/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/photoswipe@5/dist/photoswipe.css">
+  <script type="module" src="https://unpkg.com/photoswipe@5/dist/photoswipe-lightbox.esm.js"></script>
+
 
   <style>
     .VIpgJd-ZVi9od-xl07Ob-lTBxed>img {
@@ -51,7 +54,7 @@
     }
   </style>
   <!-- AlpineJS -->
- 
+
 
 </head>
 
@@ -134,7 +137,8 @@
 
     <!-- Images Grid -->
     <div class="mt-8 grid grid-cols-3 gap-3">
-      <img loading="lazy" src="./public/images/u6.avif" alt="measurement and scissors" class="rounded-xl object-cover w-full h-24" />
+      <img loading="lazy" src="./public/images/u6.avif" alt="measurement and scissors"
+        class="rounded-xl object-cover w-full h-24" />
 
       <img loading="lazy" src="./public/images/u1.avif" class="rounded-xl object-cover w-full h-24" />
       <img loading="lazy" src="./public/images/u2.avif" class="rounded-xl object-cover w-full h-24" />
@@ -162,137 +166,138 @@
 
 
 
-     <!-- Desktop Navbar -->
-    <nav id="desktop-nav"
-        class=" border-b-[0.33px] bg-white border-[#636363]  hidden z-[100] transition-all lg:flex justify-around  items-center top-[0px] py-2 w-full">
-        <div class="w-fit text-2xl mons"><img loading="lazy" class="w-[100px] " src="./public/images/logo.png" alt=""></div>
-        <div class="w-fit">
-            <ul class="flex items-center gap-4 ">
-                <li><a href="./index.html" class="cal tracking-wider text-sm font-[500] text-gray-800">HOME</a></li>
-                <li><a href="./aboutus.html" class="cal tracking-wider s text-sm font-[500] text-gray-800">ABOUT</a>
-                </li>
-                <!-- <li             class="poppins tracking-wider text-sm font-[500] text-[#e0dfdf]"> </li> -->
+  <!-- Desktop Navbar -->
+  <nav id="desktop-nav"
+    class=" border-b-[0.33px] bg-white border-[#636363]  hidden z-[100] transition-all lg:flex justify-around  items-center top-[0px] py-2 w-full">
+    <div class="w-fit text-2xl mons"><img loading="lazy" class="w-[100px] " src="./public/images/logo.png" alt=""></div>
+    <div class="w-fit">
+      <ul class="flex items-center gap-4 ">
+        <li><a href="./index.html" class="cal tracking-wider text-sm font-[500] text-gray-800">HOME</a></li>
+        <li><a href="./aboutus.html" class="cal tracking-wider s text-sm font-[500] text-gray-800">ABOUT</a>
+        </li>
+        <!-- <li             class="poppins tracking-wider text-sm font-[500] text-[#e0dfdf]"> </li> -->
 
-                <li data-dropdown-toggle="dropdown"><a 
-                        class="poppins tracking-wider font-semibold text-sm  text-gray-800 cursor-pointer cursor-pointer">PRODUCTS <i
-                            class="fa-solid fa-chevron-down"></i></a>
-                </li>
+        <li data-dropdown-toggle="dropdown"><a
+            class="poppins tracking-wider font-semibold text-sm  text-gray-800 cursor-pointer cursor-pointer">PRODUCTS
+            <i class="fa-solid fa-chevron-down"></i></a>
+        </li>
 
-                <div id="dropdown"
-                    class="z-[100] hidden w-[750px] grid grid-cols-2 md:grid-cols-4 gap-6 p-6 rounded-2xl shadow-lg bg-white">
-                    <!-- Kitchen -->
+        <div id="dropdown"
+          class="z-[100] hidden w-[750px] grid grid-cols-2 md:grid-cols-4 gap-6 p-6 rounded-2xl shadow-lg bg-white">
+          <!-- Kitchen -->
 
-                    <!-- Kids -->
-                    <div class="space-y-2">
-                        <a href='./kids.html' class="cal text-lg font-semibold text-[#a68b4a]">Kids</a>
-                        <p class="text-xs poppins text-black/70">Soft and safe textiles designed specially for
-                            children’s comfort
-                            and durability.</p>
-                    </div>
+          <!-- Kids -->
+          <div class="space-y-2">
+            <a href='./kids.html' class="cal text-lg font-semibold text-[#a68b4a]">Kids</a>
+            <p class="text-xs poppins text-black/70">Soft and safe textiles designed specially for
+              children’s comfort
+              and durability.</p>
+          </div>
 
-                    <!-- Adults -->
-                    <div class="space-y-2">
-                        <a href='./adult.html' class="cal text-lg font-semibold text-[#a68b4a]">Adults</a>
-                        <p class="text-xs poppins text-black/70">Premium clothing and home textiles tailored for
-                            everyday luxury and
-                            comfort.</p>
-                    </div>
-
-  
-
-                    <!-- Dyed -->
-                    <div class="space-y-2">
-                        <a href='./dyed.html' class="cal text-lg font-semibold text-[#a68b4a]">Dyed</a>
-                        <p class="text-xs poppins text-black/70">Vibrant, colorfast dyed fabrics made with precision and
-                            long-lasting hues.</p>
-                    </div>
-                    <div class="space-y-2">
-                        <a href='./curtain.html' class="cal text-lg font-semibold text-[#a68b4a]">Curtain</a>
-                        <p class="text-xs poppins text-black/70">Vibrant, colorfast dyed fabrics made with precision and
-                            long-lasting hues.</p>
-                    </div>
-
-                    <!-- Towel -->
-                    <div class="space-y-2">
-                        <a href="./towels.html" class="cal text-lg font-semibold text-[#a68b4a]">Towel</a>
-                        <p class="text-xs poppins text-black/70">High-quality towels offering exceptional softness,
-                            absorbency, and
-                            durability.</p>
-                    </div>
-
-                    <!-- Kitchen -->
-                    <div class="space-y-2">
-                        <a href='./kitchen.html' class="cal text-lg font-semibold text-[#a68b4a]">Kitchen</a>
-                        <p class="text-xs poppins text-black/70">Vibrant, colorfast dyed fabrics made with precision and
-                            long-lasting hues.</p>
-                    </div>
-                    <!-- Hotel -->
-                    <div class="space-y-2">
-                        <a href='./hotel.html' class="cal text-lg font-semibold text-[#a68b4a]">Hotel</a>
-                        <p class="text-xs poppins text-black/70">Luxury hotel-grade textiles for premium comfort and a
-                            refined guest
-                            experience.</p>
-                    </div>
-
-                    <!-- Hospital -->
-                    <div class="space-y-2">
-                        <a href="./hospital.html" class="cal text-lg font-semibold text-[#a68b4a]">Hospital</a>
-                        <p class="text-xs poppins text-black/70">Durable, hygienic, and comfortable fabrics designed for
-                            healthcare
-                            environments.</p>
-                    </div>
-                                        <div class="space-y-2">
-                        <a href='./uniform.html' class="cal text-lg font-semibold text-[#a68b4a]">Uniform</a>
-                        <p class="text-xs poppins text-black/70">Premium healthcare textiles engineered for everyday
-                            clinical
-                            comfort, long-term durability and safe, hygienic performance.</p>
-                    </div>
-
-                </div>
+          <!-- Adults -->
+          <div class="space-y-2">
+            <a href='./adult.html' class="cal text-lg font-semibold text-[#a68b4a]">Adults</a>
+            <p class="text-xs poppins text-black/70">Premium clothing and home textiles tailored for
+              everyday luxury and
+              comfort.</p>
+          </div>
 
 
 
+          <!-- Dyed -->
+          <div class="space-y-2">
+            <a href='./dyed.html' class="cal text-lg font-semibold text-[#a68b4a]">Dyed</a>
+            <p class="text-xs poppins text-black/70">Vibrant, colorfast dyed fabrics made with precision and
+              long-lasting hues.</p>
+          </div>
+          <div class="space-y-2">
+            <a href='./curtain.html' class="cal text-lg font-semibold text-[#a68b4a]">Curtain</a>
+            <p class="text-xs poppins text-black/70">Vibrant, colorfast dyed fabrics made with precision and
+              long-lasting hues.</p>
+          </div>
 
-                <li><a  class="cal tracking-wider text-sm font-[500] text-gray-800">E-BROUCHER</a></li>
+          <!-- Towel -->
+          <div class="space-y-2">
+            <a href="./towels.html" class="cal text-lg font-semibold text-[#a68b4a]">Towel</a>
+            <p class="text-xs poppins text-black/70">High-quality towels offering exceptional softness,
+              absorbency, and
+              durability.</p>
+          </div>
 
-                <li><a href="./shop.html" class="cal tracking-wider text-sm font-[500] text-gray-800">SHOP</a>
-                </li>
+          <!-- Kitchen -->
+          <div class="space-y-2">
+            <a href='./kitchen.html' class="cal text-lg font-semibold text-[#a68b4a]">Kitchen</a>
+            <p class="text-xs poppins text-black/70">Vibrant, colorfast dyed fabrics made with precision and
+              long-lasting hues.</p>
+          </div>
+          <!-- Hotel -->
+          <div class="space-y-2">
+            <a href='./hotel.html' class="cal text-lg font-semibold text-[#a68b4a]">Hotel</a>
+            <p class="text-xs poppins text-black/70">Luxury hotel-grade textiles for premium comfort and a
+              refined guest
+              experience.</p>
+          </div>
 
-                <li>
-                    <div id="google_translate_element" class=" bg-transparent"></div>
-                </li>
-            </ul>
-        </div>
-        <div class="w-fit flex gap-x-3 cal">
-
-            <a href="tel:+4921265001564" class="flex items-center flex-col">
-                <span class="cal tracking-wider text-base font-[500] text-gray-800">+49 212 65001564</span>
-                <span class="cal tracking-wider text-base font-[500] text-gray-800">+49 176 20171778</span>
-            </a>
-            <a href="./contact.html" style="padding:15px 20px 15px 20px"
-                class="group relative flex items-center gap-2 font-bold text-white text-base cal rounded-full bg-[#a68b4a] transition-all duration-500 ease-out hover:scale-[1.03]">
-                <span>Get A Quote!</span>
-
-            </a>
-            <button id="openMenu"><img loading="lazy" class="w-5 h-5" src="./public/images/download.png" alt=""></button>
-
-
-
+          <!-- Hospital -->
+          <div class="space-y-2">
+            <a href="./hospital.html" class="cal text-lg font-semibold text-[#a68b4a]">Hospital</a>
+            <p class="text-xs poppins text-black/70">Durable, hygienic, and comfortable fabrics designed for
+              healthcare
+              environments.</p>
+          </div>
+          <div class="space-y-2">
+            <a href='./uniform.html' class="cal text-lg font-semibold text-[#a68b4a]">Uniform</a>
+            <p class="text-xs poppins text-black/70">Premium healthcare textiles engineered for everyday
+              clinical
+              comfort, long-term durability and safe, hygienic performance.</p>
+          </div>
 
         </div>
-    </nav>
+
+
+
+
+        <li><a class="cal tracking-wider text-sm font-[500] text-gray-800">E-BROUCHER</a></li>
+
+        <li><a href="./shop.html" class="cal tracking-wider text-sm font-[500] text-gray-800">SHOP</a>
+        </li>
+
+        <li>
+          <div id="google_translate_element" class=" bg-transparent"></div>
+        </li>
+      </ul>
+    </div>
+    <div class="w-fit flex gap-x-3 cal">
+
+      <a href="tel:+4921265001564" class="flex items-center flex-col">
+        <span class="cal tracking-wider text-base font-[500] text-gray-800">+49 212 65001564</span>
+        <span class="cal tracking-wider text-base font-[500] text-gray-800">+49 176 20171778</span>
+      </a>
+      <a href="./contact.html" style="padding:15px 20px 15px 20px"
+        class="group relative flex items-center gap-2 font-bold text-white text-base cal rounded-full bg-[#a68b4a] transition-all duration-500 ease-out hover:scale-[1.03]">
+        <span>Get A Quote!</span>
+
+      </a>
+      <button id="openMenu"><img loading="lazy" class="w-5 h-5" src="./public/images/download.png" alt=""></button>
+
+
+
+
+    </div>
+  </nav>
 
   <!-- Mobile Navbar -->
   <div class="lg:hidden">
     <!-- Top bar -->
-     <!--  -->
+    <!--  -->
     <nav id="desktop-nav2"
       class=" z-[105] py-2 transition-all left-0 w-full flex items-center justify-between px-6 bg-white">
       <!-- Logo -->
       <div class="text-2xl mons text-[#e0dfdf]">
-<a href="./index.html">
-<img loading="lazy" class="w-[100px]" src="./public/images/logo.png" alt="">
-</a></div>
+        <a href="./index.html">
+          <img loading="lazy" class="w-[100px]" src="./public/images/logo.png" alt="">
+        </a>
+      </div>
 
       <div class="flex items-center gap-4">
         <a href="./contact.html" style="padding:15px 20px 15px 20px"
@@ -334,17 +339,19 @@
               <i class="fa-solid fa-chevron-down text-[#e0dfdf]"></i>
             </button>
             <ul id="products-dropdown"
-              class="hidden !z-[108] flex flex-col w-full mt-2 bg-white rounded-xl shadow-md divide-y divide-gray-200">                            <li>
-                                <a href="./curtain.html"
-                                    class="block text-gray-800 px-5 py-3 poppins text-sm font-medium hover:bg-gray-100 transition-colors duration-200">
-                                    Curtains
-                                </a>
-                            </li><li>
-                                <a href="./uniform.html"
-                                    class="block text-gray-800 px-5 py-3 poppins text-sm font-medium hover:bg-gray-100 transition-colors duration-200">
-                                    Uniform
-                                </a>
-                            </li>
+              class="hidden !z-[108] flex flex-col w-full mt-2 bg-white rounded-xl shadow-md divide-y divide-gray-200">
+              <li>
+                <a href="./curtain.html"
+                  class="block text-gray-800 px-5 py-3 poppins text-sm font-medium hover:bg-gray-100 transition-colors duration-200">
+                  Curtains
+                </a>
+              </li>
+              <li>
+                <a href="./uniform.html"
+                  class="block text-gray-800 px-5 py-3 poppins text-sm font-medium hover:bg-gray-100 transition-colors duration-200">
+                  Uniform
+                </a>
+              </li>
               <li>
                 <a href="./kids.html"
                   class="block text-gray-800 px-5 py-3 poppins text-sm font-medium hover:bg-gray-100 transition-colors duration-200">
@@ -391,7 +398,7 @@
 
           </li>
 
-          <li><a  class="mons tracking-wider text-sm font-[500] text-[#e0dfdf]">E-BROCHURE</a></li>
+          <li><a class="mons tracking-wider text-sm font-[500] text-[#e0dfdf]">E-BROCHURE</a></li>
           <li><a href="./shop.html" class="mons tracking-wider text-sm font-[500] text-[#e0dfdf]">SHOP</a></li>
         </ul>
 
@@ -432,7 +439,8 @@
 
       <!-- Text Section -->
       <div class="lg:w-1/2 space-y-6 text-center lg:text-left">
-        <h1 class="text-5xl [text-shadow:0_4px_18px_rgba(0,0,0,0.25)] sm:text-6xl font-bold cal text-gray-900 leading-tight">
+        <h1
+          class="text-5xl [text-shadow:0_4px_18px_rgba(0,0,0,0.25)] sm:text-6xl font-bold cal text-gray-900 leading-tight">
           <span class="text-[#a68b4a]">Dyed Elegance,</span><br>
           Crafted for Vibrant Living.
         </h1>
@@ -472,129 +480,52 @@
     </div>
   </section>
 
-<section class="custom-swiper-section py-12 bg-gray-50">
-  <div class="custom-container overflow-x-hidden container 2xl:max-w-[1530px] mx-auto px-4">
-          <h1 class="text-5xl [text-shadow:0_4px_18px_rgba(0,0,0,0.25)] sm:text-6xl font-bold cal text-gray-900 leading-tight text-center mt-10">
-          <span class="text-[#a68b4a]">Wims</span>
-          Dyed Collection
-        </h1>
-        <p class="text-gray-800 max-w-4xl poppins leading-relaxed md:leading-loose  mx-auto text-center  py-6   rounded-lg">
-  WIMS Dyed Textiles specializes in premium, vibrantly colored fabrics crafted with precision and care. Our textiles are known for their rich hues, consistent quality, and durable finishes, making them perfect for fashion, upholstery, and creative projects. Each piece reflects our commitment to excellence, combining traditional dyeing techniques with modern innovation to deliver fabrics that inspire creativity and elevate every design.
-</p>
+  <section class="custom-swiper-section py-12 bg-gray-50">
+    <div class="custom-container overflow-x-hidden container 2xl:max-w-[1530px] mx-auto px-4">
+      <h1
+        class="text-5xl [text-shadow:0_4px_18px_rgba(0,0,0,0.25)] sm:text-6xl font-bold cal text-gray-900 leading-tight text-center mt-10">
+        <span class="text-[#a68b4a]">Wims</span>
+        Dyed Collection
+      </h1>
+      <p
+        class="text-gray-800 max-w-4xl poppins leading-relaxed md:leading-loose  mx-auto text-center  py-6   rounded-lg">
+        WIMS Dyed Textiles specializes in premium, vibrantly colored fabrics crafted with precision and care. Our
+        textiles are known for their rich hues, consistent quality, and durable finishes, making them perfect for
+        fashion, upholstery, and creative projects. Each piece reflects our commitment to excellence, combining
+        traditional dyeing techniques with modern innovation to deliver fabrics that inspire creativity and elevate
+        every design.
+      </p>
 
-    <!-- Swiper -->
-    <div class="custom-swiper mt-16 myCustomSwiper">
-      <div class="swiper-wrapper">
-        <!-- Slides 1–20 -->
-        <div class="swiper-slide relative overflow-hidden rounded-xl shadow-lg transform transition duration-700 ease-out hover:scale-105 hover:rotate-1 hover:shadow-2xl">
-          <a href="./public/images/dyed1.webp" data-lightbox="gallery" class="group block">
-            <img loading="lazy" src="./public/images/dyed1.webp" alt="Slide Image" class="w-full h-[400px] object-contain transition-transform duration-700 ease-out group-hover:scale-110 group-hover:rotate-1">
-          </a>
+      <div class="lg:block hidden">
+        <!-- Dyed Section Gallery -->
+        <div class="hidden lg:grid lg:grid-cols-5 gap-4 dyed-gallery" id="dyedGalleryGrid">
+          <!-- Images will be inserted by JS -->
         </div>
-        <div class="swiper-slide relative overflow-hidden rounded-xl shadow-lg transform transition duration-700 ease-out hover:scale-105 hover:-rotate-1 hover:shadow-2xl">
-          <a href="./public/images/dyed2.webp" data-lightbox="gallery" class="group block">
-            <img loading="lazy" src="./public/images/dyed2.webp" alt="Slide Image" class="w-full h-[400px] object-contain transition-transform duration-700 ease-out group-hover:scale-110 group-hover:-rotate-1">
-          </a>
-        </div>
-        <div class="swiper-slide relative overflow-hidden rounded-xl shadow-lg transform transition duration-700 ease-out hover:scale-105 hover:rotate-2 hover:shadow-2xl">
-          <a href="./public/images/dyed3.webp" data-lightbox="gallery" class="group block">
-            <img loading="lazy" src="./public/images/dyed3.webp" alt="Slide Image" class="w-full h-[400px] object-contain transition-transform duration-700 ease-out group-hover:scale-110 group-hover:rotate-2">
-          </a>
-        </div>
-        <div class="swiper-slide relative overflow-hidden rounded-xl shadow-lg transform transition duration-700 ease-out hover:scale-105 hover:-rotate-2 hover:shadow-2xl">
-          <a href="./public/images/dyed4.webp" data-lightbox="gallery" class="group block">
-            <img loading="lazy" src="./public/images/dyed4.webp" alt="Slide Image" class="w-full h-[400px] object-contain transition-transform duration-700 ease-out group-hover:scale-110 group-hover:-rotate-2">
-          </a>
-        </div>
-        <div class="swiper-slide relative overflow-hidden rounded-xl shadow-lg transform transition duration-700 ease-out hover:scale-105 hover:rotate-1 hover:shadow-2xl">
-          <a href="./public/images/dyed5.webp" data-lightbox="gallery" class="group block">
-            <img loading="lazy" src="./public/images/dyed5.webp" alt="Slide Image" class="w-full h-[400px] object-contain transition-transform duration-700 ease-out group-hover:scale-110 group-hover:rotate-1">
-          </a>
-        </div>
-        <div class="swiper-slide relative overflow-hidden rounded-xl shadow-lg transform transition duration-700 ease-out hover:scale-105 hover:-rotate-1 hover:shadow-2xl">
-          <a href="./public/images/dyed6.webp" data-lightbox="gallery" class="group block">
-            <img loading="lazy" src="./public/images/dyed6.webp" alt="Slide Image" class="w-full h-[400px] object-contain transition-transform duration-700 ease-out group-hover:scale-110 group-hover:-rotate-1">
-          </a>
-        </div>
-        <div class="swiper-slide relative overflow-hidden rounded-xl shadow-lg transform transition duration-700 ease-out hover:scale-105 hover:rotate-2 hover:shadow-2xl">
-          <a href="./public/images/dyed7.webp" data-lightbox="gallery" class="group block">
-            <img loading="lazy" src="./public/images/dyed7.webp" alt="Slide Image" class="w-full h-[400px] object-contain transition-transform duration-700 ease-out group-hover:scale-110 group-hover:rotate-2">
-          </a>
-        </div>
-        <div class="swiper-slide relative overflow-hidden rounded-xl shadow-lg transform transition duration-700 ease-out hover:scale-105 hover:-rotate-2 hover:shadow-2xl">
-          <a href="./public/images/dyed8.webp" data-lightbox="gallery" class="group block">
-            <img loading="lazy" src="./public/images/dyed8.webp" alt="Slide Image" class="w-full h-[400px] object-contain transition-transform duration-700 ease-out group-hover:scale-110 group-hover:-rotate-2">
-          </a>
-        </div>
-        <div class="swiper-slide relative overflow-hidden rounded-xl shadow-lg transform transition duration-700 ease-out hover:scale-105 hover:rotate-1 hover:shadow-2xl">
-          <a href="./public/images/dyed9.webp" data-lightbox="gallery" class="group block">
-            <img loading="lazy" src="./public/images/dyed9.webp" alt="Slide Image" class="w-full h-[400px] object-contain transition-transform duration-700 ease-out group-hover:scale-110 group-hover:rotate-1">
-          </a>
-        </div>
-        <div class="swiper-slide relative overflow-hidden rounded-xl shadow-lg transform transition duration-700 ease-out hover:scale-105 hover:-rotate-1 hover:shadow-2xl">
-          <a href="./public/images/dyed10.webp" data-lightbox="gallery" class="group block">
-            <img loading="lazy" src="./public/images/dyed10.webp" alt="Slide Image" class="w-full h-[400px] object-contain transition-transform duration-700 ease-out group-hover:scale-110 group-hover:-rotate-1">
-          </a>
-        </div>
-        <div class="swiper-slide relative overflow-hidden rounded-xl shadow-lg transform transition duration-700 ease-out hover:scale-105 hover:rotate-2 hover:shadow-2xl">
-          <a href="./public/images/dyed11.webp" data-lightbox="gallery" class="group block">
-            <img loading="lazy" src="./public/images/dyed11.webp" alt="Slide Image" class="w-full h-[400px] object-contain transition-transform duration-700 ease-out group-hover:scale-110 group-hover:rotate-2">
-          </a>
-        </div>
-        <div class="swiper-slide relative overflow-hidden rounded-xl shadow-lg transform transition duration-700 ease-out hover:scale-105 hover:-rotate-2 hover:shadow-2xl">
-          <a href="./public/images/dyed12.webp" data-lightbox="gallery" class="group block">
-            <img loading="lazy" src="./public/images/dyed12.webp" alt="Slide Image" class="w-full h-[400px] object-contain transition-transform duration-700 ease-out group-hover:scale-110 group-hover:-rotate-2">
-          </a>
-        </div>
-        <div class="swiper-slide relative overflow-hidden rounded-xl shadow-lg transform transition duration-700 ease-out hover:scale-105 hover:rotate-1 hover:shadow-2xl">
-          <a href="./public/images/dyed13.webp" data-lightbox="gallery" class="group block">
-            <img loading="lazy" src="./public/images/dyed13.webp" alt="Slide Image" class="w-full h-[400px] object-contain transition-transform duration-700 ease-out group-hover:scale-110 group-hover:rotate-1">
-          </a>
-        </div>
-        <div class="swiper-slide relative overflow-hidden rounded-xl shadow-lg transform transition duration-700 ease-out hover:scale-105 hover:-rotate-1 hover:shadow-2xl">
-          <a href="./public/images/dyed14.webp" data-lightbox="gallery" class="group block">
-            <img loading="lazy" src="./public/images/dyed14.webp" alt="Slide Image" class="w-full h-[400px] object-contain transition-transform duration-700 ease-out group-hover:scale-110 group-hover:-rotate-1">
-          </a>
-        </div>
-        <div class="swiper-slide relative overflow-hidden rounded-xl shadow-lg transform transition duration-700 ease-out hover:scale-105 hover:rotate-2 hover:shadow-2xl">
-          <a href="./public/images/dyed15.webp" data-lightbox="gallery" class="group block">
-            <img loading="lazy" src="./public/images/dyed15.webp" alt="Slide Image" class="w-full h-[400px] object-contain transition-transform duration-700 ease-out group-hover:scale-110 group-hover:rotate-2">
-          </a>
-        </div>
-        <div class="swiper-slide relative overflow-hidden rounded-xl shadow-lg transform transition duration-700 ease-out hover:scale-105 hover:-rotate-2 hover:shadow-2xl">
-          <a href="./public/images/dyed16.webp" data-lightbox="gallery" class="group block">
-            <img loading="lazy" src="./public/images/dyed16.webp" alt="Slide Image" class="w-full h-[400px] object-contain transition-transform duration-700 ease-out group-hover:scale-110 group-hover:-rotate-2">
-          </a>
-        </div>
-        <div class="swiper-slide relative overflow-hidden rounded-xl shadow-lg transform transition duration-700 ease-out hover:scale-105 hover:rotate-1 hover:shadow-2xl">
-          <a href="./public/images/dyed17.webp" data-lightbox="gallery" class="group block">
-            <img loading="lazy" src="./public/images/dyed17.webp" alt="Slide Image" class="w-full h-[400px] object-contain transition-transform duration-700 ease-out group-hover:scale-110 group-hover:rotate-1">
-          </a>
-        </div>
-        <div class="swiper-slide relative overflow-hidden rounded-xl shadow-lg transform transition duration-700 ease-out hover:scale-105 hover:-rotate-1 hover:shadow-2xl">
-          <a href="./public/images/dyed18.webp" data-lightbox="gallery" class="group block">
-            <img loading="lazy" src="./public/images/dyed18.webp" alt="Slide Image" class="w-full h-[400px] object-contain transition-transform duration-700 ease-out group-hover:scale-110 group-hover:-rotate-1">
-          </a>
-        </div>
-        <div class="swiper-slide relative overflow-hidden rounded-xl shadow-lg transform transition duration-700 ease-out hover:scale-105 hover:rotate-2 hover:shadow-2xl">
-          <a href="./public/images/dyed19.webp" data-lightbox="gallery" class="group block">
-            <img loading="lazy" src="./public/images/dyed19.webp" alt="Slide Image" class="w-full h-[400px] object-contain transition-transform duration-700 ease-out group-hover:scale-110 group-hover:rotate-2">
-          </a>
-        </div>
-        <div class="swiper-slide relative overflow-hidden rounded-xl shadow-lg transform transition duration-700 ease-out hover:scale-105 hover:-rotate-2 hover:shadow-2xl">
-          <a href="./public/images/dyed20.webp" data-lightbox="gallery" class="group block">
-            <img loading="lazy" src="./public/images/dyed20.webp" alt="Slide Image" class="w-full h-[400px] object-contain transition-transform duration-700 ease-out group-hover:scale-110 group-hover:-rotate-2">
-          </a>
+
+        <!-- See All Button -->
+        <div class="mt-6 text-center">
+          <button id="dyedSeeAllBtn"
+            class="px-6 py-3 rounded-full bg-black text-white font-medium hover:bg-gray-800 transition">
+            See All
+          </button>
         </div>
       </div>
 
 
-
-      <!-- Pagination -->
-      <div class="custom-pagination text-center mx-auto mt-10"></div>
+      <div class="lg:hidden block"><!-- Swiper Container -->
+        <div class="swiper dyed-swiper">
+          <div class="swiper-wrapper" id="dyedSwiperWrapper">
+            <!-- Slides will be generated by JS -->
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+
+
+
+
+
 
 
 
@@ -959,14 +890,16 @@
               <li><a href="./towels.html"
                   class="text-white text-sm poppins hover:text-[#a68b4a] transition duration-300">Towel</a>
               </li>
-                            <li><a href="./uniform.html"
+              <li><a href="./uniform.html"
                   class="text-white text-sm poppins hover:text-[#a68b4a] transition duration-300">Uniform</a>
-              </li><li><a href="./hotel.html"
+              </li>
+              <li><a href="./hotel.html"
                   class="text-white text-sm poppins hover:text-[#a68b4a] transition duration-300">Hotel</a>
               </li>
-                                          <li><a href="./curtain.html"
-                                    class="text-white text-sm poppins hover:text-[#a68b4a] transition duration-300">Curtain</a>
-                            </li><li><a href="./hospital.html"
+              <li><a href="./curtain.html"
+                  class="text-white text-sm poppins hover:text-[#a68b4a] transition duration-300">Curtain</a>
+              </li>
+              <li><a href="./hospital.html"
                   class="text-white text-sm poppins hover:text-[#a68b4a] transition duration-300">Hospital</a>
               </li>
             </ul>
@@ -991,8 +924,7 @@
 
                 <div class="flex justify-start gap-6 mt-6">
                   <!-- Facebook -->
-                  <a 
-                    class="text-white hover:text-[#a68b4a] transition transform hover:-translate-y-1 duration-300">
+                  <a class="text-white hover:text-[#a68b4a] transition transform hover:-translate-y-1 duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                       <path
                         d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-3h2v-2.3c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V12h2.6l-.4 3h-2.2v7A10 10 0 0 0 22 12" />
@@ -1000,8 +932,7 @@
                   </a>
 
                   <!-- Instagram -->
-                  <a 
-                    class="text-white hover:text-[#a68b4a] transition transform hover:-translate-y-1 duration-300">
+                  <a class="text-white hover:text-[#a68b4a] transition transform hover:-translate-y-1 duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                       <path
                         d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h10zm-5 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm5.5-2a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
@@ -1009,8 +940,7 @@
                   </a>
 
                   <!-- LinkedIn -->
-                  <a 
-                    class="text-white hover:text-[#a68b4a] transition transform hover:-translate-y-1 duration-300">
+                  <a class="text-white hover:text-[#a68b4a] transition transform hover:-translate-y-1 duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                       <path
                         d="M19 0h-14C2.2 0 0 2.2 0 5v14c0 2.8 2.2 5 5 5h14c2.8 0 5-2.2 5-5V5c0-2.8-2.2-5-5-5zM7.1 20.5H3.6V9h3.5v11.5zM5.4 7.6C4.2 7.6 3.3 6.7 3.3 5.5S4.2 3.4 5.4 3.4s2.1.9 2.1 2.1-.9 2.1-2.1 2.1zm15.1 12.9h-3.5v-5.6c0-1.3-.5-2.2-1.7-2.2-.9 0-1.4.6-1.7 1.2-.1.2-.1.5-.1.7v5.9H10v-11h3.4v1.5c.5-.7 1.3-1.5 2.9-1.5 2.1 0 3.7 1.4 3.7 4.3v6.7z" />
@@ -1018,8 +948,7 @@
                   </a>
 
                   <!-- Twitter -->
-                  <a 
-                    class="text-white hover:text-[#a68b4a] transition transform hover:-translate-y-1 duration-300">
+                  <a class="text-white hover:text-[#a68b4a] transition transform hover:-translate-y-1 duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                       <path
                         d="M22.46 6c-.77.35-1.6.58-2.46.69a4.26 4.26 0 0 0 1.88-2.35 8.27 8.27 0 0 1-2.7 1.03 4.22 4.22 0 0 0-7.2 3.84A12 12 0 0 1 3.1 4.6a4.22 4.22 0 0 0 1.31 5.64 4.2 4.2 0 0 1-1.9-.52v.05a4.22 4.22 0 0 0 3.38 4.13 4.25 4.25 0 0 1-1.89.07 4.22 4.22 0 0 0 3.94 2.93A8.46 8.46 0 0 1 2 19.54a11.9 11.9 0 0 0 6.29 1.84c7.55 0 11.68-6.26 11.68-11.68 0-.18 0-.36-.01-.54A8.36 8.36 0 0 0 22.46 6z" />
@@ -1076,7 +1005,8 @@
   </footer>
 </body>
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<script src="https://unpkg.com/flowbite@1.5.2/dist/flowbite.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<script src="https://unpkg.com/flowbite@1.5.2/dist/flowbite.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
 
 
@@ -1142,55 +1072,9 @@
     }
   };
 </script>
-<link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet" />
-<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-
-<script>
-  const swiper2 = new Swiper(".myCustomSwiper", {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    loop: true,
-    pagination: {
-      el: ".custom-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".custom-next",
-      prevEl: ".custom-prev",
-    },
-    breakpoints: {
-      640: { slidesPerView: 1 },
-      768: { slidesPerView: 2 },
-      1024: { slidesPerView: 4 },
-      1530: { slidesPerView: 5 },
-
-    },
-        autoplay: {
-      delay: 1500,      // 3 seconds per slide
-      disableOnInteraction: false, // Continue autoplay even after user interaction
-    },
-    // Optional animation
-    on: {
-      slideChangeTransitionStart: function () {
-        this.slides.forEach(slide => {
-          slide.style.transition = "transform 0.5s ease, opacity 0.5s ease";
-        });
-      }
-    }
-  });
-
-  const lightbox = GLightbox({
-    selector: '[data-lightbox="gallery"]',
-  });
-</script>
-
-
-
 
 <script defer src="./src/js/index.js"></script>
-
-
-
+<script type="module" src="./src/js/galleries.js"></script>
 
 <script src="https://cdn.botpress.cloud/webchat/v3.3/inject.js"></script>
 <script src="https://files.bpcontent.cloud/2025/10/30/13/20251030131811-K5MIGAFC.js" defer></script>

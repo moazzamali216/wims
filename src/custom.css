@@ -312,3 +312,44 @@ body{
   .deferred-img.loaded {
     opacity: 1;
   }
+
+
+   .dyed-gallery-item {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+  .dyed-gallery-item.visible {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .dyed-deferred-img {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  .dyed-deferred-img.loaded {
+    opacity: 1;
+  }
+
+
+
+   .dyed-card {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .dyed-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  }
+  .dyed-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  .dyed-card:hover img {
+    transform: scale(1.1);
+  }
