@@ -354,9 +354,9 @@ body{
     transform: scale(1.1);
   }
   .kids-gallery-item {
-  display: none; /* hide by default */
+  display: none !important; /* hide by default */
 }
 
 .kids-gallery-item.visible {
-  display: block; /* show only visible items */
+  display: block !important; /* show only visible items */
 }
