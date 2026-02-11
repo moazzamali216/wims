@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
       div.innerHTML = `
         <div class="group relative overflow-hidden rounded-lg hover:shadow-2xl transition-transform transform hover:scale-105">
           <a href="./public/images/dyed${i}.webp" data-pswp-width="768" data-pswp-height="1024">
-            <img ${i <= DYED_VISIBLE_COUNT ? `src="./public/images/dyed${i}.webp" loading="eager"` : `data-src="./public/images/dyed${i}.webp" class="dyed-deferred-img"`} 
+            <img ${i <= DYED_VISIBLE_COUNT ? `src="./public/images/dyed${i}.webp" loading="lazy"` : `data-src="./public/images/dyed${i}.webp" class="dyed-deferred-img"`} 
             alt="Dyed ${i}" class="w-full h-full object-cover">
           </a>
         </div>`;
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
       div.innerHTML = `
         <div class="group relative overflow-hidden rounded-lg hover:shadow-2xl transition-transform transform hover:scale-105">
           <a href="./public/images/adu${i}.webp" data-pswp-width="768" data-pswp-height="1024">
-            <img ${i <= VISIBLE_COUNT ? `src="./public/images/adu${i}.webp" loading="eager"` : `data-src="./public/images/adu${i}.webp" class="deferred-img"`} 
+            <img ${i <= VISIBLE_COUNT ? `src="./public/images/adu${i}.webp" loading="lazy"` : `data-src="./public/images/adu${i}.webp" class="deferred-img"`} 
             alt="Bedset ${i}" class="w-full h-full object-cover">
           </a>
         </div>`;
@@ -153,7 +153,7 @@ const kidsSeeAllBtn = document.getElementById('kidsSeeAllBtn');
 const KIDS_VISIBLE_COUNT = 15;
 
 if (kidsGalleryGrid && kidsSeeAllBtn) {
-  const KIDS_TOTAL_IMAGES = parseInt(kidsGalleryGrid.dataset.total, 10) || 45;
+  const KIDS_TOTAL_IMAGES = parseInt(kidsGalleryGrid.dataset.total, 10) || 37;
 
   // Keep an array of remaining items to append late
 
@@ -165,7 +165,7 @@ if (kidsGalleryGrid && kidsSeeAllBtn) {
     div.innerHTML = `
       <div class="group relative overflow-hidden rounded-lg hover:shadow-2xl transition-transform transform hover:scale-105">
         <a href="./public/images/ki${i}.webp" data-pswp-width="768" data-pswp-height="1024">
-          <img ${i <= KIDS_VISIBLE_COUNT ? `src="./public/images/ki${i}.webp" loading="eager"` : `data-src="./public/images/ki${i}.webp" class="deferred-img"`} 
+          <img ${i <= KIDS_VISIBLE_COUNT ? `src="./public/images/ki${i}.webp" loading="lazy"` : `data-src="./public/images/ki${i}.webp" class="deferred-img"`} 
           alt="Kids ${i}" class="w-full h-full object-cover">
         </a>
       </div>`;

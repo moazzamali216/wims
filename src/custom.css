@@ -353,3 +353,10 @@ body{
   .dyed-card:hover img {
     transform: scale(1.1);
   }
+  .kids-gallery-item {
+  display: none; /* hide by default */
+}
+
+.kids-gallery-item.visible {
+  display: block; /* show only visible items */
+}
