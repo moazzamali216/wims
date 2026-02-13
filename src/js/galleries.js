@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       div.innerHTML = `
         <div class="group relative overflow-hidden rounded-lg hover:shadow-2xl transition-transform transform hover:scale-105">
-          <a href="./public/images/dyed${i}.webp" data-pswp-width="768" data-pswp-height="1024">
+          <a href="./public/images/dyed${i}.webp" data-pswp-width="840" data-pswp-height="1280">
             <img ${i <= DYED_VISIBLE_COUNT ? `src="./public/images/dyed${i}.webp" loading="lazy"` : `data-src="./public/images/dyed${i}.webp" class="dyed-deferred-img"`} 
             alt="Dyed ${i}" class="w-full h-full object-cover">
           </a>
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       slide.innerHTML = `
         <div class="dyed-card">
-          <a href="./public/images/dyed${i}.webp" data-pswp-width="768" data-pswp-height="1024">
+          <a href="./public/images/dyed${i}.webp" data-pswp-width="840" data-pswp-height="1280">
             <img src="./public/images/dyed${i}.webp" loading="eager" alt="Dyed ${i}">
           </a>
         </div>`;
@@ -76,10 +76,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===== Adult (Bedset) Desktop Grid =====
   const galleryGrid = document.getElementById('galleryGrid');
   const seeAllBtn = document.getElementById('seeAllBtn');
-  const VISIBLE_COUNT = 15;
+  const VISIBLE_COUNT = 20;
 
   if (galleryGrid && seeAllBtn) {
-    const TOTAL_IMAGES_ADULT = parseInt(galleryGrid.dataset.total, 10) || 45;
+    const TOTAL_IMAGES_ADULT = parseInt(galleryGrid.dataset.total, 10) || 57;
 
     for (let i = 1; i <= TOTAL_IMAGES_ADULT; i++) {
       const div = document.createElement('div');
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       div.innerHTML = `
         <div class="group relative overflow-hidden rounded-lg hover:shadow-2xl transition-transform transform hover:scale-105">
-          <a href="./public/images/adu${i}.webp" data-pswp-width="768" data-pswp-height="1024">
+          <a href="./public/images/adu${i}.webp" data-pswp-width="840" data-pswp-height="1280">
             <img ${i <= VISIBLE_COUNT ? `src="./public/images/adu${i}.webp" loading="lazy"` : `data-src="./public/images/adu${i}.webp" class="deferred-img"`} 
             alt="Bedset ${i}" class="w-full h-full object-cover">
           </a>
@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===== Adult Mobile Swiper =====
   const adultSwiperWrapper = document.getElementById('adultSwiperWrapper');
   if (adultSwiperWrapper) {
-    const TOTAL_ADULT_SWIPER_IMAGES = parseInt(adultSwiperWrapper.dataset.total, 10) || 45;
+    const TOTAL_ADULT_SWIPER_IMAGES = parseInt(adultSwiperWrapper.dataset.total, 10) || 57;
 
     for (let i = 1; i <= TOTAL_ADULT_SWIPER_IMAGES; i++) {
       const slide = document.createElement('div');
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       slide.innerHTML = `
         <div class="adult-card">
-          <a href="./public/images/adu${i}.webp" data-pswp-width="768" data-pswp-height="1024">
+          <a href="./public/images/adu${i}.webp" data-pswp-width="840" data-pswp-height="1280">
             <img src="./public/images/adu${i}.webp" loading="eager" alt="Adult ${i}">
           </a>
         </div>`;
@@ -150,10 +150,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===== Kids Desktop Grid Gallery =====
 const kidsGalleryGrid = document.getElementById('kidsGalleryGrid');
 const kidsSeeAllBtn = document.getElementById('kidsSeeAllBtn');
-const KIDS_VISIBLE_COUNT = 15;
+const KIDS_VISIBLE_COUNT = 20;
 
 if (kidsGalleryGrid && kidsSeeAllBtn) {
-  const KIDS_TOTAL_IMAGES = parseInt(kidsGalleryGrid.dataset.total, 10) || 37;
+  const KIDS_TOTAL_IMAGES = parseInt(kidsGalleryGrid.dataset.total, 10) || 45;
 
   // Keep an array of remaining items to append late
 
@@ -164,7 +164,7 @@ if (kidsGalleryGrid && kidsSeeAllBtn) {
 
     div.innerHTML = `
       <div class="group relative overflow-hidden rounded-lg hover:shadow-2xl transition-transform transform hover:scale-105">
-        <a href="./public/images/ki${i}.webp" data-pswp-width="768" data-pswp-height="1024">
+        <a href="./public/images/ki${i}.webp" data-pswp-width="840" data-pswp-height="1280">
           <img ${i <= KIDS_VISIBLE_COUNT ? `src="./public/images/ki${i}.webp" loading="lazy"` : `data-src="./public/images/ki${i}.webp" class="deferred-img"`} 
           alt="Kids ${i}" class="w-full h-full object-cover">
         </a>
@@ -210,7 +210,7 @@ if (kidsSwiperWrapper) {
 
     slide.innerHTML = `
       <div class="kids-card">
-        <a href="./public/images/ki${i}.webp" data-pswp-width="768" data-pswp-height="1024">
+        <a href="./public/images/ki${i}.webp" data-pswp-width="840" data-pswp-height="1280">
           <img src="./public/images/ki${i}.webp" loading="eager" alt="Kids ${i}">
         </a>
       </div>`;
