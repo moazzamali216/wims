@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const VISIBLE_COUNT = 20;
 
   if (galleryGrid && seeAllBtn) {
-    const TOTAL_IMAGES_ADULT = parseInt(galleryGrid.dataset.total, 10) || 57;
+    const TOTAL_IMAGES_ADULT = parseInt(galleryGrid.dataset.total, 10) || 55;
 
     for (let i = 1; i <= TOTAL_IMAGES_ADULT; i++) {
       const div = document.createElement('div');
@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===== Adult Mobile Swiper =====
   const adultSwiperWrapper = document.getElementById('adultSwiperWrapper');
   if (adultSwiperWrapper) {
-    const TOTAL_ADULT_SWIPER_IMAGES = parseInt(adultSwiperWrapper.dataset.total, 10) || 57;
+    const TOTAL_ADULT_SWIPER_IMAGES = parseInt(adultSwiperWrapper.dataset.total, 10) || 55;
 
     for (let i = 1; i <= TOTAL_ADULT_SWIPER_IMAGES; i++) {
       const slide = document.createElement('div');
