@@ -153,7 +153,7 @@ const kidsSeeAllBtn = document.getElementById('kidsSeeAllBtn');
 const KIDS_VISIBLE_COUNT = 20;
 
 if (kidsGalleryGrid && kidsSeeAllBtn) {
-  const KIDS_TOTAL_IMAGES = parseInt(kidsGalleryGrid.dataset.total, 10) || 38;
+  const KIDS_TOTAL_IMAGES = parseInt(kidsGalleryGrid.dataset.total, 10) || 54;
 
   // Keep an array of remaining items to append late
 
@@ -202,7 +202,7 @@ kidsSeeAllBtn.addEventListener('click', () => {
 // ===== Kids Mobile Swiper =====
 const kidsSwiperWrapper = document.getElementById('kidsSwiperWrapper');
 if (kidsSwiperWrapper) {
-  const KIDS_TOTAL_SWIPER_IMAGES = parseInt(kidsSwiperWrapper.dataset.total, 10) || 38;
+  const KIDS_TOTAL_SWIPER_IMAGES = parseInt(kidsSwiperWrapper.dataset.total, 10) || 54;
 
   for (let i = 1; i <= KIDS_TOTAL_SWIPER_IMAGES; i++) {
     const slide = document.createElement('div');
